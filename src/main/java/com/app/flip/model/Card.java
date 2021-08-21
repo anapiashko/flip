@@ -5,12 +5,14 @@ import org.bson.types.Binary;
 public class Card {
 
     private Integer id;
-    private String sentence;
+    private String englishSentence;
+    private String russianSentence;
     private Binary record;
 
-    public Card(Integer id, String sentence, Binary record) {
+    public Card(Integer id, String englishSentence, String russianSentence, Binary record) {
         this.id = id;
-        this.sentence = sentence;
+        this.englishSentence = englishSentence;
+        this.russianSentence = russianSentence;
         this.record = record;
     }
 
@@ -22,12 +24,20 @@ public class Card {
         this.id = id;
     }
 
-    public String getSentence() {
-        return sentence;
+    public String getEnglishSentence() {
+        return englishSentence;
     }
 
-    public void setSentence(String sentence) {
-        this.sentence = sentence;
+    public void setEnglishSentence(String englishSentence) {
+        this.englishSentence = englishSentence;
+    }
+
+    public String getRussianSentence() {
+        return russianSentence;
+    }
+
+    public void setRussianSentence(String russianSentence) {
+        this.russianSentence = russianSentence;
     }
 
     public Binary getRecord() {
@@ -42,7 +52,8 @@ public class Card {
     public String toString() {
         return "Card{" +
                 "id=" + id +
-                ", sentence='" + sentence + '\'' +
+                ", englishSentence='" + englishSentence + '\'' +
+                ", russianSentence='" + russianSentence + '\'' +
                 '}';
     }
 }

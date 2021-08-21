@@ -29,7 +29,8 @@ public class FlipApplication implements CommandLineRunner {
 
 		// save a couple of customers
 		Path path = Paths.get("src","main", "resources", "records", "silly.mp3");
-		repository.save(new Card(2, "I don't dare ask such a silly question.", new Binary(Files.readAllBytes(path))));
+		repository.save(new Card(2, "I don't dare ask such a silly question.",
+				"Я не решаюсь задать такой глупый вопрос.", new Binary(Files.readAllBytes(path))));
 
 		// fetch all customers
 		System.out.println("Cards found with findAll():");
