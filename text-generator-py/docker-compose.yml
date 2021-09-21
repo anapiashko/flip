@@ -5,3 +5,5 @@ services:
     command: flask run
     ports:
       - "5000:5000"
+    env_file:
+      - .flaskenv
