@@ -5,8 +5,10 @@ from .sentence import Sentence
 import json
 # import googletrans
 from googletrans import Translator
+import string
 
 generator = Blueprint('generator', __name__)
+
 
 # @generator.route('/')
 # def index():
@@ -55,4 +57,15 @@ def json_example():
 
 
 def split_text(text):
-    return text.split(".")
+    print("SPLITTING")
+    text = text.split(".")
+    # punctuation_set = set(string.punctuation)
+    punctuation_set = ['&', '<', '$', "'", '(', '|', '=', '\\', '%', ';', '~', '*', ']', '_', '{', '[', '+', '>',
+                       '^', '"', '}', ')', '/', '#', '-', '`', ':', '@']
+    result = []
+    for s in text:
+        string_set = set(s)
+        if not string_set.intersection(punctuation_set):
+            result.append(s)
+
+    return result

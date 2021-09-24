@@ -1,14 +1,11 @@
 package com.app.flip.controllers;
 
-//import com.app.flip.dao.CardRepository;
-
+import com.app.flip.dao.CardRepository;
 import com.app.flip.model.Card;
 import com.app.flip.services.TextGeneratorServiceImpl;
-//import com.gtranslate.Language;
-//import com.gtranslate.Translator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.InputStreamResource;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +25,8 @@ import java.util.UUID;
 @RestController
 public class HomeController {
 
-//    private final CardRepository repository;
+    @Autowired
+    private CardRepository repository;
 
     private final TextGeneratorServiceImpl textGeneratorService;
 
@@ -47,6 +45,12 @@ public class HomeController {
         model.put("id", UUID.randomUUID().toString());
         model.put("content", "Hello World");
         return model;
+    }
+
+    @GetMapping("/get")
+    public Card home1() {
+        Card va = repository.findById(1).get();
+        return va;
     }
 
 //    @RequestMapping("/tmp")

@@ -1,0 +1,1 @@
+insert IGNORE into card (id, en_sentence, rus_sentence) values (1, 'Breakfast is important', 'Завтрак важен');
