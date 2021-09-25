@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, jsonify
+from flask import Blueprint, render_template, request, redirect, jsonify, Response
 from .generator import ai
 # from translate import Translator
 from .sentence import Sentence
@@ -16,10 +16,9 @@ generator = Blueprint('generator', __name__)
 #     return render_template('index.html')
 
 
-@generator.route('/analyze', methods=['POST'])
+@generator.route('/analyze', methods=['GET'])
 def analyze():
-    request_data = request.get_json()
-    title = request_data['title']
+    title = request.args.get('title')
     text = ai.generate_text(title)
     # text = "The maximum character limit on a single text is 15k.You can use another google translate domain for " \
     #        "translation "
@@ -39,7 +38,7 @@ def analyze():
     # json_str = json.dumps([o.dump() for o in new], ensure_ascii=False)
     # print("json_str", json_str)
 
-    return json_string
+    return Response(json_string, content_type='application/json')
 
 
 def obj_dict(obj):
