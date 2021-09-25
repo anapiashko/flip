@@ -26,6 +26,7 @@ public class TextGeneratorServiceImpl {
                 Objects.requireNonNull(
                         restTemplate.getForObject("http://localhost:5000/analyze?title=health", Card[].class)
                 ));
+
         cards = CardListHelper.getInstance(cards)
                 .removeEmptyCards()
                 .getCardsWithAverageSize()

@@ -1,7 +1,7 @@
 package com.app.flip.controllers;
 
-import com.app.flip.dao.CardRepository;
 import com.app.flip.model.Card;
+import com.app.flip.services.CardServiceImpl;
 import com.app.flip.services.TextGeneratorServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ import java.util.UUID;
 public class HomeController {
 
     @Autowired
-    private CardRepository repository;
+    private CardServiceImpl cardService;
 
     private final TextGeneratorServiceImpl textGeneratorService;
 
@@ -39,7 +39,8 @@ public class HomeController {
     @GetMapping("/a")
     public List<Card> homeA() {
         log.info("homeA");
-        return textGeneratorService.getText();
+        List<Card> cards = textGeneratorService.getText();
+        return cardService.saveAll(cards);
     }
 
     @GetMapping("/resource")
@@ -48,12 +49,6 @@ public class HomeController {
         model.put("id", UUID.randomUUID().toString());
         model.put("content", "Hello World");
         return model;
-    }
-
-    @GetMapping("/get")
-    public Card home1() {
-        Card va = repository.findById(1).get();
-        return va;
     }
 
 //    @RequestMapping("/tmp")

@@ -1,5 +1,5 @@
 create table IF NOT EXISTS card (
-    id int primary key,
+    id int auto_increment primary key,
     en_sentence varchar(150) NOT NULL,
     rus_sentence varchar(150) NOT NULL
 );
