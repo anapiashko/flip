@@ -47,6 +47,33 @@ public final class CardListHelper {
         return this;
     }
 
+    public CardListHelper setMissedWord() {
+        List<Card> temp = new ArrayList<>();
+
+        for (Card card : newCards) {
+
+            if (StringUtils.isNotBlank(card.getEnglishSentence()) && card.getMissedWord() == null) {
+
+                String[] words = card.getEnglishSentence().split(" ");
+                int cardLength = words.length;
+                boolean[] wordWasChosenByRand = new boolean[cardLength];
+                while (atLeastOneIsFalse(wordWasChosenByRand)) {
+                    int rand = getRandomNumber(cardLength);
+                    String word = words[rand];
+                    if (word.length() <= MIN_SEN_SIZE) {
+                        wordWasChosenByRand[rand] = true;
+                    } else {
+                        card.setMissedWord(rand);
+                        temp.add(card);
+                        break;
+                    }
+                }
+            }
+        }
+        newCards = temp;
+        return this;
+    }
+
     public List<Card> collect() {
         return newCards;
     }
@@ -57,5 +84,17 @@ public final class CardListHelper {
             temp.add(new Card(card.getId(), card.getEnglishSentence(), card.getRussianSentence()));
         }
         return temp;
+    }
+
+    private int getRandomNumber(int max) {
+        return (int) (Math.random() * max);
+    }
+
+    private boolean atLeastOneIsFalse(boolean[] array) {
+        boolean val = true;
+        for (boolean b : array) {
+            val = val && b;
+        }
+        return !val;
     }
 }

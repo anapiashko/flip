@@ -30,6 +30,7 @@ public class TextGeneratorServiceImpl {
         cards = CardListHelper.getInstance(cards)
                 .removeEmptyCards()
                 .getCardsWithAverageSize()
+                .setMissedWord()
                 .collect();
         return cards;
     }

@@ -21,6 +21,8 @@ public class Card {
     @JsonProperty("rus_sentence")
     private String russianSentence;
 
+    private Integer missedWord;
+
     public Card (){}
 
     public Card(Integer id, String englishSentence, String russianSentence) {
