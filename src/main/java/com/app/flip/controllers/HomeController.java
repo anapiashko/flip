@@ -3,6 +3,7 @@ package com.app.flip.controllers;
 import com.app.flip.dao.CardRepository;
 import com.app.flip.model.Card;
 import com.app.flip.services.TextGeneratorServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.InputStreamResource;
@@ -23,6 +24,7 @@ import java.util.Map;
 import java.util.UUID;
 
 @RestController
+@Slf4j
 public class HomeController {
 
     @Autowired
@@ -36,6 +38,7 @@ public class HomeController {
 
     @GetMapping("/a")
     public List<Card> homeA() {
+        log.info("homeA");
         return textGeneratorService.getText();
     }
 
