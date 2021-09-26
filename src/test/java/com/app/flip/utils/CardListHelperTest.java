@@ -14,11 +14,12 @@ class CardListHelperTest {
     public void testFilteringCardList(){
         // given
         List<Card> cardList = new ArrayList<>();
-        cardList.add(new Card(1,"Breakfast is very important","Завтрак важен"));
+        cardList.add(new Card(1,"Breakfast is very important","Завтрак очень важен"));
         cardList.add(new Card(2,"",""));
         cardList.add(new Card(3,"Breakfast is super very important to eat every day before starting your new day","Завтрак важен"));
         cardList.add(new Card(4,"","Завтрак важен"));
         cardList.add(new Card(5,"Breakfast is important",""));
+        cardList.add(new Card(6," Did you get    any breakfast?  ","Ты позавтракал?"));
 
         // when
         List<Card> resultCardList = CardListHelper.getInstance(cardList)
@@ -27,10 +28,14 @@ class CardListHelperTest {
                 .collect();
 
         // then
-        assertEquals(1, resultCardList.size());
+        assertEquals(2, resultCardList.size());
         assertEquals(1, resultCardList.get(0).getId());
         assertEquals("Breakfast is very important", resultCardList.get(0).getEnglishSentence());
-        assertEquals("Завтрак важен", resultCardList.get(0).getRussianSentence());
+        assertEquals("Завтрак очень важен", resultCardList.get(0).getRussianSentence());
+
+        assertEquals(6, resultCardList.get(1).getId());
+        assertEquals("Did you get any breakfast?", resultCardList.get(1).getEnglishSentence());
+        assertEquals("Ты позавтракал?", resultCardList.get(1).getRussianSentence());
     }
 
     @Test
@@ -40,7 +45,7 @@ class CardListHelperTest {
         cardList.add(new Card(1,"Breakfast is very good","Завтрак хорош"));
         cardList.add(new Card(2,"",""));
         cardList.add(new Card(3,"I am not tall","Я не высокий"));
-        cardList.add(new Card(4,"Ask you be careful with it","Прошу, будь осторожен"));
+        cardList.add(new Card(4,"  Ask you be   careful with it ","Прошу, будь осторожен"));
 
         // when
         List<Card> resultCardList = CardListHelper.getInstance(cardList)

@@ -20,6 +20,7 @@ generator = Blueprint('generator', __name__)
 def analyze():
     title = request.args.get('title')
     text = ai.generate_text(title)
+    print("------>full generated text -->", text)
     # text = "The maximum character limit on a single text is 15k.You can use another google translate domain for " \
     #        "translation "
     text = split_text(text)

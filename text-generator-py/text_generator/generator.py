@@ -16,11 +16,11 @@ from text_generator import encoder
 
 class AI:
     def generate_text(self, input_text):
-        model_name='124M'
+        model_name='HEALTH'
         seed=None
         nsamples=1
         batch_size=1
-        length=150
+        length=550
         temperature=1
         top_k=40
         top_p=0.0

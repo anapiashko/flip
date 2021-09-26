@@ -81,7 +81,8 @@ public final class CardListHelper {
     public static List<Card> clone(List<Card> cards) {
         List<Card> temp = new ArrayList<>();
         for (Card card : cards) {
-            temp.add(new Card(card.getId(), card.getEnglishSentence(), card.getRussianSentence()));
+            String trimmedEnSen = card.getEnglishSentence().trim().replaceAll("\\s{2,}", " ");
+            temp.add(new Card(card.getId(), trimmedEnSen, card.getRussianSentence()));
         }
         return temp;
     }
