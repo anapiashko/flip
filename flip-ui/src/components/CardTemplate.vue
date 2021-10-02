@@ -2,7 +2,7 @@
   <div id="app">
     <h1>Your Upcoming Destinations</h1>
     <div class="location-contain">
-      <div id="place" class="locations" v-for="location in locations" :key="location.name">
+      <div id="place"  class="locations" v-for="location in locations" :key="location.name">
         <place :location="location">
           <h2>{{ location.name }}</h2>
            <img :src="location.img" width="25%" />
