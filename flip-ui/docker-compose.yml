@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  vue-ui:
+    image: flip-ui
+    ports:
+      - "3000:8080"
+    container_name: vue-ui

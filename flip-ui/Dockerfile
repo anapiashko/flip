@@ -2,15 +2,15 @@
 FROM node:14.17.6
 
 # set working directory
-RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
-
-# add `/usr/src/app/node_modules/.bin` to $PATH
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
+WORKDIR /app
 
 # install and cache app dependencies
-COPY package.json /usr/src/app/package.json
+COPY package*.json /app/
 RUN npm install
 RUN npm install -g @vue/cli
+
+COPY . /app
+RUN npm run build
+
 # start app
 CMD ["npm", "run", "serve"]
