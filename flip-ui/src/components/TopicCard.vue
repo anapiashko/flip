@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'CardTemplate',
+  name: 'TopicCard',
   props: {
     locations: Array
   }

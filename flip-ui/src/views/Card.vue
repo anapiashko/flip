@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <CardTemplate
+    <TopicCard
       :locations="[{
                                        name: 'moscow',
                                        img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/moscow.svg',
@@ -22,12 +22,12 @@
 
 <script>
 // @ is an alias to /src
-import CardTemplate from '@/components/CardTemplate.vue'
+import TopicCard from '@/components/TopicCard.vue'
 
 export default {
   name: 'Card',
   components: {
-    CardTemplate
+    TopicCard
   }
 }
 </script>
