@@ -1,23 +1,58 @@
 <template>
   <div id="app">
     <h1>Your Upcoming Destinations</h1>
+    <p>{{ this.info }}</p>
     <div class="location-contain">
-      <div id="place"  class="locations" v-for="location in locations" :key="location.name">
-        <place :location="location">
-          <h2>{{ location.name }}</h2>
-           <img :src="location.img" width="25%" />
-           <p>{{ location.desc }}</p>
-        </place>
+      <div id="place"
+        style="cursor: pointer;" @click="redirectToHome(location.name)"
+        class="locations" v-for="location in locations" :key="location.name">
+
+        <h2 :id="location.name" ref="header">{{ location.name }}</h2>
+        <img :src="location.img" width="25%" />
+        <p>{{ location.desc }}</p>
+
       </div>
+    </div>
+    <div>
+      {{ this.info.id }}
     </div>
   </div>
 </template>
 
 <script>
+// import axios from 'axios'
 export default {
   name: 'TopicCard',
   props: {
     locations: Array
+  },
+  data () {
+    return {
+      info: [
+        {
+          id: 1, name: 'nastya'
+        }
+      ]
+    }
+  },
+  methods: {
+    async redirectToHome (locationName) {
+      console.log(locationName)
+      console.log(document.getElementById('place').getElementsByTagName('h2')[0].innerText)
+      try {
+        const res = await this.$http.get('http://localhost:8000/a', {
+          params: {
+            title: locationName
+          }
+        })
+
+        this.info = res.data
+
+        console.log(this.info.data.id)
+      } catch (e) {
+        console.error(e)
+      }
+    }
   }
 }
 </script>
