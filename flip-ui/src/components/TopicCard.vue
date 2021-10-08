@@ -20,7 +20,7 @@
 </template>
 
 <script>
-// import axios from 'axios'
+import axios from 'axios'
 export default {
   name: 'TopicCard',
   props: {
@@ -40,7 +40,7 @@ export default {
       console.log(locationName)
       console.log(document.getElementById('place').getElementsByTagName('h2')[0].innerText)
       try {
-        const res = await this.$http.get('http://localhost:8000/a', {
+        const res = await axios.get('http://localhost:8000/a', {
           params: {
             title: locationName
           }
@@ -48,7 +48,8 @@ export default {
 
         this.info = res.data
 
-        console.log(this.info.data.id)
+        console.log(this.info[0].id)
+        await this.$router.push('/about')
       } catch (e) {
         console.error(e)
       }
