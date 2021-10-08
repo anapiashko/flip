@@ -25,7 +25,7 @@
 import TopicCard from '@/components/TopicCard.vue'
 
 export default {
-  name: 'Card',
+  name: 'Topic',
   components: {
     TopicCard
   }
