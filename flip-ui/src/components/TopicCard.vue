@@ -13,14 +13,12 @@
 
       </div>
     </div>
-    <div>
-      {{ this.info.id }}
-    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+let info
 export default {
   name: 'TopicCard',
   props: {
@@ -28,17 +26,13 @@ export default {
   },
   data () {
     return {
-      info: [
-        {
-          id: 1, name: 'nastya'
-        }
-      ]
+      info
     }
   },
   methods: {
     async redirectToHome (locationName) {
+      console.log('redirectToHome')
       console.log(locationName)
-      console.log(document.getElementById('place').getElementsByTagName('h2')[0].innerText)
       try {
         const res = await axios.get('http://localhost:8000/a', {
           params: {
@@ -46,10 +40,13 @@ export default {
           }
         })
 
-        this.info = res.data
+        info = res.data
 
-        console.log(this.info[0].id)
-        await this.$router.push('/about')
+        console.log(info)
+        console.log(info[0].id)
+        console.log(info[0].en_sentence)
+        console.log(info[0].rus_sentence)
+        await this.$router.push('/sentences')
       } catch (e) {
         console.error(e)
       }
