@@ -2,11 +2,14 @@
   <div id="container">
     <a class="card-link" >
       <article class="blog-card">
-        <img class="post-image" :src="image" style="cursor: pointer;" @click="test()"/>
+        <img class="post-image" :src="image"/>
         <div class="article-details" style="cursor: pointer;" >
+          <h2>{{ counter }}</h2>
           <h4 class="post-category">{{ category }}</h4>
-          <h3 class="post-title">{{ name }}</h3>
-          <p class="post-description">{{ desc }}</p>
+          <h3 class="post-title">{{ info[counter].en_sentence }}</h3>
+          <p class="post-description">{{ info[counter].rus_sentence }}</p>
+          <input v-model="name" placeholder="Enter Name" v-on:keyup.enter="onEnter()">
+          <p class="post-description">{{ info[counter].missedWord }}</p>
           <p class="post-author">By {{ author }}</p>
         </div>
       </article>
@@ -16,30 +19,51 @@
 
 <script>
 import TopicCard from '@/components/TopicCard.vue'
+import axios from 'axios'
+
+let info
+const counter = 0
 
 export default {
   name: 'SentenceCard',
   data: () => ({
+    info: info,
+    counter: counter,
     name: '10 Best Things to Do in Seattle',
     category: 'Travel',
     image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/pike-place.jpg',
     author: 'Anastasiya Piashko',
     desc: 'Seattle is a seaport city on the west coast of the United States...'
   }),
-  mounted () {
-    console.log('mounted')
-    const data2 = TopicCard.data().info
-    console.log(data2)
-    this.desc = data2
+  beforeCreate () {
+    console.log('beforeCreate. Nothing gets called before me!')
+    info = TopicCard.data().info
+    console.log(info)
   },
   methods: {
-    async test () {
-      console.log('test')
-      const data1 = TopicCard.data().info
-      console.log(data1)
-      console.log(data1[0].id)
-      console.log(data1[0].en_sentence)
-      console.log(data1[0].rus_sentence)
+    onEnter: function () {
+      console.log('onEnter')
+      if ((this.counter + 1) < info.length) {
+        this.counter += 1
+      } else {
+        console.log('else')
+        this.send()
+        this.counter = 0
+      }
+    },
+    async send () {
+      console.log('send')
+      try {
+        const res = await axios.get('http://localhost:8000/a', {
+          params: {
+            title: 'health'
+          }
+        })
+        info = res.data
+        console.log(info)
+      } catch (e) {
+        console.error(e)
+      }
     }
   }
 }
