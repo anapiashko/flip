@@ -18,7 +18,10 @@
 
 <script>
 import axios from 'axios'
+
 let info
+let topic
+
 export default {
   name: 'TopicCard',
   props: {
@@ -26,13 +29,16 @@ export default {
   },
   data () {
     return {
-      info
+      info,
+      topic
     }
   },
   methods: {
     async redirectToHome (locationName) {
       console.log('redirectToHome')
-      console.log(locationName)
+      topic = locationName
+      console.log('locationName = ', locationName)
+      console.log('topic = ', topic)
       try {
         const res = await axios.get('http://localhost:8000/a', {
           params: {

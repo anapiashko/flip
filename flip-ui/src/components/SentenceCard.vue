@@ -22,6 +22,7 @@ import TopicCard from '@/components/TopicCard.vue'
 import axios from 'axios'
 
 let info
+let topic
 const counter = 0
 
 export default {
@@ -53,10 +54,12 @@ export default {
     },
     async send () {
       console.log('send')
+      topic = TopicCard.data().topic
+      console.log('topic = ', topic)
       try {
         const res = await axios.get('http://localhost:8000/a', {
           params: {
-            title: 'health'
+            title: topic
           }
         })
         info = res.data
