@@ -6,9 +6,12 @@
         <div class="article-details" style="cursor: pointer;" >
           <h2>{{ counter }}</h2>
           <h4 class="post-category">{{ category }}</h4>
-          <h3 class="post-title">{{ sentences[counter].en_sentence }}</h3>
+          <div id="english_sentence" :missed="getMissedWord(sentences[counter])">
+          <h3 class="post-title">{{ getFirstSentencePart(sentences[counter]) }}</h3>
+          <input v-model="typedWord" placeholder="Enter Name" v-on:keyup.enter="onEnter()">
+            <h3 class="post-title">{{ getLastSentencePart(sentences[counter]) }}</h3>
+          </div>
           <p class="post-description">{{ sentences[counter].rus_sentence }}</p>
-          <input v-model="name" placeholder="Enter Name" v-on:keyup.enter="onEnter()">
           <p class="post-description">{{ sentences[counter].missedWord }}</p>
           <p class="post-author">By {{ author }}</p>
         </div>
@@ -23,13 +26,20 @@ import axios from 'axios'
 
 let sentences
 let topic
-const counter = 0
+
+let missedWord
+let firstSentencePart
+let lastSentencePart
 
 export default {
   name: 'SentenceCard',
   data: () => ({
     sentences: sentences,
-    counter: counter,
+    counter: 0,
+    typedWord: '',
+    missedWord: missedWord,
+    firstSentencePart: firstSentencePart,
+    lastSentencePart: lastSentencePart,
     name: '10 Best Things to Do in Seattle',
     category: 'Travel',
     image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/pike-place.jpg',
@@ -42,15 +52,44 @@ export default {
     console.log(sentences)
   },
   methods: {
+    getFirstSentencePart (sentence) {
+      console.log('getFirstSentencePart')
+      const arr = (sentence !== null) ? sentence.en_sentence.split(' ') : ''
+      const subArr = arr.splice(0, sentence.missedWord)
+      firstSentencePart = subArr.join(' ')
+      console.log('firstSentencePart = ', firstSentencePart)
+      return firstSentencePart
+    },
+    getLastSentencePart (sentence) {
+      console.log('getLastSentencePart')
+      const arr = (sentence !== null) ? sentence.en_sentence.split(' ') : ''
+      const subArr = arr.splice(sentence.missedWord + 1, arr.length)
+      lastSentencePart = subArr.join(' ')
+      console.log('lastSentencePart = ', lastSentencePart)
+      return lastSentencePart
+    },
+    getMissedWord (sentence) {
+      console.log('getMissedWord')
+      const arr = (sentence !== null) ? sentence.en_sentence.split(' ') : ''
+      const word = arr[sentence.missedWord]
+      missedWord = (word !== null) ? word : ''
+      console.log('missed word = ', missedWord)
+      return (word !== null) ? word : ''
+    },
     onEnter: function () {
       console.log('onEnter')
-      if ((this.counter + 1) < sentences.length) {
-        this.counter += 1
-      } else {
-        console.log('else')
-        this.send()
-        this.counter = 0
+      console.log('typedWord = ', this.typedWord)
+      console.log(this.typedWord === missedWord)
+      if (this.typedWord === missedWord) {
+        if ((this.counter + 1) < sentences.length) {
+          this.counter += 1
+        } else {
+          console.log('else')
+          this.send()
+          this.counter = 0
+        }
       }
+      this.typedWord = ''
     },
     async send () {
       console.log('send')
@@ -108,6 +147,21 @@ body {
   align-items: center;
   justify-content: center;
   text-rendering: optimizeLegibility;
+}
+
+input,
+input:focus {
+  width:100%;
+  border:0;
+  padding:10px 0;
+  font-size:1em;
+  background:none;
+  color:#559;
+  outline:0px solid transparent;
+}
+
+#english_sentence {
+  display:flex
 }
 
 #container {
