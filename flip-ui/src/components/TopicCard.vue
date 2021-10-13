@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>Your Upcoming Destinations</h1>
-    <p>{{ this.info }}</p>
+    <p>{{ this.sentences }}</p>
     <div class="location-contain">
       <div id="place"
         style="cursor: pointer;" @click="redirectToHome(location.name)"
@@ -19,7 +19,7 @@
 <script>
 import axios from 'axios'
 
-let info
+let sentences
 let topic
 
 export default {
@@ -29,7 +29,7 @@ export default {
   },
   data () {
     return {
-      info,
+      sentences: sentences,
       topic
     }
   },
@@ -46,12 +46,12 @@ export default {
           }
         })
 
-        info = res.data
+        sentences = res.data
 
-        console.log(info)
-        console.log(info[0].id)
-        console.log(info[0].en_sentence)
-        console.log(info[0].rus_sentence)
+        console.log(sentences)
+        console.log(sentences[0].id)
+        console.log(sentences[0].en_sentence)
+        console.log(sentences[0].rus_sentence)
         await this.$router.push('/sentences')
       } catch (e) {
         console.error(e)

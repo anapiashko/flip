@@ -6,10 +6,10 @@
         <div class="article-details" style="cursor: pointer;" >
           <h2>{{ counter }}</h2>
           <h4 class="post-category">{{ category }}</h4>
-          <h3 class="post-title">{{ info[counter].en_sentence }}</h3>
-          <p class="post-description">{{ info[counter].rus_sentence }}</p>
+          <h3 class="post-title">{{ sentences[counter].en_sentence }}</h3>
+          <p class="post-description">{{ sentences[counter].rus_sentence }}</p>
           <input v-model="name" placeholder="Enter Name" v-on:keyup.enter="onEnter()">
-          <p class="post-description">{{ info[counter].missedWord }}</p>
+          <p class="post-description">{{ sentences[counter].missedWord }}</p>
           <p class="post-author">By {{ author }}</p>
         </div>
       </article>
@@ -21,14 +21,14 @@
 import TopicCard from '@/components/TopicCard.vue'
 import axios from 'axios'
 
-let info
+let sentences
 let topic
 const counter = 0
 
 export default {
   name: 'SentenceCard',
   data: () => ({
-    info: info,
+    sentences: sentences,
     counter: counter,
     name: '10 Best Things to Do in Seattle',
     category: 'Travel',
@@ -38,13 +38,13 @@ export default {
   }),
   beforeCreate () {
     console.log('beforeCreate. Nothing gets called before me!')
-    info = TopicCard.data().info
-    console.log(info)
+    sentences = TopicCard.data().sentences
+    console.log(sentences)
   },
   methods: {
     onEnter: function () {
       console.log('onEnter')
-      if ((this.counter + 1) < info.length) {
+      if ((this.counter + 1) < sentences.length) {
         this.counter += 1
       } else {
         console.log('else')
@@ -62,8 +62,8 @@ export default {
             title: topic
           }
         })
-        info = res.data
-        console.log(info)
+        sentences = res.data
+        console.log(sentences)
       } catch (e) {
         console.error(e)
       }
