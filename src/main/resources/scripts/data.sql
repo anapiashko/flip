@@ -1,1 +1,1 @@
-insert IGNORE into card (id, en_sentence, rus_sentence, missed_word) values (1, 'Did you get any breakfast?', 'Ты завтракал?', 4);
+insert IGNORE into card (id, en_sentence, rus_sentence, missed_word, topic) values (1, 'Did you get any breakfast?', 'Ты завтракал?', 4, 'HEALTH');

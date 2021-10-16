@@ -68,6 +68,8 @@ public final class CardListHelper {
                         break;
                     }
                 }
+            } else {
+                temp.add(card);
             }
         }
         newCards = temp;
@@ -82,7 +84,7 @@ public final class CardListHelper {
         List<Card> temp = new ArrayList<>();
         for (Card card : cards) {
             String trimmedEnSen = card.getEnglishSentence().trim().replaceAll("\\s{2,}", " ");
-            temp.add(new Card(card.getId(), trimmedEnSen, card.getRussianSentence()));
+            temp.add(new Card(card.getId(), trimmedEnSen, card.getRussianSentence(), card.getMissedWord(), card.getCardTopic()));
         }
         return temp;
     }

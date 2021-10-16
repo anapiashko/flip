@@ -1,5 +1,6 @@
 package com.app.flip.model;
 
+import com.app.flip.utils.CardTopic;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
@@ -23,11 +24,23 @@ public class Card {
 
     private Integer missedWord;
 
+    @Column(name = "topic")
+    @Enumerated(EnumType.STRING)
+    private CardTopic cardTopic;
+
     public Card (){}
 
     public Card(Integer id, String englishSentence, String russianSentence) {
         this.id = id;
         this.englishSentence = englishSentence;
         this.russianSentence = russianSentence;
+    }
+
+    public Card(Integer id, String englishSentence, String russianSentence, Integer missedWord, CardTopic cardTopic) {
+        this.id = id;
+        this.englishSentence = englishSentence;
+        this.russianSentence = russianSentence;
+        this.missedWord = missedWord;
+        this.cardTopic = cardTopic;
     }
 }

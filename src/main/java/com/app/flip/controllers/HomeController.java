@@ -3,25 +3,14 @@ package com.app.flip.controllers;
 import com.app.flip.model.Card;
 import com.app.flip.services.CardServiceImpl;
 import com.app.flip.services.TextGeneratorServiceImpl;
+import com.app.flip.utils.CardTopic;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.FileSystemResource;
-import org.springframework.core.io.InputStreamResource;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.awt.*;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.UUID;
 
 @RestController
 @Slf4j
@@ -36,19 +25,11 @@ public class HomeController {
         this.textGeneratorService = textGeneratorService;
     }
 
-    @GetMapping("/a")
-    public List<Card> homeA() {
-        log.info("homeA");
-        List<Card> cards = textGeneratorService.getText();
+    @GetMapping("/generate")
+    public List<? extends Card> generateSampleByTopic(@RequestParam String topic) {
+        log.info("Generate Sentences by topic name, topic = {}", topic);
+        List<Card> cards = textGeneratorService.getText(topic);
         return cardService.saveAll(cards);
-    }
-
-    @GetMapping("/resource")
-    public Map<String, Object> home() {
-        Map<String, Object> model = new HashMap<>();
-        model.put("id", UUID.randomUUID().toString());
-        model.put("content", "Hello World");
-        return model;
     }
 
 //    @RequestMapping("/tmp")
