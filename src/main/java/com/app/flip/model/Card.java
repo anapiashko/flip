@@ -30,12 +30,6 @@ public class Card {
 
     public Card (){}
 
-    public Card(Integer id, String englishSentence, String russianSentence) {
-        this.id = id;
-        this.englishSentence = englishSentence;
-        this.russianSentence = russianSentence;
-    }
-
     public Card(Integer id, String englishSentence, String russianSentence, Integer missedWord, CardTopic cardTopic) {
         this.id = id;
         this.englishSentence = englishSentence;
