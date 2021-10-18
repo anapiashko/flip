@@ -25,6 +25,7 @@ public class Card {
     private Integer missedWord;
 
     @Column(name = "topic")
+    @JsonProperty("topic")
     @Enumerated(EnumType.STRING)
     private CardTopic cardTopic;
 
