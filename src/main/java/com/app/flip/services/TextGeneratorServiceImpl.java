@@ -20,11 +20,11 @@ public class TextGeneratorServiceImpl {
         this.restTemplate = restTemplate;
     }
 
-    public List<Card> getText() {
-        log.info("getText");
+    public List<Card> getText(String topic) {
+        log.info("Sending request to generator with topic = {}", topic);
         List<Card> cards =  Arrays.asList(
                 Objects.requireNonNull(
-                        restTemplate.getForObject("http://localhost:5000/analyze?title=health", Card[].class)
+                        restTemplate.getForObject("http://localhost:5000/analyze?title=" + topic, Card[].class)
                 ));
 
         cards = CardListHelper.getInstance(cards)
