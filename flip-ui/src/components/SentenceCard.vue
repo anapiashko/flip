@@ -89,6 +89,8 @@ export default {
           this.counter = 0
         }
       }
+      // send request to java with card_id and boolean value
+      // if user typed correct word or not
       this.typedWord = ''
     },
     async send () {

@@ -26,7 +26,7 @@ public class HomeController {
     }
 
     @GetMapping("/generate")
-    public List<? extends Card> generateSampleByTopic(@RequestParam String topic) {
+    public List<Card> generateSampleByTopic(@RequestParam String topic) {
         log.info("Generate Sentences by topic name, topic = {}", topic);
         List<Card> cards = textGeneratorService.getText(topic);
         return cardService.saveAll(cards);
