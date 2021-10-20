@@ -29,7 +29,7 @@ def analyze():
     for sen in text:
         translation = translator.translate(sen, dest='ru').text
         print("-------->translation", translation)
-        new.append(Sentence(sen, str(translation)))
+        new.append(Sentence(sen, str(translation), title.upper()))
 
     # print("text", text)
     # print("new[0].rus_sentence", new[0].rus_sentence)
