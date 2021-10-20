@@ -14,16 +14,17 @@ from text_generator import model
 from text_generator import sample
 from text_generator import encoder
 
+
 class AI:
     def generate_text(self, input_text):
-        model_name='HEALTH'
-        seed=None
-        nsamples=1
-        batch_size=1
-        length=550
-        temperature=1
-        top_k=40
-        top_p=0.0
+        model_name = input_text.upper()
+        seed = None
+        nsamples = 1
+        batch_size = 1
+        length = 550
+        temperature = 1
+        top_k = 40
+        top_p = 0.0
 
         self.response = ""
 
@@ -76,8 +77,9 @@ class AI:
 
         return self.response
 
+
 ai = AI()
-#text = ai.generate_text("The Jedi")
-#print(text)
+# text = ai.generate_text("The Jedi")
+# print(text)
 # Table of Contents
 # 1. - X.
