@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  mysql-app:
+    image: mysql:8.0.26
+    environment:
+      MYSQL_USER: flip_user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3307:3306
+    volumes:
+      - ./_infrastructure/mysql/datadir/:/var/lib/mysql
+      - ./_infrastructure/mysql/init/:/docker-entrypoint-initdb.d/
