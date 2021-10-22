@@ -27,6 +27,7 @@ import axios from 'axios'
 let sentences
 let topic
 
+let sentenceId
 let missedWord
 let firstSentencePart
 let lastSentencePart
@@ -58,6 +59,7 @@ export default {
       const subArr = arr.splice(0, sentence.missedWord)
       firstSentencePart = subArr.join(' ')
       console.log('firstSentencePart = ', firstSentencePart)
+      sentenceId = sentence.id
       return firstSentencePart
     },
     getLastSentencePart (sentence) {
@@ -79,32 +81,44 @@ export default {
     onEnter: function () {
       console.log('onEnter')
       console.log('typedWord = ', this.typedWord)
-      console.log(this.typedWord === missedWord)
-      if (this.typedWord === missedWord) {
+      const isTypedWordCorrect = (this.typedWord === missedWord)
+      console.log(isTypedWordCorrect)
+      if (isTypedWordCorrect) {
         if ((this.counter + 1) < sentences.length) {
           this.counter += 1
         } else {
           console.log('else')
-          this.send()
+          this.requestForAdditionalSentenceSet()
           this.counter = 0
         }
       }
-      // send request to java with card_id and boolean value
-      // if user typed correct word or not
+      this.updateProgress(isTypedWordCorrect)
       this.typedWord = ''
     },
-    async send () {
-      console.log('send')
+    async requestForAdditionalSentenceSet () {
+      console.log('requestForAdditionalSentenceSet')
       topic = TopicCard.data().topic
       console.log('topic = ', topic)
       try {
-        const res = await axios.get('http://localhost:8000/a', {
+        const res = await axios.get('http://localhost:8000/generate', {
           params: {
-            title: topic
+            topic: topic
           }
         })
         sentences = res.data
         console.log(sentences)
+      } catch (e) {
+        console.error(e)
+      }
+    },
+    async updateProgress (isTypedWordCorrect) {
+      console.log('updateProgress')
+      console.log('sentenceId = ', sentenceId)
+      try {
+        await axios.post('http://localhost:8000/change-progress', {
+          card_id: sentenceId,
+          typed_correct: isTypedWordCorrect
+        })
       } catch (e) {
         console.error(e)
       }
@@ -159,7 +173,7 @@ input:focus {
   font-size:1em;
   background:none;
   color:#559;
-  outline:0px solid transparent;
+  outline:0 solid transparent;
 }
 
 #english_sentence {
