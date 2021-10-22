@@ -1,6 +1,5 @@
 <template>
   <div id="container">
-    <a class="card-link" >
       <article class="blog-card">
         <img class="post-image" :src="image"/>
         <div class="article-details" style="cursor: pointer;" >
@@ -16,7 +15,6 @@
           <p class="post-author">By {{ author }}</p>
         </div>
       </article>
-    </a>
    </div>
 </template>
 
@@ -48,7 +46,7 @@ export default {
     desc: 'Seattle is a seaport city on the west coast of the United States...'
   }),
   beforeCreate () {
-    console.log('beforeCreate. Nothing gets called before me!')
+    console.log('beforeCreate. Nothing gets called before me!'.toUpperCase())
     sentences = TopicCard.data().sentences
     console.log(sentences)
   },
@@ -181,8 +179,13 @@ input:focus {
 }
 
 #container {
-  width: 30rem;
+  width: 40rem;
   height: 13.625rem;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 .blog-card {
