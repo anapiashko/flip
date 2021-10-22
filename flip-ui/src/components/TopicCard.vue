@@ -2,14 +2,13 @@
   <div id="app">
     <h1>Your Upcoming Destinations</h1>
     <p>{{ this.sentences }}</p>
-    <div class="location-contain">
-      <div id="place"
-        style="cursor: pointer;" @click="redirectToHome(location.name)"
-        class="locations" v-for="location in locations" :key="location.name">
+    <div class="topic-contain">
+      <div id="topics" style="cursor: pointer;" @click="goToSentenceCards(topic.name)"
+           v-for="topic in topics" :key="topic.name">
 
-        <h2 :id="location.name" ref="header">{{ location.name }}</h2>
-        <img :src="location.img" width="25%" />
-        <p>{{ location.desc }}</p>
+        <h2 :id="topic.name" ref="header">{{ topic.name }}</h2>
+        <img :src="topic.img" width="25%" />
+        <p>{{ topic.desc }}</p>
 
       </div>
     </div>
@@ -25,7 +24,7 @@ let topic
 export default {
   name: 'TopicCard',
   props: {
-    locations: Array
+    topics: Array
   },
   data () {
     return {
@@ -34,15 +33,15 @@ export default {
     }
   },
   methods: {
-    async redirectToHome (locationName) {
-      console.log('redirectToHome')
-      topic = locationName
-      console.log('locationName = ', locationName)
+    async goToSentenceCards (topicName) {
+      console.log('goToSentenceCards')
+      topic = topicName
+      console.log('topicName = ', topicName)
       console.log('topic = ', topic)
       try {
-        const res = await axios.get('http://localhost:8000/a', {
+        const res = await axios.get('http://localhost:8000/generate', {
           params: {
-            title: locationName
+            topic: topicName
           }
         })
 
@@ -73,12 +72,12 @@ h1 {
   text-align: center;
 }
 
-.location-contain {
+.topic-contain {
   display: flex;
   justify-content: center;
 }
 
-#place {
+#topics {
   display: flex;
   flex-direction: column;
   width: 280px;
