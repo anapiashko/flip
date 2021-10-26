@@ -7,11 +7,10 @@
           <h4 class="post-category">{{ category }}</h4>
           <div id="english_sentence" :missed="getMissedWord(sentences[counter])">
           <h3 class="post-title">{{ getFirstSentencePart(sentences[counter]) }}</h3>
-          <input v-model="typedWord" placeholder="Enter Name" v-on:keyup.enter="onEnter()">
+          <input id="input-word" v-model.lazy.trim="typedWord" :style="{width: missedWord.length * 1.5 + 'ch'}" v-on:keyup.enter="onEnter()">
             <h3 class="post-title">{{ getLastSentencePart(sentences[counter]) }}</h3>
           </div>
           <p class="post-description">{{ sentences[counter].rus_sentence }}</p>
-          <p class="post-description">{{ sentences[counter].missedWord }}</p>
           <p class="post-author">By {{ author }}</p>
         </div>
       </article>
@@ -49,6 +48,13 @@ export default {
     console.log('beforeCreate. Nothing gets called before me!'.toUpperCase())
     sentences = TopicCard.data().sentences
     console.log(sentences)
+
+    console.log('getMissedWord beforeCreate'.toUpperCase())
+    const arr = (sentences[0] !== null) ? sentences[0].en_sentence.split(' ') : ''
+    const word = arr[sentences[0].missedWord]
+    missedWord = (word !== null) ? word : ''
+    console.log('missed word = ', missedWord)
+    return (word !== null) ? word : ''
   },
   methods: {
     getFirstSentencePart (sentence) {
@@ -70,6 +76,7 @@ export default {
     },
     getMissedWord (sentence) {
       console.log('getMissedWord')
+      console.log('sentence = ', sentence)
       const arr = (sentence !== null) ? sentence.en_sentence.split(' ') : ''
       const word = arr[sentence.missedWord]
       missedWord = (word !== null) ? word : ''
@@ -92,6 +99,10 @@ export default {
       }
       this.updateProgress(isTypedWordCorrect)
       this.typedWord = ''
+
+      this.getMissedWord(sentences[this.counter])
+      console.log(' missedWord.length = ', missedWord.length)
+      document.getElementById('input-word').style.width = missedWord.length * 1.5 + 'ch'
     },
     async requestForAdditionalSentenceSet () {
       console.log('requestForAdditionalSentenceSet')
