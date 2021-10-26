@@ -174,14 +174,18 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-input,
-input:focus {
-  width:100%;
+input {
+  @include transition(color 0.3s ease);
+  font-size: 1.125rem;
+  line-height: 1.4;
+  color: $black;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+
+  padding-left: 7px;
+  padding-right: 5px;
+  padding-top: 0;
   border:0;
-  padding:10px 0;
-  font-size:1em;
-  background:none;
-  color:#559;
   outline:0 solid transparent;
 }
 
@@ -206,23 +210,6 @@ input:focus {
   box-shadow: 0 0.1875rem 1.5rem $shadow;
   border-radius: 0.375rem;
   overflow: hidden;
-}
-
-.card-link {
-  position: relative;
-  display: block;
-  color: inherit;
-  text-decoration: none;
-
-  &:hover .post-title {
-    @include transition(color 0.3s ease);
-    color: $red;
-  }
-
-  &:hover .post-image {
-    @include transition(opacity 0.3s ease);
-    opacity: 0.9;
-  }
 }
 
 .post-image {
