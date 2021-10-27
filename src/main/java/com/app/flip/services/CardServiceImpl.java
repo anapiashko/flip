@@ -2,6 +2,7 @@ package com.app.flip.services;
 
 import com.app.flip.dao.CardRepository;
 import com.app.flip.model.Card;
+import com.app.flip.utils.CardTopic;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -24,5 +25,9 @@ public class CardServiceImpl implements CardService {
         List<Card> savedCards = new ArrayList<>();
         cardRepository.saveAll(cards).forEach(savedCards::add);
         return savedCards;
+    }
+
+    public List<Card> getSample(CardTopic cardTopic){
+        return cardRepository.findByCardTopic(cardTopic.name());
     }
 }
