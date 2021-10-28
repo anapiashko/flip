@@ -5,6 +5,7 @@ import com.app.flip.model.Progress;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -14,6 +15,10 @@ public class ProgressServiceImpl {
 
     public ProgressServiceImpl(ProgressRepository progressRepository) {
         this.progressRepository = progressRepository;
+    }
+
+    public void saveAll(List<Progress> progresses){
+        progressRepository.saveAll(progresses);
     }
 
     /**

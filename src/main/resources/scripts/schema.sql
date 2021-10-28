@@ -8,7 +8,7 @@ create table IF NOT EXISTS card (
 
 create table IF NOT EXISTS progress (
     id int auto_increment primary key,
-    card_id int NOT NULL,
+    card_id int UNIQUE NOT NULL,
     probability DECIMAL( 5, 2 ) default 1,
     CONSTRAINT record_to_card_fk
         FOREIGN KEY (card_id) REFERENCES card (id)

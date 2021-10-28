@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 8.0.11, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.35, for Linux (x86_64)
 --
--- Host: localhost    Database: flip
+-- Host: 127.0.0.1    Database: flip
 -- ------------------------------------------------------
--- Server version	8.0.11
+-- Server version	8.0.26
 use flip;
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
- SET NAMES utf8mb4 ;
+/*!40101 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,12 +21,12 @@ use flip;
 
 DROP TABLE IF EXISTS `card`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `card` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int NOT NULL AUTO_INCREMENT,
   `en_sentence` varchar(150) NOT NULL,
   `rus_sentence` varchar(150) NOT NULL,
-  `missed_word` int(11) NOT NULL,
+  `missed_word` int NOT NULL,
   `topic` enum('HEALTH','TRAVEL') DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -48,15 +48,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `progress`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `progress` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `card_id` int(11) UNIQUE NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `card_id` int NOT NULL,
   `probability` decimal(5,2) DEFAULT '1.00',
   PRIMARY KEY (`id`),
+  UNIQUE KEY `card_id` (`card_id`),
   KEY `record_to_card_fk` (`card_id`),
   CONSTRAINT `record_to_card_fk` FOREIGN KEY (`card_id`) REFERENCES `card` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +66,7 @@ CREATE TABLE `progress` (
 
 LOCK TABLES `progress` WRITE;
 /*!40000 ALTER TABLE `progress` DISABLE KEYS */;
-INSERT INTO `progress` VALUES (1,1,1.00),(2,10,0.05);
+INSERT INTO `progress` VALUES (4,1,1.00),(5,7,1.00),(6,10,1.00),(7,11,1.00),(8,12,1.00),(9,13,1.00),(10,14,1.00),(11,17,1.00),(12,20,1.00),(13,21,1.00),(14,23,1.00),(15,24,1.00),(16,28,1.00),(17,29,1.00),(18,31,1.00),(19,32,1.00),(20,34,1.00),(21,35,1.00),(22,38,1.00),(23,40,1.00),(24,41,1.00),(25,42,1.00),(26,43,1.00),(27,45,1.00),(28,46,1.00),(29,47,1.00),(30,48,1.00),(31,49,1.00),(32,50,1.00),(33,51,1.00),(34,52,1.00),(35,53,1.00),(36,54,1.00),(37,55,1.00),(38,56,1.00),(39,59,1.00),(40,60,1.00),(41,61,1.00),(42,63,1.00),(43,65,1.00),(44,67,1.00),(45,68,1.00),(46,69,1.00);
 /*!40000 ALTER TABLE `progress` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -78,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-20 21:18:29
+-- Dump completed on 2021-10-28 23:55:16
