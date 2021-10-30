@@ -4,6 +4,7 @@ import com.app.flip.dao.CardRepository;
 import com.app.flip.model.Card;
 import com.app.flip.model.Progress;
 import com.app.flip.utils.CardTopic;
+import com.app.flip.utils.Constants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -38,17 +39,17 @@ public class CardServiceImpl implements CardService {
 
         List<Card> resultCollection = new ArrayList<>();
 
-        List<Card> newCards = cardRepository.findNewByCardTopic(cardTopic.name(), 5);
-        List<Card> seenCards = cardRepository.findSeenByCardTopic(cardTopic.name(), 10);
+        List<Card> newCards = cardRepository.findNewByCardTopic(cardTopic.name(), Constants.NEW_CARDS_SIZE);
+        List<Card> seenCards = cardRepository.findSeenByCardTopic(cardTopic.name(), Constants.SEEN_CARDS_SIZE);
 
-        if (seenCards.size() < 10) {
-            newCards.addAll(cardRepository.findNewByCardTopic(cardTopic.name(), 10));
+        if (seenCards.size() < Constants.SEEN_CARDS_SIZE) {
+            newCards.addAll(cardRepository.findNewByCardTopic(cardTopic.name(), Constants.SEEN_CARDS_SIZE));
             newCards = newCards.stream().distinct().collect(Collectors.toList());
         }
 
         resultCollection.addAll(newCards);
         resultCollection.addAll(seenCards);
-        resultCollection = resultCollection.stream().limit(15).collect(Collectors.toList());
+        resultCollection = resultCollection.stream().limit(Constants.SAMPLE_SIZE).collect(Collectors.toList());
 
         return resultCollection;
     }
