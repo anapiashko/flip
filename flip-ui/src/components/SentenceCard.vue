@@ -6,9 +6,9 @@
           <h2>{{ counter }}</h2>
           <h4 class="post-category">{{ category }}</h4>
           <div id="english_sentence" :missed="getMissedWord(sentences[counter])">
-          <h3 class="post-title">{{ getFirstSentencePart(sentences[counter]) }}</h3>
-          <input id="input-word" v-model.lazy.trim="typedWord" :style="{width: missedWord.length * 1.5 + 'ch'}" v-on:keyup.enter="onEnter()">
-            <h3 class="post-title">{{ getLastSentencePart(sentences[counter]) }}</h3>
+            <h3 class="post-title">{{ getFirstSentencePart(sentences[counter]) }}
+            <input id="input-word" v-model.lazy.trim="typedWord" :style="{width: missedWord.length * 1.5 + 'ch'}" v-on:keyup.enter="onEnter()">
+            {{ getLastSentencePart(sentences[counter]) }}</h3>
           </div>
           <p class="post-description">{{ sentences[counter].rus_sentence }}</p>
           <p class="post-author">By {{ author }}</p>
@@ -196,6 +196,8 @@ input {
   padding-top: 0;
   border:0;
   outline:0 solid transparent;
+
+  letter-spacing: 0.19em;
 }
 
 #english_sentence {
