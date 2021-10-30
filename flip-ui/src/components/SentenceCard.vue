@@ -50,7 +50,7 @@ export default {
     console.log(sentences)
 
     console.log('getMissedWord beforeCreate'.toUpperCase())
-    const arr = (sentences[0] !== null) ? sentences[0].en_sentence.split(' ') : ''
+    const arr = (sentences[0] !== null) ? sentences[0].en_sentence.split(/[ ,.?!]/) : ''
     const word = arr[sentences[0].missedWord]
     missedWord = (word !== null) ? word : ''
     console.log('missed word = ', missedWord)
@@ -71,13 +71,16 @@ export default {
       const arr = (sentence !== null) ? sentence.en_sentence.split(' ') : ''
       const subArr = arr.splice(sentence.missedWord + 1, arr.length)
       lastSentencePart = subArr.join(' ')
+      if (this.isBlank(lastSentencePart)) {
+        lastSentencePart = sentence.en_sentence[sentence.en_sentence.length - 1]
+      }
       console.log('lastSentencePart = ', lastSentencePart)
       return lastSentencePart
     },
     getMissedWord (sentence) {
       console.log('getMissedWord')
       console.log('sentence = ', sentence)
-      const arr = (sentence !== null) ? sentence.en_sentence.split(' ') : ''
+      const arr = (sentence !== null) ? sentence.en_sentence.split(/[ ,.?!]/) : ''
       const word = arr[sentence.missedWord]
       missedWord = (word !== null) ? word : ''
       console.log('missed word = ', missedWord)
@@ -109,7 +112,7 @@ export default {
       topic = TopicCard.data().topic
       console.log('topic = ', topic)
       try {
-        const res = await axios.get('http://localhost:8000/generate', {
+        const res = await axios.get('http://localhost:8000/get-sample', {
           params: {
             topic: topic
           }
@@ -131,6 +134,9 @@ export default {
       } catch (e) {
         console.error(e)
       }
+    },
+    isBlank (str) {
+      return (!str || /^\s*$/.test(str))
     }
   }
 }

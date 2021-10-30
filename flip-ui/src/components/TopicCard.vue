@@ -39,7 +39,7 @@ export default {
       console.log('topicName = ', topicName)
       console.log('topic = ', topic)
       try {
-        const res = await axios.get('http://localhost:8000/generate', {
+        const res = await axios.get('http://localhost:8000/get-sample', {
           params: {
             topic: topicName
           }
