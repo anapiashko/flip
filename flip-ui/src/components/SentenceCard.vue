@@ -50,7 +50,7 @@ export default {
     console.log(sentences)
 
     console.log('getMissedWord beforeCreate'.toUpperCase())
-    const arr = (sentences[0] !== null) ? sentences[0].en_sentence.split(/[ ,.?!]/) : ''
+    const arr = (sentences[0] !== null) ? sentences[0].en_sentence.split(/[ ,.?!]+/) : ''
     const word = arr[sentences[0].missedWord]
     missedWord = (word !== null) ? word : ''
     console.log('missed word = ', missedWord)
@@ -80,7 +80,7 @@ export default {
     getMissedWord (sentence) {
       console.log('getMissedWord')
       console.log('sentence = ', sentence)
-      const arr = (sentence !== null) ? sentence.en_sentence.split(/[ ,.?!]/) : ''
+      const arr = (sentence !== null) ? sentence.en_sentence.split(/[ ,.?!]+/) : ''
       const word = arr[sentence.missedWord]
       missedWord = (word !== null) ? word : ''
       console.log('missed word = ', missedWord)
@@ -99,6 +99,9 @@ export default {
           this.requestForAdditionalSentenceSet()
           this.counter = 0
         }
+        document.getElementById('input-word').placeholder = ''
+      } else {
+        document.getElementById('input-word').placeholder = missedWord
       }
       this.updateProgress(isTypedWordCorrect)
       this.typedWord = ''
