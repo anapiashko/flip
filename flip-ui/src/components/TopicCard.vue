@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Your Upcoming Destinations</h1>
+    <h1>Your Upcoming Goals</h1>
     <p>{{ this.sentences }}</p>
     <div class="topic-contain">
       <div id="topics" style="cursor: pointer;" @click="goToSentenceCards(topic.name)"
@@ -61,6 +61,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+$shadow: rgba(0, 0, 0, 0.2);
+
 body {
   width: 100vw;
   height: 100vh;
@@ -85,6 +88,8 @@ h1 {
   justify-content: center;
   background: white;
   border: 1px solid #ddd;
+  border-radius: 25px;
+  box-shadow: 0 0.1875rem 1.5rem $shadow;
   padding: 20px 20px;
   margin: 10px;
   h2 {

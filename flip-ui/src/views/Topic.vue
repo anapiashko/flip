@@ -4,12 +4,12 @@
       :topics="[{
                                        name: 'Health',
                                        img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/moscow.svg',
-                                       desc: `Moscow is the capital and most populous city of Russia, with 13.2 million residents within the city limits and 17.8 million within the urban area. Moscow has the status of a Russian federal city.`
+                                       desc: `Vocabulary set to help learn words related to health. Learn useful health and healthcare vocabulary in English, including common diseases, medical supplies and equipment and medicine names.`
                                      },
                                      {
                                        name: 'Travel',
                                        img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/paris1.svg',
-                                       desc: `Paris is the capital and most populous city of France. By the 17th century, Paris was one of Europe's major centres of finance, commerce, fashion, science, and the arts, and it retains that position still today.`
+                                       desc: `The travel-related words are the most important terms to know when talking about travel or taking vacations. You'll find example sentences to help provide context for learning.`
                                      }]"
     />
   </div>
