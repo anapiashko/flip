@@ -39,13 +39,14 @@ export default {
     firstSentencePart: firstSentencePart,
     lastSentencePart: lastSentencePart,
     name: '10 Best Things to Do in Seattle',
-    category: 'Travel',
+    category: topic,
     image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/pike-place.jpg',
     author: 'Anastasiya Piashko',
     desc: 'Seattle is a seaport city on the west coast of the United States...'
   }),
   beforeCreate () {
     console.log('beforeCreate. Nothing gets called before me!'.toUpperCase())
+    topic = TopicCard.data().topic
     sentences = TopicCard.data().sentences
     console.log(sentences)
 

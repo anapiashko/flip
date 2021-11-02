@@ -4,7 +4,7 @@
       :topics="[{
           name: 'Health',
           img: 'img/icons/yoga-position.png',
-          desc: `Vocabulary set to help learn words related to health. Learn useful health and healthcare vocabulary in English, including common diseases, medical supplies and equipment and medicine names.`
+          desc: `Vocabulary set to help learn words related to health. Learn useful health and healthcare vocabulary in English, including common diseases, medical supplies and equipment.`
         },
         {
           name: 'Travel',
