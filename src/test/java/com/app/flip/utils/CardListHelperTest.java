@@ -17,21 +17,22 @@ class CardListHelperTest {
         cardList.add(new Card(1,"Breakfast is very important","Завтрак очень важен", 0, CardTopic.HEALTH));
         cardList.add(new Card(2,"","", null, null));
         cardList.add(new Card(3,"Breakfast is super very important to eat every day before starting your new day","Завтрак важен", 0, CardTopic.HEALTH));
-        cardList.add(new Card(4,"","Завтрак важен", null, CardTopic.HEALTH));
-        cardList.add(new Card(5,"Breakfast is important","", 0, CardTopic.HEALTH));
-        cardList.add(new Card(6," Did you get    any breakfast?  ","Ты позавтракал?", 4, CardTopic.HEALTH));
+        cardList.add(new Card(4,"","Завтрак важен.", null, CardTopic.HEALTH));
+        cardList.add(new Card(5,"Breakfast is important.","", 0, CardTopic.HEALTH));
+        cardList.add(new Card(6," Did you get    any breakfast?  "," Ты позавтракал?", 4, CardTopic.HEALTH));
 
         // when
         List<Card> resultCardList = CardListHelper.getInstance(cardList)
                 .removeEmptyCards()
                 .getCardsWithAverageSize()
+                .setPunctuation()
                 .collect();
 
         // then
         assertEquals(2, resultCardList.size());
         assertEquals(1, resultCardList.get(0).getId());
-        assertEquals("Breakfast is very important", resultCardList.get(0).getEnglishSentence());
-        assertEquals("Завтрак очень важен", resultCardList.get(0).getRussianSentence());
+        assertEquals("Breakfast is very important.", resultCardList.get(0).getEnglishSentence());
+        assertEquals("Завтрак очень важен.", resultCardList.get(0).getRussianSentence());
 
         assertEquals(6, resultCardList.get(1).getId());
         assertEquals("Did you get any breakfast?", resultCardList.get(1).getEnglishSentence());

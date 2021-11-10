@@ -78,6 +78,25 @@ public final class CardListHelper {
         return this;
     }
 
+    public CardListHelper setPunctuation() {
+        List<Card> temp = new ArrayList<>();
+
+        for (Card card : newCards) {
+
+            if (!card.getEnglishSentence().matches(".*[.?!]$")) {
+                card.setEnglishSentence(card.getEnglishSentence() + ".");
+            }
+
+            if (!card.getRussianSentence().matches(".*[.?!]$")) {
+                card.setRussianSentence(card.getRussianSentence() + ".");
+            }
+
+            temp.add(card);
+        }
+        newCards = temp;
+        return this;
+    }
+
     public List<Card> collect() {
         return newCards;
     }
@@ -86,7 +105,8 @@ public final class CardListHelper {
         List<Card> temp = new ArrayList<>();
         for (Card card : cards) {
             String trimmedEnSen = card.getEnglishSentence().trim().replaceAll("\\s{2,}", " ");
-            temp.add(new Card(card.getId(), trimmedEnSen, card.getRussianSentence(), card.getMissedWord(), card.getCardTopic()));
+            String trimmedRusSen = card.getRussianSentence().trim().replaceAll("\\s{2,}", " ");
+            temp.add(new Card(card.getId(), trimmedEnSen, trimmedRusSen, card.getMissedWord(), card.getCardTopic()));
         }
         return temp;
     }
