@@ -4,9 +4,9 @@
         <img class="post-image" :src="image"/>
         <div class="article-details" style="cursor: pointer;" >
           <h2>{{ counter }}</h2>
-          <h4 class="post-category">{{ category }}</h4>
+          <h4 class="card-category">{{ category }}</h4>
           <div id="english_sentence" :missed="getMissedWord(sentences[counter])">
-            <h3 class="post-title">{{ getFirstSentencePart(sentences[counter]) }}
+            <h3 class="en-sentence">{{ getFirstSentencePart(sentences[counter]) }}
             <input id="input-word" v-model.lazy.trim="typedWord" :style="{width: missedWord.length * 1.5 + 'ch'}" v-on:keyup.enter="onEnter()">
             {{ getLastSentencePart(sentences[counter]) }}</h3>
           </div>
@@ -38,7 +38,6 @@ export default {
     missedWord: missedWord,
     firstSentencePart: firstSentencePart,
     lastSentencePart: lastSentencePart,
-    name: '10 Best Things to Do in Seattle',
     category: topic,
     image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/pike-place.jpg',
     author: 'Anastasiya Piashko',
@@ -235,7 +234,7 @@ input {
   padding: 1.5rem;
 }
 
-.post-category {
+.card-category {
   display: inline-block;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -247,7 +246,7 @@ input {
   border-bottom: 0.125rem solid $border;
 }
 
-.post-title {
+.en-sentence {
   @include transition(color 0.3s ease);
   font-size: 1.125rem;
   line-height: 1.4;
