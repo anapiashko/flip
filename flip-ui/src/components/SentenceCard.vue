@@ -1,8 +1,7 @@
 <template>
   <div id="container">
       <article class="blog-card">
-        <img class="post-image" :src="image"/>
-        <div class="article-details" style="cursor: pointer;" >
+        <div class="article-details" >
           <h2>{{ counter }}</h2>
           <h4 class="card-category">{{ category }}</h4>
           <div id="english_sentence" :missed="getMissedWord(sentences[counter])">
@@ -10,7 +9,7 @@
             <input id="input-word" v-model.lazy.trim="typedWord" :style="{width: missedWord.length * 1.5 + 'ch'}" v-on:keyup.enter="onEnter()">
             {{ getLastSentencePart(sentences[counter]) }}</h3>
           </div>
-          <p class="post-description">{{ sentences[counter].rus_sentence }}</p>
+          <p class="rus-sentence">{{ sentences[counter].rus_sentence }}</p>
           <p class="post-author">By {{ author }}</p>
         </div>
       </article>
@@ -39,9 +38,7 @@ export default {
     firstSentencePart: firstSentencePart,
     lastSentencePart: lastSentencePart,
     category: topic,
-    image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/pike-place.jpg',
-    author: 'Anastasiya Piashko',
-    desc: 'Seattle is a seaport city on the west coast of the United States...'
+    author: 'Anastasiya Piashko'
   }),
   beforeCreate () {
     console.log('beforeCreate. Nothing gets called before me!'.toUpperCase())
@@ -150,7 +147,7 @@ export default {
 
 $bg: #eedfcc;
 $text: #777;
-$black: #121212;
+$black: #2c3e50;
 $white: #fff;
 $red: #e04f62;
 $border: #ebebeb;
@@ -184,20 +181,24 @@ body {
 }
 
 input {
-  @include transition(color 0.3s ease);
   font-size: 1.125rem;
   line-height: 1.4;
   color: $black;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
 
-  padding-left: 7px;
+  padding-left: 5px;
   padding-right: 5px;
   padding-top: 0;
   border:0;
+  border-bottom: 0.0625rem solid $shadow;
   outline:0 solid transparent;
 
-  letter-spacing: 0.19em;
+  letter-spacing: 0.2rem;
+}
+
+input::placeholder {
+  letter-spacing: 0.2rem;
 }
 
 #english_sentence {
@@ -223,13 +224,6 @@ input {
   overflow: hidden;
 }
 
-.post-image {
-  @include transition(opacity 0.3s ease);
-  display: block;
-  width: 100%;
-  object-fit: cover;
-}
-
 .article-details {
   padding: 1.5rem;
 }
@@ -246,63 +240,11 @@ input {
   border-bottom: 0.125rem solid $border;
 }
 
-.en-sentence {
-  @include transition(color 0.3s ease);
-  font-size: 1.125rem;
-  line-height: 1.4;
-  color: $black;
-  font-weight: 700;
-  margin: 0 0 0.5rem 0;
-}
-
 .post-author {
   font-size: 0.875rem;
   line-height: 1;
   margin: 1.125rem 0 0 0;
   padding: 1.125rem 0 0 0;
   border-top: 0.0625rem solid $border;
-}
-
-@media (max-width: 40rem) {
-  #container {
-    width: 18rem;
-    height: 27.25rem;
-  }
-
-  .blog-card {
-    flex-wrap: wrap;
-  }
-}
-
-@supports (display: grid) {
-  body {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0.625rem;
-    grid-template-areas: ". main main ." ". main main .";
-  }
-
-  #container {
-    grid-area: main;
-    align-self: center;
-    justify-self: center;
-  }
-
-  .post-image {
-    height: 100%;
-  }
-
-  .blog-card {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
-  }
-
-  @media (max-width: 40rem) {
-    .blog-card {
-      grid-template-columns: auto;
-      grid-template-rows: 12rem 1fr;
-    }
-  }
 }
 </style>
