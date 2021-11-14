@@ -86,7 +86,7 @@ export default {
     onEnter: function () {
       console.log('onEnter')
       console.log('typedWord = ', this.typedWord)
-      const isTypedWordCorrect = (this.typedWord === missedWord)
+      const isTypedWordCorrect = (this.typedWord.toLowerCase() === missedWord.toLowerCase())
       console.log(isTypedWordCorrect)
       if (isTypedWordCorrect) {
         if ((this.counter + 1) < sentences.length) {
