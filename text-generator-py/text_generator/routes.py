@@ -60,7 +60,7 @@ def split_text(text):
     print("SPLITTING")
     text = text.split(".")
     # punctuation_set = set(string.punctuation)
-    punctuation_set = ['&', '<', '$', "'", '(', '|', '=', '\\', '%', ';', '~', '*', ']', '_', '{', '[', '+', '>',
+    punctuation_set = ['&', '<', '$', '\'', '(', '|', '=', '\\', '%', ';', '~', '*', ']', '_', '{', '[', '+', '>',
                        '^', '"', '}', ')', '/', '#', '-', '`', ':', '@']
     result = []
     for s in text:
