@@ -6,6 +6,7 @@ import com.app.flip.model.Progress;
 import com.app.flip.utils.CardTopic;
 import com.app.flip.utils.Constants;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -26,9 +27,18 @@ public class CardServiceImpl implements CardService {
 
     @Override
     public List<Card> saveAll(List<Card> cards) {
-        log.info("saveAll");
+        log.info("Save all generated cards to database");
         List<Card> savedCards = new ArrayList<>();
-        cardRepository.saveAll(cards).forEach(savedCards::add);
+        for (Card card : cards) {
+            try {
+                Card savedCard = cardRepository.save(card);
+                savedCards.add(savedCard);
+            } catch (DataIntegrityViolationException d) {
+                log.error("Not unique value, card {} , {}", card, d.getMessage());
+            } catch (Exception e) {
+                log.error("Error saving card {}, {} ", card, e.getMessage());
+            }
+        }
 
         List<Progress> progresses = savedCards.stream().map(card -> new Progress(card.getId())).collect(Collectors.toList());
         progressService.saveAll(progresses);
