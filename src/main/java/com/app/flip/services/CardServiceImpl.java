@@ -40,20 +40,24 @@ public class CardServiceImpl implements CardService {
             }
         }
 
-        List<Progress> progresses = savedCards.stream().map(card -> new Progress(card.getId())).collect(Collectors.toList());
+        List<Progress> progresses = savedCards.stream()
+                .map(Card::getId)
+                .map(Progress::new)
+                .collect(Collectors.toList());
         progressService.saveAll(progresses);
         return savedCards;
     }
 
     public List<Card> getSample(CardTopic cardTopic) {
+        log.info("Getting sample by topic = {}", cardTopic);
 
         List<Card> resultCollection = new ArrayList<>();
 
-        List<Card> newCards = cardRepository.findNewByCardTopic(cardTopic.name(), Constants.NEW_CARDS_SIZE);
-        List<Card> seenCards = cardRepository.findSeenByCardTopic(cardTopic.name(), Constants.SEEN_CARDS_SIZE);
+        List<Card> newCards = cardRepository.findNewByCardTopic(cardTopic.getOrdinal(), Constants.NEW_CARDS_SIZE);
+        List<Card> seenCards = cardRepository.findSeenByCardTopic(cardTopic.getOrdinal(), Constants.SEEN_CARDS_SIZE);
 
         if (seenCards.size() < Constants.SEEN_CARDS_SIZE) {
-            newCards.addAll(cardRepository.findNewByCardTopic(cardTopic.name(), Constants.SEEN_CARDS_SIZE));
+            newCards.addAll(cardRepository.findNewByCardTopic(cardTopic.getOrdinal(), Constants.SEEN_CARDS_SIZE));
             newCards = newCards.stream().distinct().collect(Collectors.toList());
         }
 

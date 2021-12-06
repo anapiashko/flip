@@ -1,21 +1,16 @@
 package com.app.flip.utils;
 
 public enum CardTopic {
-    HEALTH ("health"),
-    TRAVEL ("travel");
+    HEALTH (0),
+    TRAVEL (1);
 
-    private final String typeName;
+    private final Integer ordinal;
 
-    CardTopic(String typeName) {
-        this.typeName = typeName;
+    CardTopic(Integer ordinal) {
+        this.ordinal = ordinal;
     }
 
-    public static CardTopic fromString(String text) {
-        for (CardTopic b : CardTopic.values()) {
-            if (b.typeName.equalsIgnoreCase(text)) {
-                return b;
-            }
-        }
-        throw new IllegalArgumentException("No constant with text " + text + " found");
+    public Integer getOrdinal() {
+        return ordinal;
     }
 }

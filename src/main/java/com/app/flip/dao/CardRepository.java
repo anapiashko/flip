@@ -17,11 +17,11 @@ public interface CardRepository extends CrudRepository<Card, Integer> {
   @Query(value = "SELECT c.id, c.en_sentence, c.rus_sentence, c.missed_word, c.topic FROM card c " +
           " JOIN progress p on c.id = p.card_id WHERE c.topic = :cardTopic AND p.probability = 1 LIMIT :limitValue",
           nativeQuery = true)
-  List<Card> findNewByCardTopic(@Param("cardTopic") String cardTopic, Integer limitValue);
+  List<Card> findNewByCardTopic(@Param("cardTopic") Integer cardTopic, Integer limitValue);
 
   @Query(value = "SELECT c.id, c.en_sentence, c.rus_sentence, c.missed_word, c.topic FROM card c " +
           " JOIN progress p on c.id = p.card_id WHERE c.topic = :cardTopic AND p.probability < 1 LIMIT :limitValue",
           nativeQuery = true)
-  List<Card> findSeenByCardTopic(@Param("cardTopic") String cardTopic,  Integer limitValue);
+  List<Card> findSeenByCardTopic(@Param("cardTopic") Integer cardTopic, Integer limitValue);
 
 }

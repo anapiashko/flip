@@ -39,7 +39,7 @@ public class HomeController {
     @GetMapping("/get-sample")
     public List<Card> getSampleByTopic(@RequestParam String topic) {
         log.info("Get card sample by topic name, topic = {}", topic);
-        List<Card> sample = cardService.getSample(CardTopic.fromString(topic.toLowerCase()));
+        List<Card> sample = cardService.getSample(CardTopic.valueOf(topic.toUpperCase()));
         return sample;
     }
 

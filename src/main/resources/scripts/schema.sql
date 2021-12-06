@@ -3,7 +3,7 @@ create table IF NOT EXISTS card (
     en_sentence varchar(150) NOT NULL,
     rus_sentence varchar(150) NOT NULL,
     missed_word int NOT NULL,
-    topic ENUM ('HEALTH', 'TRAVEL')
+    topic int NOT NULL
 );
 
 create table IF NOT EXISTS progress (

@@ -26,7 +26,7 @@ public class Card {
 
     @Column(name = "topic")
     @JsonProperty("topic")
-    @Enumerated(EnumType.STRING)
+    @Enumerated
     private CardTopic cardTopic;
 
     public Card (){}
