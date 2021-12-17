@@ -2,15 +2,16 @@
   <div id="container">
       <article class="blog-card">
         <div class="article-details" >
-          <h2>{{ counter }}</h2>
+<!--          <h2>{{ counter }}</h2>-->
           <h4 class="card-category">{{ category }}</h4>
           <div id="english_sentence" :missed="getMissedWord(sentences[counter])">
             <h3 class="en-sentence">{{ getFirstSentencePart(sentences[counter]) }}
-            <input id="input-word" v-model.lazy.trim="typedWord" :style="{width: missedWord.length * 1.5 + 'ch'}" v-on:keyup.enter="onEnter()">
+            <input id="input-word" v-model.lazy.trim="typedWord"
+                   :style="{width: missedWord.length * 1.5 + 'ch'}"
+                   v-on:keyup.enter="onEnter()">
             {{ getLastSentencePart(sentences[counter]) }}</h3>
           </div>
           <p class="rus-sentence">{{ sentences[counter].rus_sentence }}</p>
-          <p class="post-author">By {{ author }}</p>
         </div>
       </article>
    </div>
@@ -153,6 +154,11 @@ $red: #e04f62;
 $border: #ebebeb;
 $shadow: rgba(0, 0, 0, 0.2);
 
+$char-w: 1ch;
+$gap: .5*$char-w;
+$n-char: 15;
+$in-w: $n-char*($char-w + $gap);
+
 @mixin transition($args...) {
   transition: $args;
 }
@@ -181,24 +187,18 @@ body {
 }
 
 input {
-  font-size: 1.125rem;
-  line-height: 1.4;
   color: $black;
-  font-weight: 700;
   margin: 0 0 0.5rem 0;
-
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 0;
-  border:0;
-  border-bottom: 0.0625rem solid $shadow;
   outline:0 solid transparent;
-
-  letter-spacing: 0.2rem;
-}
-
-input::placeholder {
-  letter-spacing: 0.2rem;
+  border: none;
+  padding: 0;
+  width: $in-w;
+  background: repeating-linear-gradient(90deg,
+    $black 0, $black $char-w,
+    transparent 0, transparent $char-w + $gap)
+  0 100%/ #{$in-w - $gap} 2px no-repeat;
+  font: 2ch droid sans mono, consolas, monospace;
+  letter-spacing: $gap;
 }
 
 #english_sentence {
@@ -206,7 +206,7 @@ input::placeholder {
 }
 
 #container {
-  width: 40rem;
+  width: 35rem;
   height: 13.625rem;
   position: absolute;
   top: 35%;
@@ -238,13 +238,5 @@ input::placeholder {
   margin: 0 0 0.75rem 0;
   padding: 0 0 0.25rem 0;
   border-bottom: 0.125rem solid $border;
-}
-
-.post-author {
-  font-size: 0.875rem;
-  line-height: 1;
-  margin: 1.125rem 0 0 0;
-  padding: 1.125rem 0 0 0;
-  border-top: 0.0625rem solid $border;
 }
 </style>
