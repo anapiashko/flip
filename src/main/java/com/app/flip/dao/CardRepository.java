@@ -20,7 +20,7 @@ public interface CardRepository extends CrudRepository<Card, Integer> {
   List<Card> findNewByCardTopic(@Param("cardTopic") Integer cardTopic, Integer limitValue);
 
   @Query(value = "SELECT c.id, c.en_sentence, c.rus_sentence, c.missed_word, c.topic FROM card c " +
-          " JOIN progress p on c.id = p.card_id WHERE c.topic = :cardTopic AND p.probability < 1 LIMIT :limitValue",
+          " JOIN progress p on c.id = p.card_id WHERE c.topic = :cardTopic AND p.probability BETWEEN 0.3 AND 0.9 LIMIT :limitValue",
           nativeQuery = true)
   List<Card> findSeenByCardTopic(@Param("cardTopic") Integer cardTopic, Integer limitValue);
 
