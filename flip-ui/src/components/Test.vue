@@ -1,8 +1,5 @@
 <template>
-  <div class="sidebar"
-       :class="isOpened ? 'open' : ''"
-       :style="cssVars">
-    <h2>hello test</h2>
+  <div class="sidebar" :class="isOpened ? 'open' : ''" :style="cssVars">
     <div class="logo-details">
       <img
         v-if="menuLogo"
@@ -10,11 +7,7 @@
         alt="menu-logo"
         class="menu-logo icon"
       >
-      <i
-        v-else
-        class="bx icon"
-        :class="menuIcon"
-      />
+      <i v-else class="bx icon" :class="menuIcon"/>
       <div class="logo_name">
         {{ menuTitle }}
       </div>
@@ -30,18 +23,6 @@
       :options="{ suppressScrollX: true }"
     >
       <ul class="nav-list">
-        <li
-          v-if="isSearch"
-          @click="isOpened = true"
-        >
-          <i class="bx bx-search"/>
-          <input
-            type="text"
-            :placeholder="searchPlaceholder"
-            @input="$emit('search-input-emit', $event.target.value)"
-          >
-          <span class="tooltip">{{ searchTooltip }}</span>
-        </li>
 
         <span
           v-for="(menuItem, index) in menuItems"
@@ -102,7 +83,7 @@ export default {
     //! Menu settings
     isMenuOpen: {
       type: Boolean,
-      default: true
+      default: false
     },
     menuTitle: {
       type: String,
@@ -172,20 +153,6 @@ export default {
       ]
     },
 
-    //! Search
-    isSearch: {
-      type: Boolean,
-      default: true
-    },
-    searchPlaceholder: {
-      type: String,
-      default: 'Search...'
-    },
-    searchTooltip: {
-      type: String,
-      default: 'Search'
-    },
-
     //! Profile detailes
     profileImg: {
       type: String,
@@ -229,10 +196,6 @@ export default {
       type: String,
       default: '#e4e9f7'
     },
-    searchInputTextColor: {
-      type: String,
-      default: '#fff'
-    },
     menuItemsHoverColor: {
       type: String,
       default: '#fff'
@@ -263,7 +226,6 @@ export default {
         '--logo-title-color': this.logoTitleColor,
         '--icons-color': this.iconsColor,
         '--items-tooltip-color': this.itemsTooltipColor,
-        '--serach-input-text-color': this.searchInputTextColor,
         '--menu-items-hover-color': this.menuItemsHoverColor,
         '--menu-items-text-color': this.menuItemsTextColor,
         '--menu-footer-text-color': this.menuFooterTextColor
@@ -419,7 +381,7 @@ export default {
   width: 100%;
 }
 
-.sidebar .bx-search {
+.sidebar {
   position: absolute;
   top: 50%;
   left: 0;
@@ -429,7 +391,7 @@ export default {
   color: var(--icons-color);
 }
 
-.sidebar.open .bx-search:hover {
+.sidebar.open {
   background: var(--secondary-color);
   color: var(--icons-color);
 }
