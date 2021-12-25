@@ -41,6 +41,7 @@
         </span>
       </ul>
     </perfect-scrollbar>
+
     <div class="profile">
       <div class="profile-details">
         <img
@@ -87,7 +88,7 @@ export default {
     },
     menuTitle: {
       type: String,
-      default: 'Akahon'
+      default: 'Flip'
     },
     menuLogo: {
       type: String,
@@ -95,7 +96,7 @@ export default {
     },
     menuIcon: {
       type: String,
-      default: 'bxl-c-plus-plus'
+      default: 'bxl-foursquare'
     },
 
     //! Menu items
@@ -160,11 +161,11 @@ export default {
     },
     profileName: {
       type: String,
-      default: 'Fayzullo Saidakbarov'
+      default: 'Anastasiya Piashko'
     },
     profileRole: {
       type: String,
-      default: 'Frontend vue developer'
+      default: 'Developer'
     },
     isExitButton: {
       type: Boolean,
