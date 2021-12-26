@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+<!--    <SidebarMenuAkahon />-->
+<!--    <sidebar-menu-akahon @search-input-emit="search" />-->
+    <Test></Test>
     <h1>Your Upcoming Goals</h1>
     <p>{{ this.sentences }}</p>
     <div class="topic-contain">
@@ -17,12 +20,18 @@
 
 <script>
 import axios from 'axios'
+// import SidebarMenuAkahon from "@/components/Sidebar-menu-akahon.vue"
+import Test from '@/components/Test.vue'
 
 let sentences
 let topic
 
 export default {
   name: 'TopicCard',
+  components: {
+    // SidebarMenuAkahon,
+    Test
+  },
   props: {
     topics: Array
   },

@@ -1,39 +1,35 @@
 <template>
   <div class="sidebar" :class="isOpened ? 'open' : ''" :style="cssVars">
     <div class="logo-details">
-      <img
-        v-if="menuLogo"
-        :src="menuLogo"
-        alt="menu-logo"
-        class="menu-logo icon"
-      >
+      <img v-if="menuLogo" :src="menuLogo" alt="menu-logo" class="menu-logo icon">
       <i v-else class="bx icon" :class="menuIcon"/>
       <div class="logo_name">
         {{ menuTitle }}
       </div>
-      <i
-        class="bx"
-        :class="isOpened ? 'bx-menu-alt-right' : 'bx-menu'"
-        id="btn"
-        @click="isOpened = !isOpened"
-      />
+      <i class="bx" :class="isOpened ? 'bx-menu-alt-right' : 'bx-menu'"
+        id="btn" @click="isOpened = !isOpened"/>
     </div>
-    <perfect-scrollbar
-      style="height: 87vh;"
-      :options="{ suppressScrollX: true }"
-    >
-      <ul class="nav-list">
 
-        <span
-          v-for="(menuItem, index) in menuItems"
-          :key="index"
-        >
+    <perfect-scrollbar style="height: 87vh;" :options="{ suppressScrollX: true }">
+
+      <div v-if="isOpened">
+        <Progress :radius="50" :strokeWidth="15" value="86.12">
+          <template v-slot:footer>
+            <b>Health</b>
+          </template>
+        </Progress>
+        <Progress :radius="50" :strokeWidth="15" value="86.12">
+          <template v-slot:footer>
+            <b>Travel</b>
+          </template>
+        </Progress>
+      </div>
+
+      <ul class="nav-list">
+        <span v-for="(menuItem, index) in menuItems" :key="index">
           <li>
             <a :href="menuItem.link">
-              <i
-                class="bx"
-                :class="menuItem.icon || 'bx-square-rounded'"
-              />
+              <i class="bx" :class="menuItem.icon || 'bx-square-rounded'"/>
               <span class="links_name">{{ menuItem.name }}</span>
             </a>
             <span class="tooltip">{{ menuItem.tooltip || menuItem.name }}</span>
@@ -47,12 +43,8 @@
         <img
           v-if="profileImg"
           :src="profileImg"
-          alt="profileImg"
-        >
-        <i
-          v-else
-          class="bx bxs-user-rectangle"
-        />
+          alt="profileImg">
+        <i v-else class="bx bxs-user-rectangle"/>
         <div class="name_job">
           <div class="name">
             {{ profileName }}
@@ -74,11 +66,13 @@
 
 <script>
 import { PerfectScrollbar } from 'vue2-perfect-scrollbar'
+import Progress from 'easy-circular-progress'
 
 export default {
   name: 'Test',
   components: {
-    PerfectScrollbar
+    PerfectScrollbar,
+    Progress
   },
   props: {
     //! Menu settings
@@ -103,52 +97,52 @@ export default {
     menuItems: {
       type: Array,
       default: () => [
-        {
-          link: '#',
-          name: 'Dashboard',
-          tooltip: 'Dashboard',
-          icon: 'bx-grid-alt'
-        },
-        {
-          link: '#',
-          name: 'User',
-          tooltip: 'User',
-          icon: 'bx-user'
-        },
-        {
-          link: '#',
-          name: 'Messages',
-          tooltip: 'Messages',
-          icon: 'bx-chat'
-        },
-        {
-          link: '#',
-          name: 'Analytics',
-          tooltip: 'Analytics',
-          icon: 'bx-pie-chart-alt-2'
-        },
-        {
-          link: '#',
-          name: 'File Manager',
-          tooltip: 'Files',
-          icon: 'bx-folder'
-        },
-        {
-          link: '#',
-          name: 'Order',
-          tooltip: 'Order',
-          icon: 'bx-cart-alt'
-        },
-        {
-          link: '#',
-          name: 'Saved',
-          tooltip: 'Saved',
-          icon: 'bx-heart'
-        },
+        // {
+        //   link: '#',
+        //   name: 'Dashboard',
+        //   tooltip: 'Dashboard',
+        //   icon: 'bx-grid-alt'
+        // },
+        // {
+        //   link: '#',
+        //   name: 'User',
+        //   tooltip: 'User',
+        //   icon: 'bx-user'
+        // },
+        // {
+        //   link: '#',
+        //   name: 'Messages',
+        //   tooltip: 'Messages',
+        //   icon: 'bx-chat'
+        // },
+        // {
+        //   link: '#',
+        //   name: 'Analytics',
+        //   tooltip: 'Analytics',
+        //   icon: 'bx-pie-chart-alt-2'
+        // },
+        // {
+        //   link: '#',
+        //   name: 'File Manager',
+        //   tooltip: 'Files',
+        //   icon: 'bx-folder'
+        // },
+        // {
+        //   link: '#',
+        //   name: 'Order',
+        //   tooltip: 'Order',
+        //   icon: 'bx-cart-alt'
+        // },
+        // {
+        //   link: '#',
+        //   name: 'Saved',
+        //   tooltip: 'Saved',
+        //   icon: 'bx-heart'
+        // },
         {
           link: '#',
           name: 'Setting',
-          tooltip: 'Setting',
+          tooltip: 'Setting up',
           icon: 'bx-cog'
         }
       ]
