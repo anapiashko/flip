@@ -13,7 +13,7 @@
     <perfect-scrollbar style="height: 87vh;" :options="{ suppressScrollX: true }">
 
       <div id="progressCircles" v-if="isOpened">
-        <div id="healthProgress" >
+        <div id="healthProgress">
           <Progress :radius="50" :strokeWidth="15" strokeColor="#2c3e50" value="86.12">
             <template v-slot:footer>
               <b>Health</b>
@@ -27,7 +27,7 @@
               <b>Travel</b>
             </template>
           </Progress>
-          <span class="tooltip">Seen from Travel Topic </span>
+          <span class="tooltip">Seen from Travel Topic</span>
         </div>
       </div>
 
@@ -46,26 +46,20 @@
 
     <div class="profile">
       <div class="profile-details">
-        <img
-          v-if="profileImg"
-          :src="profileImg"
-          alt="profileImg">
-        <i v-else class="bx bxs-user-rectangle"/>
+<!--        <img v-if="profileImg" :src="profileImg" alt="profileImg">-->
+        <i class="bx bxs-user-rectangle"/>
         <div class="name_job">
-          <div class="name">
-            {{ profileName }}
-          </div>
-          <div class="job">
-            {{ profileRole }}
-          </div>
+          <div class="name"> {{ profileName }} </div>
+          <div class="job"> {{ profileRole }} </div>
         </div>
       </div>
-      <i
-        v-if="isExitButton"
-        class="bx bx-log-out"
-        id="log_out"
-        @click.stop="$emit('button-exit-clicked')"
-      />
+<!--      <i-->
+<!--        v-if="isExitButton"-->
+<!--        class="bx bx-log-out"-->
+<!--        id="log_out"-->
+<!--        @click.stop="$emit('button-exit-clicked')"-->
+<!--      />-->
+      <i id="log_out" class="bx bxs-user-rectangle"/>
     </div>
   </div>
 </template>
@@ -165,11 +159,11 @@ export default {
     },
     profileRole: {
       type: String,
-      default: 'Developer'
+      default: 'anapiashko@gmail.com'
     },
     isExitButton: {
       type: Boolean,
-      default: true
+      default: false
     },
 
     //! Styles
@@ -507,14 +501,14 @@ export default {
   opacity: 0;
 }
 
-.sidebar.open .profile:hover #log_out {
-  opacity: 1;
-}
+/*.sidebar.open .profile:hover #log_out {*/
+/*  opacity: 1;*/
+/*}*/
 
-.sidebar.open .profile #log_out:hover {
-  opacity: 1;
-  color: red;
-}
+/*.sidebar.open .profile #log_out:hover {*/
+/*  opacity: 1;*/
+/*  color: red;*/
+/*}*/
 
 .home-section {
   position: relative;
