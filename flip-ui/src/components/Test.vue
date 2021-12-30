@@ -12,13 +12,16 @@
 
     <perfect-scrollbar style="height: 87vh;" :options="{ suppressScrollX: true }">
 
-      <div v-if="isOpened">
-        <Progress :radius="50" :strokeWidth="15" value="86.12">
-          <template v-slot:footer>
-            <b>Health</b>
-          </template>
-        </Progress>
-        <Progress :radius="50" :strokeWidth="15" value="86.12">
+      <div id="progressCircles" v-if="isOpened" >
+        <div id="healthProgress" @mouseover="upHere = true" >
+          <Progress :radius="50" :strokeWidth="15" value="86.12">
+            <template v-slot:footer>
+              <b>Health</b>
+            </template>
+          </Progress>
+          <span class="tooltip" v-show="upHere"> Health Text</span>
+        </div>
+        <Progress id="travelProgress" :radius="50" :strokeWidth="15" value="86.12">
           <template v-slot:footer>
             <b>Travel</b>
           </template>
@@ -206,7 +209,8 @@ export default {
   },
   data () {
     return {
-      isOpened: false
+      isOpened: false,
+      upHere: false
     }
   },
   mounted () {
@@ -246,13 +250,38 @@ export default {
   margin: 0 10px 0 10px;
 }
 
+#healthProgress:hover .tooltip {
+  color: #42b983;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#healthProgress .tooltip {
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: var(--items-tooltip-color);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+
 .sidebar {
   position: fixed;
   left: 0;
   top: 0;
   height: 100%;
   min-height: min-content;
-  /* overflow-y: auto; */
   width: 78px;
   background: var(--bg-color);
   padding: 6px 14px;
@@ -357,25 +386,6 @@ export default {
   display: none;
 }
 
-.sidebar input {
-  font-size: 15px;
-  color: var(--serach-input-text-color);
-  font-weight: 400;
-  outline: none;
-  height: 50px;
-  width: 100%;
-  width: 50px;
-  border: none;
-  border-radius: 12px;
-  transition: all 0.5s ease;
-  background: var(--secondary-color);
-}
-
-.sidebar.open input {
-  padding: 0 20px 0 50px;
-  width: 100%;
-}
-
 .sidebar {
   position: absolute;
   top: 50%;
@@ -389,11 +399,6 @@ export default {
 .sidebar.open {
   background: var(--secondary-color);
   color: var(--icons-color);
-}
-
-.sidebar .bx-search:hover {
-  background: var(--menu-items-hover-color);
-  color: var(--bg-color);
 }
 
 .sidebar li a {
