@@ -13,21 +13,21 @@
     <perfect-scrollbar style="height: 87vh;" :options="{ suppressScrollX: true }">
 
       <div id="progressCircles" v-if="isOpened">
-        <div id="healthProgress" @mouseover="popUpHealth = true">
+        <div id="healthProgress" >
           <Progress :radius="50" :strokeWidth="15" value="86.12">
             <template v-slot:footer>
               <b>Health</b>
             </template>
           </Progress>
-          <span class="tooltip" v-show="popUpHealth"> Health Text</span>
+          <span class="tooltip">Seen from Health Topic</span>
         </div>
-        <div id="travelProgress" @mouseover="popUpTravel = true">
+        <div id="travelProgress">
           <Progress :radius="50" :strokeWidth="15" value="86.12">
             <template v-slot:footer>
               <b>Travel</b>
             </template>
           </Progress>
-          <span class="tooltip" v-show="popUpTravel"> Travel Text</span>
+          <span class="tooltip">Seen from Travel Topic </span>
         </div>
       </div>
 
@@ -212,9 +212,7 @@ export default {
   },
   data () {
     return {
-      isOpened: false,
-      popUpHealth: false,
-      popUpTravel: false
+      isOpened: false
     }
   },
   mounted () {
@@ -264,9 +262,9 @@ export default {
 }
 
 #healthProgress .tooltip, #travelProgress .tooltip {
-  position: absolute;
-  top: -20px;
-  left: calc(100% + 15px);
+  position: relative;
+  bottom: 150px;
+  left: calc(80%);
   z-index: 3;
   background: var(--items-tooltip-color);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
