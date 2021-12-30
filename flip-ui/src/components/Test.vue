@@ -12,20 +12,23 @@
 
     <perfect-scrollbar style="height: 87vh;" :options="{ suppressScrollX: true }">
 
-      <div id="progressCircles" v-if="isOpened" >
-        <div id="healthProgress" @mouseover="upHere = true" >
+      <div id="progressCircles" v-if="isOpened">
+        <div id="healthProgress" @mouseover="popUpHealth = true">
           <Progress :radius="50" :strokeWidth="15" value="86.12">
             <template v-slot:footer>
               <b>Health</b>
             </template>
           </Progress>
-          <span class="tooltip" v-show="upHere"> Health Text</span>
+          <span class="tooltip" v-show="popUpHealth"> Health Text</span>
         </div>
-        <Progress id="travelProgress" :radius="50" :strokeWidth="15" value="86.12">
-          <template v-slot:footer>
-            <b>Travel</b>
-          </template>
-        </Progress>
+        <div id="travelProgress" @mouseover="popUpTravel = true">
+          <Progress :radius="50" :strokeWidth="15" value="86.12">
+            <template v-slot:footer>
+              <b>Travel</b>
+            </template>
+          </Progress>
+          <span class="tooltip" v-show="popUpTravel"> Travel Text</span>
+        </div>
       </div>
 
       <ul class="nav-list">
@@ -210,7 +213,8 @@ export default {
   data () {
     return {
       isOpened: false,
-      upHere: false
+      popUpHealth: false,
+      popUpTravel: false
     }
   },
   mounted () {
@@ -250,7 +254,7 @@ export default {
   margin: 0 10px 0 10px;
 }
 
-#healthProgress:hover .tooltip {
+#healthProgress:hover .tooltip, #travelProgress:hover .tooltip {
   color: #42b983;
   opacity: 1;
   pointer-events: auto;
@@ -259,7 +263,7 @@ export default {
   transform: translateY(-50%);
 }
 
-#healthProgress .tooltip {
+#healthProgress .tooltip, #travelProgress .tooltip {
   position: absolute;
   top: -20px;
   left: calc(100% + 15px);
