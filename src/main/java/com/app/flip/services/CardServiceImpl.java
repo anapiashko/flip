@@ -3,6 +3,7 @@ package com.app.flip.services;
 import com.app.flip.dao.CardRepository;
 import com.app.flip.model.Card;
 import com.app.flip.model.Progress;
+import com.app.flip.model.Statistics;
 import com.app.flip.utils.CardTopic;
 import com.app.flip.utils.Constants;
 import lombok.extern.slf4j.Slf4j;
@@ -66,5 +67,22 @@ public class CardServiceImpl implements CardService {
         resultCollection = resultCollection.stream().limit(Constants.SAMPLE_SIZE).collect(Collectors.toList());
 
         return resultCollection;
+    }
+
+    public Statistics getStatistics() {
+        log.info("Get full statistics in percentage");
+        Integer allSeenHealth = cardRepository.findAllSeenByCardTopic(CardTopic.HEALTH.getOrdinal());
+        Integer allSeenTravel = cardRepository.findAllSeenByCardTopic(CardTopic.TRAVEL.getOrdinal());
+
+        long allHealth = cardRepository.countByCardTopic(CardTopic.HEALTH);
+        long allTravel = cardRepository.countByCardTopic(CardTopic.TRAVEL);
+
+        Double percentageHealth = (double)allSeenHealth/allHealth;
+        Double percentageTravel = (double)allSeenTravel/allTravel;
+
+        return Statistics.builder()
+                .healthPercentage(percentageHealth)
+                .travelPercentage(percentageTravel)
+                .build();
     }
 }

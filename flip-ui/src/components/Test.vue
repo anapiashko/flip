@@ -7,7 +7,7 @@
         {{ menuTitle }}
       </div>
       <i class="bx" :class="isOpened ? 'bx-menu-alt-right' : 'bx-menu'"
-        id="btn" @click="isOpened = !isOpened"/>
+        id="btn" @click="isOpened = !isOpened" @onclick="getStatistics()"/>
     </div>
 
     <perfect-scrollbar style="height: 87vh;" :options="{ suppressScrollX: true }">
@@ -22,7 +22,7 @@
           <span class="tooltip">Seen from Health Topic</span>
         </div>
         <div id="travelProgress">
-          <Progress :radius="50" :strokeWidth="15" strokeColor="#2c3e50" value="86.12">
+          <Progress :radius="50" :strokeWidth="15" strokeColor="#2c3e50" :value="this.statistics.travelPercentage">
             <template v-slot:footer>
               <b>Travel</b>
             </template>
@@ -67,6 +67,9 @@
 <script>
 import { PerfectScrollbar } from 'vue2-perfect-scrollbar'
 import Progress from 'easy-circular-progress'
+import axios from 'axios'
+
+let statistics
 
 export default {
   name: 'Test',
@@ -207,11 +210,28 @@ export default {
   },
   data () {
     return {
-      isOpened: false
+      isOpened: false,
+      statistics: statistics
     }
   },
   mounted () {
     this.isOpened = this.isMenuOpen
+  },
+  methods: {
+    async getStatistics () {
+      console.log('getStatistics')
+      try {
+        const res = await axios.get('http://localhost:8000/get-statistics')
+
+        statistics = res.data
+
+        console.log(statistics)
+        console.log(statistics.healthPercentage)
+        console.log(statistics.travelPercentage)
+      } catch (e) {
+        console.error(e)
+      }
+    }
   },
   computed: {
     cssVars () {

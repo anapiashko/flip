@@ -1,6 +1,7 @@
 package com.app.flip.controllers;
 
 import com.app.flip.model.Card;
+import com.app.flip.model.Statistics;
 import com.app.flip.services.CardServiceImpl;
 import com.app.flip.services.TextGeneratorServiceImpl;
 import com.app.flip.utils.CardTopic;
@@ -41,6 +42,14 @@ public class HomeController {
         log.info("Get card sample by topic name, topic = {}", topic);
         List<Card> sample = cardService.getSample(CardTopic.valueOf(topic.toUpperCase()));
         return sample;
+    }
+
+    @GetMapping("/get-statistics")
+    public Statistics getStatistics() {
+        log.info("Get Statistics");
+        return cardService.getStatistics();
+//        return new ArrayList<>(Arrays.asList(new Card(190, "Eat fruits, vegetables and whole grains.", "Ешьте фрукты, овощи и цельнозерновые продукты.", 0, CardTopic.fromString(topic)),
+//                new Card(2, "When you can enjoy them, you feel relaxed and rejuvenated.", "Я тебя не знаю", 2, CardTopic.fromString(topic))));
     }
 
 //    @RequestMapping("/tmp")
