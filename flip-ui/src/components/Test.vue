@@ -14,7 +14,7 @@
 
       <div id="progressCircles" v-if="isOpened">
         <div id="healthProgress" >
-          <Progress :radius="50" :strokeWidth="15" value="86.12">
+          <Progress :radius="50" :strokeWidth="15" strokeColor="#2c3e50" value="86.12">
             <template v-slot:footer>
               <b>Health</b>
             </template>
@@ -22,7 +22,7 @@
           <span class="tooltip">Seen from Health Topic</span>
         </div>
         <div id="travelProgress">
-          <Progress :radius="50" :strokeWidth="15" value="86.12">
+          <Progress :radius="50" :strokeWidth="15" strokeColor="#2c3e50" value="86.12">
             <template v-slot:footer>
               <b>Travel</b>
             </template>
@@ -175,27 +175,28 @@ export default {
     //! Styles
     bgColor: {
       type: String,
-      default: '#11101d'
+      default: '#bde0ff'
     },
     secondaryColor: {
       type: String,
-      default: '#1d1b31'
+      // default: '#1d1b31'
+      default: '#d7ecff'
     },
-    homeSectionColor: {
-      type: String,
-      default: '#e4e9f7'
-    },
+    // homeSectionColor: {
+    //   type: String,
+    //   default: '#e4e9f7'
+    // },
     logoTitleColor: {
       type: String,
-      default: '#fff'
+      default: '#2c3e50'
     },
     iconsColor: {
       type: String,
-      default: '#fff'
+      default: '#2c3e50'
     },
     itemsTooltipColor: {
       type: String,
-      default: '#e4e9f7'
+      default: '#bde0ff'
     },
     menuItemsHoverColor: {
       type: String,
@@ -203,11 +204,11 @@ export default {
     },
     menuItemsTextColor: {
       type: String,
-      default: '#fff'
+      default: '#2c3e50'
     },
     menuFooterTextColor: {
       type: String,
-      default: '#fff'
+      default: '#2c3e50'
     }
   },
   data () {
@@ -223,7 +224,7 @@ export default {
       return {
         '--bg-color': this.bgColor,
         '--secondary-color': this.secondaryColor,
-        '--home-section-color': this.homeSectionColor,
+        // '--home-section-color': this.homeSectionColor,
         '--logo-title-color': this.logoTitleColor,
         '--icons-color': this.iconsColor,
         '--items-tooltip-color': this.itemsTooltipColor,
@@ -253,7 +254,6 @@ export default {
 }
 
 #healthProgress:hover .tooltip, #travelProgress:hover .tooltip {
-  color: #42b983;
   opacity: 1;
   pointer-events: auto;
   transition: all 0.4s ease;
