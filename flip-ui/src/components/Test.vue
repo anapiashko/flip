@@ -7,14 +7,14 @@
         {{ menuTitle }}
       </div>
       <i class="bx" :class="isOpened ? 'bx-menu-alt-right' : 'bx-menu'"
-        id="btn" @click="isOpened = !isOpened" @onclick="getStatistics()"/>
+        id="btn" @click="isOpened = !isOpened"/>
     </div>
 
     <perfect-scrollbar style="height: 87vh;" :options="{ suppressScrollX: true }">
 
       <div id="progressCircles" v-if="isOpened">
         <div id="healthProgress">
-          <Progress :radius="50" :strokeWidth="15" strokeColor="#2c3e50" value="86.12">
+          <Progress :radius="50" :strokeWidth="15" strokeColor="#2c3e50" :value="statistics.healthPercentage">
             <template v-slot:footer>
               <b>Health</b>
             </template>
@@ -22,7 +22,7 @@
           <span class="tooltip">Seen from Health Topic</span>
         </div>
         <div id="travelProgress">
-          <Progress :radius="50" :strokeWidth="15" strokeColor="#2c3e50" :value="this.statistics.travelPercentage">
+          <Progress :radius="50" :strokeWidth="15" strokeColor="#2c3e50" :value="statistics.travelPercentage">
             <template v-slot:footer>
               <b>Travel</b>
             </template>
@@ -68,8 +68,6 @@
 import { PerfectScrollbar } from 'vue2-perfect-scrollbar'
 import Progress from 'easy-circular-progress'
 import axios from 'axios'
-
-let statistics
 
 export default {
   name: 'Test',
@@ -211,27 +209,17 @@ export default {
   data () {
     return {
       isOpened: false,
-      statistics: statistics
+      statistics: {
+        healthPercentage: 0,
+        travelPercentage: 0
+      }
     }
   },
   mounted () {
     this.isOpened = this.isMenuOpen
-  },
-  methods: {
-    async getStatistics () {
-      console.log('getStatistics')
-      try {
-        const res = await axios.get('http://localhost:8000/get-statistics')
-
-        statistics = res.data
-
-        console.log(statistics)
-        console.log(statistics.healthPercentage)
-        console.log(statistics.travelPercentage)
-      } catch (e) {
-        console.error(e)
-      }
-    }
+    axios
+      .get('http://localhost:8000/get-statistics')
+      .then(response => (this.statistics = response.data))
   },
   computed: {
     cssVars () {
