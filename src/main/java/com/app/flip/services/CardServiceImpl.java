@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -77,8 +78,10 @@ public class CardServiceImpl implements CardService {
         long allHealth = cardRepository.countByCardTopic(CardTopic.HEALTH);
         long allTravel = cardRepository.countByCardTopic(CardTopic.TRAVEL);
 
-        Double percentageHealth = (double)allSeenHealth/allHealth;
-        Double percentageTravel = (double)allSeenTravel/allTravel;
+        DecimalFormat df = new DecimalFormat("##.##");
+
+        Double percentageHealth = new Double(df.format((double)allSeenHealth/allHealth));
+        Double percentageTravel = new Double(df.format((double)allSeenTravel/allTravel));
 
         return Statistics.builder()
                 .healthPercentage(percentageHealth)
