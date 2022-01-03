@@ -119,7 +119,7 @@ export default {
           }
         })
         sentences = res.data
-        console.log(sentences)
+        console.log('new sample : ', sentences)
       } catch (e) {
         console.error(e)
       }
