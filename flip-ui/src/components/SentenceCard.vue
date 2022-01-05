@@ -93,7 +93,6 @@ export default {
         if ((this.counter + 1) < sentences.length) {
           this.counter += 1
         } else {
-          console.log('else')
           this.requestForAdditionalSentenceSet()
           this.counter = 0
         }
