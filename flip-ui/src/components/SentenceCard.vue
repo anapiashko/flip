@@ -103,7 +103,7 @@ export default {
       this.updateProgress(isTypedWordCorrect)
       this.typedWord = ''
 
-      this.getMissedWord(sentences[this.counter])
+      this.getMissedWord(this.$data.sentences[this.counter])
       console.log(' missedWord.length = ', missedWord.length)
       document.getElementById('input-word').style.width = missedWord.length * 1.5 + 'ch'
     },
@@ -117,8 +117,12 @@ export default {
             topic: topic
           }
         })
-        sentences = res.data
-        console.log('new sample : ', sentences)
+        this.$data.sentences = res.data
+        console.log('new sample : ', this.$data.sentences)
+
+        this.getMissedWord(this.$data.sentences[this.counter])
+        console.log(' missedWord.length = ', missedWord.length)
+        document.getElementById('input-word').style.width = missedWord.length * 1.5 + 'ch'
       } catch (e) {
         console.error(e)
       }
