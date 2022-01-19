@@ -37,5 +37,4 @@ EXPOSE 8000
 
 ENTRYPOINT ["java", \
     "-Djava.security.egd=file:/dev/./urandom", \
-    "-jar","/home/appuser/app/app.jar", \
-    "--spring.config.additional-location=file:/configuration/"]
+    "-jar","/home/appuser/app/app.jar"]
