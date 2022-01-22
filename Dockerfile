@@ -35,6 +35,4 @@ EXPOSE 8000
 # JVM memory options
 # ENV JAVA_TOOL_OPTIONS="-XX:+PrintFlagsFinal -XX:MaxRAM=1024m -XX:+UseG1GC -Xmx1g -Xms32m"
 
-ENTRYPOINT ["java", \
-    "-Djava.security.egd=file:/dev/./urandom", \
-    "-jar","/home/appuser/app/app.jar"]
+ENTRYPOINT ["java", "-jar","/home/appuser/app/app.jar"]
