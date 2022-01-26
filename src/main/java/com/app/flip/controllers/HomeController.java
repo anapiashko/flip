@@ -31,10 +31,10 @@ public class HomeController {
     @GetMapping("/generate")
     public List<Card> generateSampleByTopic(@RequestParam String topic) {
         log.info("Generate Sentences by topic name, topic = {}", topic);
-//        List<Card> cards = textGeneratorService.getText(topic.toLowerCase());
-//        return cardService.saveAll(cards);
-        return new ArrayList<>(Arrays.asList(new Card(1, "Did you get any breakfast?", "Ты завтракал?", 1, CardTopic.fromString(topic)),
-                new Card(2, "I don't know you", "Я тебя не знаю", 2, CardTopic.fromString(topic))));
+        List<Card> cards = textGeneratorService.getText(topic.toLowerCase());
+        return cardService.saveAll(cards);
+//        return new ArrayList<>(Arrays.asList(new Card(1, "Did you get any breakfast?", "Ты завтракал?", 1, CardTopic.fromString(topic)),
+//                new Card(2, "I don't know you", "Я тебя не знаю", 2, CardTopic.fromString(topic))));
     }
 
     @GetMapping("/get-sample")
