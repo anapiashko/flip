@@ -2,3 +2,5 @@ build:
   docker:
     web: flip-ui/Dockerfile
     ui: Dockerfile
+run:
+  web: npm run serve --port $PORT
