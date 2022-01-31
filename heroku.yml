@@ -4,5 +4,4 @@ setup:
       as: DATABASE
 build:
   docker:
-    web: flip-ui/Dockerfile
-    ui: flip-ui/Dockerfile
+    web: Dockerfile
