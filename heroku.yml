@@ -2,5 +2,3 @@ build:
   docker:
     web: flip-ui/Dockerfile
     ui: Dockerfile
-run:
-  web: java -jar /home/appuser/app/app.jar $JAVA_OPTS
