@@ -1,7 +1,9 @@
+const process = require(".eslintrc");
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
+    PORT: process.env.PORT || 8080,
   },
   extends: [
     'plugin:vue/essential',
