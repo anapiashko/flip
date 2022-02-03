@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   env: {
     node: true,
-    PORT: process.env.PORT || 8080,
+    port: process.env.PORT || 8080,
   },
   extends: [
     'plugin:vue/essential',
