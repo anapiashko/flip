@@ -1,4 +1,3 @@
-const process = require(".eslintrc");
 module.exports = {
   devServer: {
     host: 'localhost',
