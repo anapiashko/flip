@@ -1,4 +1,3 @@
 build:
   docker:
-    web: flip-ui/Dockerfile
-    ui: Dockerfile
+    web: Dockerfile
