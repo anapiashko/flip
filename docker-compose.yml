@@ -1,29 +1,32 @@
 version: '3.3'
 
 services:
-  flip-app:
-    image: flip
-#    build:
-#      context: ./
-    depends_on:
-      - mysql-app
-    environment:
-      #  SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3307/car_rental?autoReconnect=true
-      - DATABASE_HOST=mysql-app
-#      - DATABASE_NAME=car_rental
-#      - DATABASE_USER=anastasiya
-#      - DATABASE_PASSWORD=password
-#      - DATABASE_PORT=3306
-    ports:
-      - 8000:8000
   mysql-app:
     image: mysql:8.0.26
     environment:
-      MYSQL_USER: flip_user
-      MYSQL_PASSWORD: password
+      #      MYSQL_USER: flip_user
+      #      MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: root
     ports:
       - 3308:3306
     volumes:
       - ./_infrastructure/mysql/datadir/:/var/lib/mysql
       - ./_infrastructure/mysql/init/:/docker-entrypoint-initdb.d/
+  flip-app:
+    #    image: flip
+    build: .
+    restart: always
+    depends_on:
+      - mysql-app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-app:3306/flip
+      SPRING_DATASOURCE_USERNAME: flip_user
+      SPRING_DATASOURCE_PASSWORD: password
+#      - MYSQL_ROOT_HOST=%
+#      DATABASE_HOST: mysql-app
+#      - DATABASE_NAME=flip
+#      - DATABASE_USER=flip_user
+#      - DATABASE_PASSWORD=password
+#      - DATABASE_PORT=3306
+    ports:
+      - 8000:8000
