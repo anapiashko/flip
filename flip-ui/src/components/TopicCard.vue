@@ -48,7 +48,7 @@ export default {
       console.log('topicName = ', topicName)
       console.log('topic = ', topic)
       try {
-        const res = await axios.get('http://localhost:8000/get-sample', {
+        const res = await axios.get(process.env.VUE_APP_SERVER_HOST + '/get-sample', {
           params: {
             topic: topicName
           }

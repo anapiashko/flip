@@ -112,7 +112,7 @@ export default {
       topic = TopicCard.data().topic
       console.log('topic = ', topic)
       try {
-        const res = await axios.get('http://localhost:8000/get-sample', {
+        const res = await axios.get(process.env.VUE_APP_SERVER_HOST + '/get-sample', {
           params: {
             topic: topic
           }
@@ -131,7 +131,7 @@ export default {
       console.log('updateProgress')
       console.log('sentenceId = ', sentenceId)
       try {
-        await axios.post('http://localhost:8000/change-progress', {
+        await axios.post(process.env.VUE_APP_SERVER_HOST + '/change-progress', {
           card_id: sentenceId,
           typed_correct: isTypedWordCorrect
         })

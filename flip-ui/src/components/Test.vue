@@ -218,7 +218,7 @@ export default {
   mounted () {
     this.isOpened = this.isMenuOpen
     axios
-      .get('http://localhost:8000/get-statistics')
+      .get(process.env.VUE_APP_SERVER_HOST + '/get-statistics')
       .then(response => (this.statistics = response.data))
   },
   computed: {
