@@ -4,7 +4,6 @@
 <!--    <sidebar-menu-akahon @search-input-emit="search" />-->
     <Test></Test>
     <h1>Your Upcoming Goals</h1>
-    <p>{{ this.sentences }}</p>
     <div class="topic-contain">
       <div id="topics" style="cursor: pointer;" @click="goToSentenceCards(topic.name)"
            v-for="topic in topics" :key="topic.name">
