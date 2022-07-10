@@ -84,22 +84,33 @@ export default {
       console.log('missed word = ', missedWord)
       return (word !== null) ? word : ''
     },
-    onEnter: function () {
+    onEnter: async function () {
       console.log('onEnter')
       console.log('typedWord = ', this.typedWord)
       const isTypedWordCorrect = (this.typedWord.toLowerCase() === missedWord.toLowerCase())
       console.log(isTypedWordCorrect)
+      const audio = new Audio(require('../../../src/main/resources/media/1038.mp3'))
+      let audioDuration = 1
+      audio.onloadedmetadata = () => {
+        console.log(audio.duration)
+        audioDuration = audio.duration
+      }
       if (isTypedWordCorrect) {
-        if ((this.counter + 1) < sentences.length) {
-          this.counter += 1
-        } else {
-          this.requestForAdditionalSentenceSet()
-          this.counter = 0
-        }
-        document.getElementById('input-word').placeholder = ''
+        await audio.play()
+        audio.addEventListener('ended', () => {
+          console.log('ended')
+          if ((this.counter + 1) < sentences.length) {
+            this.counter += 1
+          } else {
+            this.requestForAdditionalSentenceSet()
+            this.counter = 0
+          }
+          document.getElementById('input-word').placeholder = ''
+        })
       } else {
         document.getElementById('input-word').placeholder = missedWord
       }
+      await this.sleep(audioDuration * 1000)
       this.updateProgress(isTypedWordCorrect)
       this.typedWord = ''
 
@@ -138,6 +149,11 @@ export default {
       } catch (e) {
         console.error(e)
       }
+    },
+    async sleep (ms) {
+      return new Promise((resolve) => {
+        setTimeout(resolve, ms)
+      })
     },
     isBlank (str) {
       return (!str || /^\s*$/.test(str))
