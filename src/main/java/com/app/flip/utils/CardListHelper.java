@@ -106,7 +106,8 @@ public final class CardListHelper {
         for (Card card : cards) {
             String trimmedEnSen = card.getEnglishSentence().trim().replaceAll("\\s{2,}", " ");
             String trimmedRusSen = card.getRussianSentence().trim().replaceAll("\\s{2,}", " ");
-            temp.add(new Card(card.getId(), trimmedEnSen, trimmedRusSen, card.getMissedWord(), card.getCardTopic()));
+            temp.add(new Card(card.getId(), trimmedEnSen, trimmedRusSen, card.getMissedWord(),
+                    card.getCardTopic(), card.getLocation()));
         }
         return temp;
     }

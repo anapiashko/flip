@@ -14,12 +14,15 @@ class CardListHelperTest {
     public void testFilteringCardList(){
         // given
         List<Card> cardList = new ArrayList<>();
-        cardList.add(new Card(1,"Breakfast is very important","Завтрак очень важен", 0, CardTopic.HEALTH));
-        cardList.add(new Card(2,"","", null, null));
-        cardList.add(new Card(3,"Breakfast is super very important to eat every day before starting your new day","Завтрак важен", 0, CardTopic.HEALTH));
-        cardList.add(new Card(4,"","Завтрак важен.", null, CardTopic.HEALTH));
-        cardList.add(new Card(5,"Breakfast is important.","", 0, CardTopic.HEALTH));
-        cardList.add(new Card(6," Did you get    any breakfast?  "," Ты позавтракал?", 4, CardTopic.HEALTH));
+        cardList.add(new Card(1,"Breakfast is very important","Завтрак очень важен", 0,
+                CardTopic.HEALTH, "media/1001.mp3"));
+        cardList.add(new Card(2,"","", null, null, "media/1001.mp3"));
+        cardList.add(new Card(3,"Breakfast is super very important to eat every day before starting your new day","Завтрак важен", 0,
+                CardTopic.HEALTH, "media/1001.mp3"));
+        cardList.add(new Card(4,"","Завтрак важен.", null, CardTopic.HEALTH, "media/1001.mp3"));
+        cardList.add(new Card(5,"Breakfast is important.","", 0, CardTopic.HEALTH, "media/1001.mp3"));
+        cardList.add(new Card(6," Did you get    any breakfast?  "," Ты позавтракал?", 4,
+                CardTopic.HEALTH, "media/1001.mp3"));
 
         // when
         List<Card> resultCardList = CardListHelper.getInstance(cardList)
@@ -43,10 +46,11 @@ class CardListHelperTest {
     public void testChoosingMissedWordForCardList(){
         // given
         List<Card> cardList = new ArrayList<>();
-        cardList.add(new Card(1,"Breakfast is very good","Завтрак хорош",0, CardTopic.HEALTH));
-        cardList.add(new Card(2,"","", null, null));
-        cardList.add(new Card(3,"I am not tall","Я не высокий", null,null));
-        cardList.add(new Card(4,"  Ask you be   careful with it ","Прошу, будь осторожен", 3, CardTopic.TRAVEL));
+        cardList.add(new Card(1,"Breakfast is very good","Завтрак хорош",0, CardTopic.HEALTH, "media/1001.mp3"));
+        cardList.add(new Card(2,"","", null, null, "media/1001.mp3"));
+        cardList.add(new Card(3,"I am not tall","Я не высокий", null,null, "media/1001.mp3"));
+        cardList.add(new Card(4,"  Ask you be   careful with it ","Прошу, будь осторожен", 3,
+                CardTopic.TRAVEL, "media/1001.mp3"));
 
         // when
         List<Card> resultCardList = CardListHelper.getInstance(cardList)
