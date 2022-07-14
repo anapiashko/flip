@@ -1,4 +1,7 @@
-create table IF NOT EXISTS card (
+drop table if exists progress;
+drop table if exists card;
+
+create table card (
     id int auto_increment primary key,
     en_sentence varchar(150) NOT NULL,
     rus_sentence varchar(150) NOT NULL,
@@ -7,7 +10,7 @@ create table IF NOT EXISTS card (
     location varchar(150) NOT NULL
 );
 
-create table IF NOT EXISTS progress (
+create table progress (
     id int auto_increment primary key,
     card_id int UNIQUE NOT NULL,
     probability DECIMAL( 5, 2 ) default 1,
