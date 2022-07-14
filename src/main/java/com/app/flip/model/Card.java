@@ -29,13 +29,17 @@ public class Card {
     @Enumerated
     private CardTopic cardTopic;
 
+    private String location;
+
     public Card (){}
 
-    public Card(Integer id, String englishSentence, String russianSentence, Integer missedWord, CardTopic cardTopic) {
+    public Card(Integer id, String englishSentence, String russianSentence, Integer missedWord,
+                CardTopic cardTopic, String location) {
         this.id = id;
         this.englishSentence = englishSentence;
         this.russianSentence = russianSentence;
         this.missedWord = missedWord;
         this.cardTopic = cardTopic;
+        this.location = location;
     }
 }
