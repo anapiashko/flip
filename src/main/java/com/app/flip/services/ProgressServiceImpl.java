@@ -36,7 +36,7 @@ public class ProgressServiceImpl {
             if (typedCorrect) {
                 progress.setProbability(progress.getProbability().multiply(new BigDecimal("0.9")));
             } else {
-                progress.setProbability(progress.getProbability().divide(new BigDecimal("0.9")));
+                progress.setProbability(progress.getProbability().divide(new BigDecimal("0.9"), 2));
             }
             progress = progressRepository.save(progress);
         }
