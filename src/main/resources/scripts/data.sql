@@ -102,7 +102,6 @@ insert into progress (id, card_id, probability) values (9, 9, 1.00);
 insert into progress (id, card_id, probability) values (10, 10, 1.00);
 insert into progress (id, card_id, probability) values (11, 11, 1.00);
 insert into progress (id, card_id, probability) values (12, 12, 1.00);
-insert into progress (id, card_id, probability) values (12, 12, 1.00);
 insert into progress (id, card_id, probability) values (13, 13, 1.00);
 insert into progress (id, card_id, probability) values (14, 14, 1.00);
 insert into progress (id, card_id, probability) values (15, 15, 1.00);
