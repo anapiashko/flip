@@ -2,7 +2,7 @@
   <div id="container">
       <article class="blog-card">
         <div class="article-details" >
-<!--          <h2>{{ counter }}</h2>-->
+          <h2>{{ counter }}</h2>
           <h4 class="card-category">{{ category }}</h4>
           <div id="english_sentence" :missed="getMissedWord(sentences[counter])">
             <h3 class="en-sentence">{{ getFirstSentencePart(sentences[counter]) }}
@@ -76,7 +76,7 @@ export default {
       return lastSentencePart
     },
     getMissedWord (sentence) {
-      console.log('getMissedWord')
+      console.log('GET_MISSED_WORD')
       console.log('sentence = ', sentence)
       const arr = (sentence !== null) ? sentence.en_sentence.split(/[ ,.?!]+/) : ''
       const word = arr[sentence.missedWord]
@@ -97,20 +97,18 @@ export default {
       }
       if (isTypedWordCorrect) {
         await audio.play()
-        audio.addEventListener('ended', () => {
-          console.log('ended')
-          if ((this.counter + 1) < sentences.length) {
-            this.counter += 1
-          } else {
-            this.requestForAdditionalSentenceSet()
-            this.counter = 0
-          }
-          document.getElementById('input-word').placeholder = ''
-        })
+        await this.sleep(audioDuration * 1000)
+        if ((this.counter + 1) < sentences.length) {
+          this.counter += 1
+          console.log('this.counter = ', this.counter)
+        } else {
+          this.requestForAdditionalSentenceSet()
+          this.counter = 0
+        }
+        document.getElementById('input-word').placeholder = ''
       } else {
         document.getElementById('input-word').placeholder = missedWord
       }
-      await this.sleep(audioDuration * 1000)
       this.updateProgress(isTypedWordCorrect)
       this.typedWord = ''
 
