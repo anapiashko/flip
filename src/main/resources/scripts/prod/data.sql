@@ -1,12 +1,4 @@
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-            values (1, 'Sorry, I did not understand what you just said.',
-                    'Извините, я не понял, что вы только что сказали.', 2, 0, 'media/1038.mp3');
-
-insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (2, 'I am so sorry to see you go.',
-        'Очень жаль, что Вы уходите.', 1, 0, 'media/1042.mp3');
-
-insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (3, 'On the contrary, it is a deep and heave responsibility.',
         'Напротив, это глубокая и тяжелая ответственность.', 2, 0, 'media/0001.mp3');
 
@@ -83,15 +75,49 @@ values (21, 'there has been an outbreak of salmonella.',
         'Приозошла вспышка сальмонеллы.', 7, 0, 'media/0019.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (22, 'a Chinese saying has it that women hold up half of the sky.',
+values (22, 'A Chinese saying has it that women hold up half of the sky.',
         'Китайская пословица гласит, что на женщинах держится полнеба.', 7, 0, 'media/0020.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (23, 'i am tired of hearing about your moans and groans.',
+values (23, 'I am tired of hearing about your moans and groans.',
         'Мне надоело слушать, как ты охаешь и ахаешь.', 7, 0, 'media/0021.mp3');
 
-insert into progress (id, card_id, probability) values (1, 1, 1.00);
-insert into progress (id, card_id, probability) values (2, 2, 1.00);
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (24, 'I have let my heart overpower my head.',
+        'Я позволил своему сердцу взять верх над разумом.', 5, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (25, 'he moved along the pavement, deep in thought.',
+        'он шел по тротуару, погруженный в свои мысли.', 4, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (26, 'Never put off until tomorrow what you can do today.',
+        'Никогда не откладывайте на завтра то, что вы можете сделать сегодня.', 1, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (27, 'Now is not time for quarrel!',
+        'Сейчас не время для раздора!', 5, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (28, 'Smells of rotten leaves and mushrooms.',
+        'Пахнет гнилыми листьями и грибами.', 2, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (29, 'Sailed past but never stopped over.',
+        'Проплывал мимо, но никогда не останавливался.', 0, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (30, 'I tried to snatch it but he was too quick for me.',
+        'Я пыталась выхватить, но он оказался проворнее.', 3, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (31, 'The school has received sufficient government funding.',
+        'Школа получила существенную помощь от правительства.', 4, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (32, 'The only way to get rid of a temptation is to yield to it.',
+        'Единственный способ отделаться от искушения - уступить ему.', 8, 0, 'media/.mp3');
+
 insert into progress (id, card_id, probability) values (3, 3, 1.00);
 insert into progress (id, card_id, probability) values (4, 4, 1.00);
 insert into progress (id, card_id, probability) values (5, 5, 1.00);
@@ -113,3 +139,12 @@ insert into progress (id, card_id, probability) values (20, 20, 1.00);
 insert into progress (id, card_id, probability) values (21, 21, 1.00);
 insert into progress (id, card_id, probability) values (22, 22, 1.00);
 insert into progress (id, card_id, probability) values (23, 23, 1.00);
+insert into progress (id, card_id, probability) values (24, 24, 1.00);
+insert into progress (id, card_id, probability) values (25, 25, 1.00);
+insert into progress (id, card_id, probability) values (26, 26, 1.00);
+insert into progress (id, card_id, probability) values (27, 27, 1.00);
+insert into progress (id, card_id, probability) values (28, 28, 1.00);
+insert into progress (id, card_id, probability) values (29, 29, 1.00);
+insert into progress (id, card_id, probability) values (30, 30, 1.00);
+insert into progress (id, card_id, probability) values (31, 31, 1.00);
+insert into progress (id, card_id, probability) values (32, 32, 1.00);
