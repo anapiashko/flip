@@ -4,7 +4,7 @@ import com.app.flip.dao.CardRepository;
 import com.app.flip.model.Card;
 import com.app.flip.model.Progress;
 import com.app.flip.model.Statistics;
-import com.app.flip.utils.CardTopic;
+import com.app.flip.model.CardTopic;
 import com.app.flip.utils.Constants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;

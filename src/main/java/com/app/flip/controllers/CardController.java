@@ -3,7 +3,7 @@ package com.app.flip.controllers;
 import com.app.flip.model.Card;
 import com.app.flip.model.Statistics;
 import com.app.flip.services.CardServiceImpl;
-import com.app.flip.utils.CardTopic;
+import com.app.flip.model.CardTopic;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;

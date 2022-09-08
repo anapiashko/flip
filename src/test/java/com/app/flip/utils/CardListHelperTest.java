@@ -1,6 +1,7 @@
 package com.app.flip.utils;
 
 import com.app.flip.model.Card;
+import com.app.flip.model.CardTopic;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

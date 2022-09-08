@@ -1,6 +1,5 @@
 package com.app.flip.model;
 
-import com.app.flip.utils.CardTopic;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 

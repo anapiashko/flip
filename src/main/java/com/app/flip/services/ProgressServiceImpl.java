@@ -5,6 +5,7 @@ import com.app.flip.model.Progress;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 import java.util.Map;
 
@@ -36,7 +37,7 @@ public class ProgressServiceImpl {
             if (typedCorrect) {
                 progress.setProbability(progress.getProbability().multiply(new BigDecimal("0.9")));
             } else {
-                progress.setProbability(progress.getProbability().divide(new BigDecimal("0.9"), 2));
+                progress.setProbability(progress.getProbability().divide(new BigDecimal("0.9"), RoundingMode.HALF_UP));
             }
             progress = progressRepository.save(progress);
         }

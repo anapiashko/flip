@@ -1,4 +1,4 @@
-package com.app.flip.utils;
+package com.app.flip.model;
 
 public enum CardTopic {
     HEALTH (0),

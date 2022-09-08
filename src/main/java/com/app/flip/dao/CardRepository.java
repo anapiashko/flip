@@ -1,7 +1,7 @@
 package com.app.flip.dao;
 
 import com.app.flip.model.Card;
-import com.app.flip.utils.CardTopic;
+import com.app.flip.model.CardTopic;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
