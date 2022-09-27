@@ -1,5 +1,6 @@
 drop table if exists progress;
 drop table if exists card;
+drop table if exists users;
 
 create table card (
     id int auto_increment primary key,
@@ -18,4 +19,11 @@ create table progress (
         FOREIGN KEY (card_id) REFERENCES card (id)
         ON DELETE NO ACTION
         ON UPDATE NO ACTION
+);
+
+create table users (
+    id int auto_increment primary key,
+    email varchar(150) NOT NULL,
+    password varchar(150) NOT NULL,
+    user_role varchar(20) NOT NULL default 'USER'
 );
