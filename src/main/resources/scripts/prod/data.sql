@@ -148,3 +148,8 @@ insert into progress (id, card_id, probability) values (29, 29, 1.00);
 insert into progress (id, card_id, probability) values (30, 30, 1.00);
 insert into progress (id, card_id, probability) values (31, 31, 1.00);
 insert into progress (id, card_id, probability) values (32, 32, 1.00);
+
+insert into users (id, email, password, user_role)
+ values (1, 'admin@admin.com', '$2a$12$nRKrtJpoPXonmfoTxNS9c.Gi56j6XmnmJM38.JlinVb7/rxwLWyVy', 'ADMIN');
+insert into users (id, email, password, user_role)
+ values (2, 'user@user.com', '$2a$12$Jycus7lth9cTTpj8OHgjmeoDuNb79dXTNddi1UuPYKclfLmSUEIJu', 'USER');
