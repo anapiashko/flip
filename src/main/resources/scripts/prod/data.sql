@@ -118,38 +118,39 @@ insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (32, 'The only way to get rid of a temptation is to yield to it.',
         'Единственный способ отделаться от искушения - уступить ему.', 8, 0, 'media/.mp3');
 
-insert into progress (id, card_id, probability) values (3, 3, 1.00);
-insert into progress (id, card_id, probability) values (4, 4, 1.00);
-insert into progress (id, card_id, probability) values (5, 5, 1.00);
-insert into progress (id, card_id, probability) values (6, 6, 1.00);
-insert into progress (id, card_id, probability) values (7, 7, 1.00);
-insert into progress (id, card_id, probability) values (8, 8, 1.00);
-insert into progress (id, card_id, probability) values (9, 9, 1.00);
-insert into progress (id, card_id, probability) values (10, 10, 1.00);
-insert into progress (id, card_id, probability) values (11, 11, 1.00);
-insert into progress (id, card_id, probability) values (12, 12, 1.00);
-insert into progress (id, card_id, probability) values (13, 13, 1.00);
-insert into progress (id, card_id, probability) values (14, 14, 1.00);
-insert into progress (id, card_id, probability) values (15, 15, 1.00);
-insert into progress (id, card_id, probability) values (16, 16, 1.00);
-insert into progress (id, card_id, probability) values (17, 17, 1.00);
-insert into progress (id, card_id, probability) values (18, 18, 1.00);
-insert into progress (id, card_id, probability) values (19, 19, 1.00);
-insert into progress (id, card_id, probability) values (20, 20, 1.00);
-insert into progress (id, card_id, probability) values (21, 21, 1.00);
-insert into progress (id, card_id, probability) values (22, 22, 1.00);
-insert into progress (id, card_id, probability) values (23, 23, 1.00);
-insert into progress (id, card_id, probability) values (24, 24, 1.00);
-insert into progress (id, card_id, probability) values (25, 25, 1.00);
-insert into progress (id, card_id, probability) values (26, 26, 1.00);
-insert into progress (id, card_id, probability) values (27, 27, 1.00);
-insert into progress (id, card_id, probability) values (28, 28, 1.00);
-insert into progress (id, card_id, probability) values (29, 29, 1.00);
-insert into progress (id, card_id, probability) values (30, 30, 1.00);
-insert into progress (id, card_id, probability) values (31, 31, 1.00);
-insert into progress (id, card_id, probability) values (32, 32, 1.00);
-
 insert into users (id, email, password, user_role)
  values (1, 'admin@admin.com', '$2a$12$nRKrtJpoPXonmfoTxNS9c.Gi56j6XmnmJM38.JlinVb7/rxwLWyVy', 'ADMIN');
 insert into users (id, email, password, user_role)
  values (2, 'user@user.com', '$2a$12$Jycus7lth9cTTpj8OHgjmeoDuNb79dXTNddi1UuPYKclfLmSUEIJu', 'USER');
+
+insert into progress (id, card_id, probability, user_id) values (3, 3, 1.00, 2);
+insert into progress (id, card_id, probability, user_id) values (4, 4, 1.00, 2);
+insert into progress (id, card_id, probability, user_id) values (5, 5, 1.00, 2);
+insert into progress (id, card_id, probability, user_id) values (6, 6, 1.00, 2);
+insert into progress (id, card_id, probability, user_id) values (7, 7, 1.00, 2);
+insert into progress (id, card_id, probability, user_id) values (8, 8, 1.00, 2);
+insert into progress (id, card_id, probability, user_id) values (9, 9, 1.00, 2);
+insert into progress (id, card_id, probability, user_id) values (10, 10, 0.9, 2);
+insert into progress (id, card_id, probability, user_id) values (33, 10, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (11, 11, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (12, 12, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (13, 13, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (14, 14, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (15, 15, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (16, 16, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (17, 17, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (18, 18, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (19, 19, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (20, 20, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (21, 21, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (22, 22, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (23, 23, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (24, 24, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (25, 25, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (26, 26, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (27, 27, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (28, 28, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (29, 29, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (30, 30, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (31, 31, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (32, 32, 1.00, 1);

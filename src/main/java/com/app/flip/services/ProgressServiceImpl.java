@@ -2,6 +2,7 @@ package com.app.flip.services;
 
 import com.app.flip.dao.ProgressRepository;
 import com.app.flip.model.Progress;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -9,6 +10,7 @@ import java.math.RoundingMode;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 @Service
 public class ProgressServiceImpl {
 
@@ -30,7 +32,8 @@ public class ProgressServiceImpl {
     public void updateProgress(Map<String, String> json) {
         Integer cardId = Integer.parseInt(json.get("card_id"));
         boolean typedCorrect = Boolean.parseBoolean(json.get("typed_correct"));
-        Progress progress = progressRepository.findByCardId(cardId);
+        String email = json.get("email");
+        Progress progress = progressRepository.findByCardIdAndUserEmail(cardId, email);
         if (progress == null) {
             progress = progressRepository.save(new Progress(cardId));
         } else {
@@ -42,6 +45,6 @@ public class ProgressServiceImpl {
             progress = progressRepository.save(progress);
         }
 
-        System.out.println("Progress : " + progress);
+        log.info("Progress : " + progress);
     }
 }

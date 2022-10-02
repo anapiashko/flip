@@ -20,6 +20,8 @@ public class Progress {
 
     private BigDecimal probability = new BigDecimal("1.00");
 
+    private Integer userId;
+
     public Progress (Integer cardId) {
         this.cardId = cardId;
     }
