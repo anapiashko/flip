@@ -118,6 +118,30 @@ insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (32, 'The only way to get rid of a temptation is to yield to it.',
         'Единственный способ отделаться от искушения - уступить ему.', 8, 0, 'media/.mp3');
 
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (33, 'The idea of going to a Greek island appeals to me.',
+        'Идея поехать на греческий остров меня привлекает.', 8, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (34, 'The police are appealing for witnesses to the attack.',
+        'Полиция запрашивает свидетелей нападения.', 3, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (35, 'All living things have been desperately struggling to survive the harsh conditions of the planet.',
+        'Все живые существа отчаянно боролись за выживание в суровых условиях планеты.', 5, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (36, 'This will lead to either evolution or extinction.',
+        'Это приведет либо к эволюции, либо к вымиранию.', 7, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (37, 'Spiders make intricate webs.',
+        'Пауки плетут запутанную паутину.', 2, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (38, 'Humans has managed to create the means to destroy the planet we live on.',
+        'Людям удалось создать средства для уничтожения планеты, на которой мы живем.', 6, 0, 'media/.mp3');
+
 insert into users (id, email, password, user_role)
  values (1, 'admin@admin.com', '$2a$12$nRKrtJpoPXonmfoTxNS9c.Gi56j6XmnmJM38.JlinVb7/rxwLWyVy', 'ADMIN');
 insert into users (id, email, password, user_role)
@@ -154,3 +178,9 @@ insert into progress (id, card_id, probability, user_id) values (29, 29, 1.00, 1
 insert into progress (id, card_id, probability, user_id) values (30, 30, 1.00, 1);
 insert into progress (id, card_id, probability, user_id) values (31, 31, 1.00, 1);
 insert into progress (id, card_id, probability, user_id) values (32, 32, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (33, 33, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (34, 34, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (35, 35, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (36, 36, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (37, 37, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (38, 38, 1.00, 1);
