@@ -2,12 +2,11 @@
   <div class="sidebar" :class="isOpened ? 'open' : ''" :style="cssVars">
     <div class="logo-details">
       <img v-if="menuLogo" :src="menuLogo" alt="menu-logo" class="menu-logo icon">
-      <i v-else class="bx icon" :class="menuIcon"/>
+      <i v-else class="bx icon" :class="menuIcon" />
       <div class="logo_name">
         {{ menuTitle }}
       </div>
-      <i class="bx" :class="isOpened ? 'bx-menu-alt-right' : 'bx-menu'"
-        id="btn" @click="isOpened = !isOpened"/>
+      <i class="bx" :class="isOpened ? 'bx-menu-alt-right' : 'bx-menu'" id="btn" @click="isOpened = !isOpened" />
     </div>
 
     <perfect-scrollbar style="height: 87vh;" :options="{ suppressScrollX: true }">
@@ -35,7 +34,7 @@
         <span v-for="(menuItem, index) in menuItems" :key="index">
           <li>
             <a :href="menuItem.link">
-              <i class="bx" :class="menuItem.icon || 'bx-square-rounded'"/>
+              <i class="bx" :class="menuItem.icon || 'bx-square-rounded'" />
               <span class="links_name">{{ menuItem.name }}</span>
             </a>
             <span class="tooltip">{{ menuItem.tooltip || menuItem.name }}</span>
@@ -46,20 +45,14 @@
 
     <div class="profile">
       <div class="profile-details">
-<!--        <img v-if="profileImg" :src="profileImg" alt="profileImg">-->
-        <i class="bx bxs-user-rectangle"/>
+        <i class="bx bxs-user-rectangle" />
         <div class="name_job">
           <div class="name"> {{ profileName }} </div>
           <div class="job"> {{ profileRole }} </div>
         </div>
       </div>
-<!--      <i-->
-<!--        v-if="isExitButton"-->
-<!--        class="bx bx-log-out"-->
-<!--        id="log_out"-->
-<!--        @click.stop="$emit('button-exit-clicked')"-->
-<!--      />-->
-      <i id="log_out" class="bx bxs-user-rectangle"/>
+      <i v-if="isExitButton" class="bx bx-log-out" id="log_out" @click.stop="$emit('button-exit-clicked')"
+       href @click.prevent="logOut" />
     </div>
   </div>
 </template>
@@ -164,7 +157,7 @@ export default {
     },
     isExitButton: {
       type: Boolean,
-      default: false
+      default: true
     },
 
     //! Styles
@@ -235,6 +228,12 @@ export default {
         '--menu-footer-text-color': this.menuFooterTextColor
       }
     }
+  },
+  methods: {
+    logOut () {
+      this.$store.dispatch('auth/logout')
+      this.$router.push('/login')
+    }
   }
 }
 </script>
@@ -255,7 +254,8 @@ export default {
   margin: 0 10px 0 10px;
 }
 
-#healthProgress:hover .tooltip, #travelProgress:hover .tooltip {
+#healthProgress:hover .tooltip,
+#travelProgress:hover .tooltip {
   opacity: 1;
   pointer-events: auto;
   transition: all 0.4s ease;
@@ -263,7 +263,8 @@ export default {
   transform: translateY(-50%);
 }
 
-#healthProgress .tooltip, #travelProgress .tooltip {
+#healthProgress .tooltip,
+#travelProgress .tooltip {
   position: relative;
   bottom: 150px;
   left: calc(80%);
@@ -502,21 +503,18 @@ export default {
   border-radius: 0px;
   transition: all 0.5s ease;
 }
-
 .sidebar.open .profile #log_out {
   width: 50px;
   background: var(--secondary-color);
   opacity: 0;
 }
-
-/*.sidebar.open .profile:hover #log_out {*/
-/*  opacity: 1;*/
-/*}*/
-
-/*.sidebar.open .profile #log_out:hover {*/
-/*  opacity: 1;*/
-/*  color: red;*/
-/*}*/
+.sidebar.open .profile:hover #log_out {
+  opacity: 1;
+}
+.sidebar.open .profile #log_out:hover {
+  opacity: 1;
+  color: red;
+}
 
 .home-section {
   position: relative;
@@ -529,7 +527,7 @@ export default {
   z-index: 2;
 }
 
-.sidebar.open ~ .home-section {
+.sidebar.open~.home-section {
   left: 250px;
   width: calc(100% - 250px);
 }
