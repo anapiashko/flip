@@ -26,13 +26,24 @@ public class AuthenticationRestController {
     private final UserRepository userRepository;
     private final JwtTokenProvider jwtTokenProvider;
 
-    public AuthenticationRestController(AuthenticationManager authenticationManager, UserRepository userRepository, JwtTokenProvider jwtTokenProvider) {
+    public AuthenticationRestController(AuthenticationManager authenticationManager,
+                                        UserRepository userRepository,
+                                        JwtTokenProvider jwtTokenProvider) {
         this.authenticationManager = authenticationManager;
         this.userRepository = userRepository;
         this.jwtTokenProvider = jwtTokenProvider;
     }
 
-    @PostMapping("/login")
+    @PostMapping("/signup")
+    public ResponseEntity<?> signup(@RequestBody AuthenticationRequestDTO request) {
+        userRepository.save(User.builder()
+                .email(request.getEmail())
+                .password(request.getPassword())
+                .build());
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @PostMapping("/signin")
     public ResponseEntity<?> authenticate(@RequestBody AuthenticationRequestDTO request) {
         try {
             authenticationManager.authenticate(
