@@ -4,6 +4,7 @@ import com.app.flip.dao.UserRepository;
 import com.app.flip.model.User;
 import com.app.flip.model.dto.AuthenticationRequestDTO;
 import com.app.flip.security.JwtTokenProvider;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -19,7 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/v1/auth")
+@RequestMapping("/api/auth")
+@Slf4j
 public class AuthenticationRestController {
 
     private final AuthenticationManager authenticationManager;
@@ -57,6 +59,7 @@ public class AuthenticationRestController {
 
             return ResponseEntity.ok(response);
         } catch (AuthenticationException e) {
+            log.error(e.getMessage());
             return new ResponseEntity<>("Invalid request/password combination", HttpStatus.FORBIDDEN);
         }
     }

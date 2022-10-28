@@ -1,10 +1,13 @@
 package com.app.flip.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "users")
 public class User {
