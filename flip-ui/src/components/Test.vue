@@ -61,6 +61,7 @@
 import { PerfectScrollbar } from 'vue2-perfect-scrollbar'
 import Progress from 'easy-circular-progress'
 import axios from 'axios'
+import authHeader from '../services/auth-header'
 
 export default {
   name: 'Test',
@@ -211,7 +212,7 @@ export default {
   mounted () {
     this.isOpened = this.isMenuOpen
     axios
-      .get(process.env.VUE_APP_SERVER_HOST + '/get-statistics')
+      .get(process.env.VUE_APP_SERVER_HOST + '/get-statistics', { headers: authHeader() })
       .then(response => (this.statistics = response.data))
   },
   computed: {
