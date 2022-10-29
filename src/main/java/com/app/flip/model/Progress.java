@@ -25,4 +25,9 @@ public class Progress {
     public Progress (Integer cardId) {
         this.cardId = cardId;
     }
+
+    public Progress (Integer cardId, Integer userId) {
+        this.cardId = cardId;
+        this.userId = userId;
+    }
 }

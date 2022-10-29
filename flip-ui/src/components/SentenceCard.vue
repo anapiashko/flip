@@ -21,6 +21,7 @@
 import TopicCard from '@/components/TopicCard.vue'
 import axios from 'axios'
 import authHeader from '../services/auth-header'
+import userService from '../services/user.service'
 
 let sentences
 let topic
@@ -144,8 +145,10 @@ export default {
       try {
         await axios.post(process.env.VUE_APP_SERVER_HOST + '/change-progress', {
           card_id: sentenceId,
-          typed_correct: isTypedWordCorrect
-        })
+          typed_correct: isTypedWordCorrect,
+          userId: userService.getUserId()
+        },
+        { headers: authHeader() })
       } catch (e) {
         console.error(e)
       }

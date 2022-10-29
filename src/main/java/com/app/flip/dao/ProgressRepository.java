@@ -11,4 +11,6 @@ public interface ProgressRepository extends CrudRepository<Progress, Integer> {
     @Query("select p from Progress p " +
             "join User u on p.userId=u.id where u.email=:email and p.cardId=:cardId")
     Progress findByCardIdAndUserEmail(Integer cardId, String email);
+
+    Progress findByCardIdAndUserId(Integer cardId, Integer userId);
 }

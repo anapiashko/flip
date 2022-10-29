@@ -28,7 +28,7 @@ values (9, 'She appeared quite bewildered.',
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (10, 'She is able to replicate any action.',
-        'Она способна копирвоать любое дейтсвие.', 7, 0, 'media/0008.mp3');
+        'Она способна копирвоать любое дейтсвие.', 4, 0, 'media/0008.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (11, 'He traversed more than half the length of the settlement.',

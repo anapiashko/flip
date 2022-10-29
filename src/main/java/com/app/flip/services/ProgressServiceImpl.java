@@ -32,10 +32,10 @@ public class ProgressServiceImpl {
     public void updateProgress(Map<String, String> json) {
         Integer cardId = Integer.parseInt(json.get("card_id"));
         boolean typedCorrect = Boolean.parseBoolean(json.get("typed_correct"));
-        String email = json.get("email");
-        Progress progress = progressRepository.findByCardIdAndUserEmail(cardId, email);
+        Integer userId = Integer.parseInt(json.get("userId"));
+        Progress progress = progressRepository.findByCardIdAndUserId(cardId, userId);
         if (progress == null) {
-            progress = progressRepository.save(new Progress(cardId));
+            progress = progressRepository.save(new Progress(cardId, userId));
         } else {
             if (typedCorrect) {
                 progress.setProbability(progress.getProbability().multiply(new BigDecimal("0.9")));
