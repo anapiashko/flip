@@ -20,6 +20,7 @@
 <script>
 import TopicCard from '@/components/TopicCard.vue'
 import axios from 'axios'
+import authHeader from '../services/auth-header'
 
 let sentences
 let topic
@@ -122,6 +123,7 @@ export default {
       console.log('topic = ', topic)
       try {
         const res = await axios.get(process.env.VUE_APP_SERVER_HOST + '/get-sample', {
+          headers: authHeader(),
           params: {
             topic: topic
           }
