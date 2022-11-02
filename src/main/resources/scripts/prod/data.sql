@@ -286,6 +286,62 @@ insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (74, 'He has been getting private tuition in French.',
         'Он получал частное обучение французскому языку.', 5, 0, 'media/.mp3');
 
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (75, 'If you wanna keep up, you better brush up on your skills.',
+        'Если ты не хочешь отставать, тебе стоит освежить свои навыки.', 8, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (76, 'But lately I have come around to her way of view.',
+        'Но недавно я принял ее точку зрения.', 5, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (77, 'You know, it\'s easier to come up with a new plan in silence.',
+        'Знаешь, новый план легче придумывать в тишине.', 6, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (78, 'I was being too young and foolish to face up to them.',
+        'Я был слишком молод и глуп, чтобы признать это.', 8, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (79, 'Quickly racking his brain, he hit upon a promising idea.',
+        'Быстро поразмыслив, он наткнулся на многообещающую идею.', 6, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (80, 'But it was impossible to make out what he said.',
+        'Но нельзя было разобрать, что он говорил.', 6, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (81, 'I\'m just quietly mulling over whether or not I should fire you.',
+        'Я потихоньку обдумываю увольнять тебя или нет.', 3, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (82, 'When he heard about the gun, he must have pieced it together.',
+        'Когда он услышал о пистолете, должно быть, он соединил все факты.', 9, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (83, 'I need to read up on the rules before then.',
+        'Перед этим нужно ознакомиться с правилами.', 4, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (84, 'I\'ve swotted up on all procedures and I\'ve made these flash cards.',
+        'Я вызубрила все процедуры и подготовила эти карточки с текстом.', 1, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (85, 'Don\'t take it so seriously, it\'s just a bit of fun.',
+        'Не воспринимай это так серьезно, это же просто забава.', 1, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (86, 'I will give you two days to think it over.',
+        'На размышление я даю вам два дня.', 9, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (87, 'The visit made us think through other ways to get out of poverty.',
+        'Этот визит заставил нас подумать о других способах выбраться из бедности.', 5, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (88, 'The best advertising was impossible to think up.',
+        'Лучшую рекламу было просто невозможно придумать.', 6, 1, 'media/.mp3');
+
 insert into users (id, email, password, user_role)
  values (1, 'admin@admin.com', '$2a$12$nRKrtJpoPXonmfoTxNS9c.Gi56j6XmnmJM38.JlinVb7/rxwLWyVy', 'ADMIN');
 insert into users (id, email, password, user_role)
