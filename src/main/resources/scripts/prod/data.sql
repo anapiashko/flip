@@ -288,59 +288,99 @@ values (74, 'He has been getting private tuition in French.',
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (75, 'If you wanna keep up, you better brush up on your skills.',
-        'Если ты не хочешь отставать, тебе стоит освежить свои навыки.', 8, 1, 'media/.mp3');
+        'Если ты не хочешь отставать, тебе стоит освежить свои навыки.', 8, 1, 'media/0075.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (76, 'But lately I have come around to her way of view.',
-        'Но недавно я принял ее точку зрения.', 5, 1, 'media/.mp3');
+        'Но недавно я принял ее точку зрения.', 5, 1, 'media/0076.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (77, 'You know, it\'s easier to come up with a new plan in silence.',
-        'Знаешь, новый план легче придумывать в тишине.', 6, 1, 'media/.mp3');
+        'Знаешь, новый план легче придумывать в тишине.', 6, 1, 'media/0077.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (78, 'I was being too young and foolish to face up to them.',
-        'Я был слишком молод и глуп, чтобы признать это.', 8, 1, 'media/.mp3');
+        'Я был слишком молод и глуп, чтобы признать это.', 8, 1, 'media/0078.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (79, 'Quickly racking his brain, he hit upon a promising idea.',
-        'Быстро поразмыслив, он наткнулся на многообещающую идею.', 6, 1, 'media/.mp3');
+        'Быстро поразмыслив, он наткнулся на многообещающую идею.', 6, 1, 'media/0079.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (80, 'But it was impossible to make out what he said.',
-        'Но нельзя было разобрать, что он говорил.', 6, 1, 'media/.mp3');
+        'Но нельзя было разобрать, что он говорил.', 6, 1, 'media/0080.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (81, 'I\'m just quietly mulling over whether or not I should fire you.',
-        'Я потихоньку обдумываю увольнять тебя или нет.', 3, 1, 'media/.mp3');
+        'Я потихоньку обдумываю увольнять тебя или нет.', 3, 1, 'media/0081.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (82, 'When he heard about the gun, he must have pieced it together.',
-        'Когда он услышал о пистолете, должно быть, он соединил все факты.', 9, 1, 'media/.mp3');
+        'Когда он услышал о пистолете, должно быть, он соединил все факты.', 9, 1, 'media/0082.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (83, 'I need to read up on the rules before then.',
-        'Перед этим нужно ознакомиться с правилами.', 4, 1, 'media/.mp3');
+        'Перед этим нужно ознакомиться с правилами.', 4, 1, 'media/0083.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (84, 'I\'ve swotted up on all procedures and I\'ve made these flash cards.',
-        'Я вызубрила все процедуры и подготовила эти карточки с текстом.', 1, 1, 'media/.mp3');
+        'Я вызубрила все процедуры и подготовила эти карточки с текстом.', 1, 1, 'media/0084.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (85, 'Don\'t take it so seriously, it\'s just a bit of fun.',
-        'Не воспринимай это так серьезно, это же просто забава.', 1, 1, 'media/.mp3');
+        'Не воспринимай это так серьезно, это же просто забава.', 1, 1, 'media/0085.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (86, 'I will give you two days to think it over.',
-        'На размышление я даю вам два дня.', 9, 1, 'media/.mp3');
+        'На размышление я даю вам два дня.', 9, 1, 'media/0086.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (87, 'The visit made us think through other ways to get out of poverty.',
-        'Этот визит заставил нас подумать о других способах выбраться из бедности.', 5, 1, 'media/.mp3');
+        'Этот визит заставил нас подумать о других способах выбраться из бедности.', 5, 1, 'media/0087.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (88, 'The best advertising was impossible to think up.',
-        'Лучшую рекламу было просто невозможно придумать.', 6, 1, 'media/.mp3');
+        'Лучшую рекламу было просто невозможно придумать.', 6, 1, 'media/0088.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (89, 'Fame and fortune had gone to his head.',
+        'Слава и богатство вскружили ему в голову.', 4, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (90, 'She managed to keep her wits about her and escaped unharmed.',
+        'Ей удалось сохранить самообладание и сбежать целой и невредимой.', 5, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (91, 'He also keeps her in the dark about their grandchild.',
+        'Он также держит её в неведении относительно их внучки.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (92, 'If you have no witnesses, you don\'t have a leg to stand on.',
+        'Если у вас нет свидетелей, вам не на что опереться.', 11, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (93, 'I can\'t see the wood for the trees, so let\'s get an outsider to take a look at the project.',
+        'Я не вижу леса за деревьями, так что давайте попросим постороннего взглянуть на проект.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (94, 'She is not an intellectual, but is quick on the uptake.',
+        'Она не интеллектуалка, но соображает быстро.', 10, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (95, 'That name rings a bell but I cannot recall where I have heard it before.',
+        'Припоминаю это имя, но я не могу вспомнить, где я слышал его раньше.', 4, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (96, 'I am going to round the bend if they don\'t turn that music down.',
+        'Я сойду с ума, если они не убавят эту музыку.', 4, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (97, 'As a lawyer I split hairs so much that every case became a hopeless.',
+        'Как юрист я придирался к каждой мелочи, поэтому каждое дело становилось безнадежным.', 5, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (98, 'Birthdays make me take stock of where I am in life..',
+        'Дни рождения заставляют меня проанализировать, где я нахожусь в жизни.', 4, 2, 'media/.mp3');
 
 insert into users (id, email, password, user_role)
  values (1, 'admin@admin.com', '$2a$12$nRKrtJpoPXonmfoTxNS9c.Gi56j6XmnmJM38.JlinVb7/rxwLWyVy', 'ADMIN');
@@ -419,3 +459,59 @@ insert into progress (id, card_id, probability, user_id) values (71, 71, 1.00, 1
 insert into progress (id, card_id, probability, user_id) values (72, 72, 1.00, 1);
 insert into progress (id, card_id, probability, user_id) values (73, 73, 1.00, 1);
 insert into progress (id, card_id, probability, user_id) values (74, 74, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (75, 75, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (76, 76, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (77, 77, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (78, 78, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (79, 79, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (80, 80, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (81, 81, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (82, 82, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (83, 83, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (84, 84, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (85, 85, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (86, 86, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (87, 87, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (88, 88, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (89, 89, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (90, 90, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (91, 91, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (92, 92, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (93, 93, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (94, 94, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (95, 95, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (96, 96, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (97, 97, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (98, 98, 1.00, 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
