@@ -91,7 +91,8 @@ export default {
       console.log('typedWord = ', this.typedWord)
       const isTypedWordCorrect = (this.typedWord.toLowerCase() === missedWord.toLowerCase())
       console.log(isTypedWordCorrect)
-      const audio = new Audio(require(process.env.VUE_APP_AUDIO_FILES_LOCATION + this.$data.sentences[this.counter].location))
+      const soundPath = this.getSoundPath()
+      const audio = new Audio(soundPath)
       let audioDuration = 1
       audio.onloadedmetadata = () => {
         console.log(audio.duration)
@@ -160,6 +161,15 @@ export default {
     },
     isBlank (str) {
       return (!str || /^\s*$/.test(str))
+    },
+    getSoundPath () {
+      if (process.env.VUE_APP_ENV === 'prd') {
+        return process.env.VUE_APP_AUDIO_FILES_LOCATION +
+                                this.$data.sentences[this.counter].location
+      } else {
+        return require(process.env.VUE_APP_AUDIO_FILES_LOCATION +
+                                this.$data.sentences[this.counter].location)
+      }
     }
   }
 }
