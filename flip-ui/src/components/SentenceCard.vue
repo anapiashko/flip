@@ -91,7 +91,7 @@ export default {
       console.log('typedWord = ', this.typedWord)
       const isTypedWordCorrect = (this.typedWord.toLowerCase() === missedWord.toLowerCase())
       console.log(isTypedWordCorrect)
-      const audio = new Audio(require('../../../src/main/resources/' + this.$data.sentences[this.counter].location))
+      const audio = new Audio(require(process.env.VUE_APP_AUDIO_FILES_LOCATION + this.$data.sentences[this.counter].location))
       let audioDuration = 1
       audio.onloadedmetadata = () => {
         console.log(audio.duration)
