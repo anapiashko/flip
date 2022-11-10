@@ -379,8 +379,80 @@ values (97, 'As a lawyer I split hairs so much that every case became a hopeless
         'Как юрист я придирался к каждой мелочи, поэтому каждое дело становилось безнадежным.', 5, 2, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (98, 'Birthdays make me take stock of where I am in life..',
+values (98, 'Birthdays make me take stock of where I am in life.',
         'Дни рождения заставляют меня проанализировать, где я нахожусь в жизни.', 4, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (98, 'I gave an account of a circumstance which occurred in my presence on the 13th.',
+        'Я дал отчет об обстоятельствах, которые произошли в моем присутствии 13-го числа.', 8, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (98, 'This should take account of policies for information dissemination and entitlement.',
+        'При этом следует учитывать политику распространения информации и предоставления прав.', 10, 0, 'media/.mp3');
+
+ insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+ values (99, 'The meeting was adjourned on account of the absence of witnesses.',
+         'Заседание было отложено из-за отсутствия свидетелей.', 3, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (100, 'Not when the future of our country hangs in the balance.',
+        'Только не в то время, когда будущее страны висит на волоске.', 7, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (101, 'Strike a balance between workouts and proper nutrition..',
+        'Соблюдайте баланс между тренировками и правильным питанием.', 0, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (102, 'But, on balance, we are on the right track..',
+        'Однако, в целом, мы находимся на верном пути.', 2, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (103, 'Both sides have come together to redress the balance.',
+        'Обе стороны собрались вместе, чтобы восстановить равновесие.', 8, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (104, 'With frequent use, they can upset the balance of the normal microbial environment on skin.',
+        'При частом использовании они могут нарушить баланс нормальной микробной среды на коже.', 5, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (105, '.',
+        '.', 8, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (106, '.',
+        '.', 8, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (107, '.',
+        '.', 8, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (108, '.',
+        '.', 8, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (109, '.',
+        '.', 8, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (110, '.',
+        '.', 8, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (111, '.',
+        '.', 8, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (112, '.',
+        '.', 8, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (113, '.',
+        '.', 8, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (114, '.',
+        '.', 8, 0, 'media/.mp3');
 
 insert into users (id, email, password, user_role)
  values (1, 'admin@admin.com', '$2a$12$nRKrtJpoPXonmfoTxNS9c.Gi56j6XmnmJM38.JlinVb7/rxwLWyVy', 'ADMIN');
