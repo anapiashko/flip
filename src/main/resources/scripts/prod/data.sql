@@ -415,24 +415,24 @@ values (104, 'With frequent use, they can upset the balance of the normal microb
         'При частом использовании они могут нарушить баланс нормальной микробной среды на коже.', 5, 2, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (105, '.',
-        '.', 8, 0, 'media/.mp3');
+values (105, 'It is a widely held belief that foreigners are jumping the queue for council housing.',
+        'Широко распространено мнение, что иностранцы встают в очередь на муниципальное жилье.', 3, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (106, '.',
-        '.', 8, 0, 'media/.mp3');
+values (106, 'Carter was the brain behind the whole criminal operation.',
+        'Картер был мозгом всей преступной операции.', 4, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (107, '.',
-        '.', 8, 0, 'media/.mp3');
+values (107, 'Could I just pick your brain about good places to eat around here?',
+        'Могу я узнать, где здесь можно поесть?', 5, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (108, '.',
-        '.', 8, 0, 'media/.mp3');
+values (108, 'We sat there racking our brain trying to think of a place to take Paul in the evening.',
+        'Мы сидели, ломая голову, пытаясь придумать, куда бы отвезти Пола вечером.', 3, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (109, '.',
-        '.', 8, 0, 'media/.mp3');
+values (109, 'The market is the brainchild of several banks that "create supply and demand".',
+        'Рынок – это детище нескольких банков, которые «создают спрос и предложение».', 4, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (110, '.',
