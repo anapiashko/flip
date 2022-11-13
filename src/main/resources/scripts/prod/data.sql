@@ -399,7 +399,7 @@ values (100, 'Not when the future of our country hangs in the balance.',
         'Только не в то время, когда будущее страны висит на волоске.', 7, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (101, 'Strike a balance between workouts and proper nutrition..',
+values (101, 'Strike a balance between workouts and proper nutrition.',
         'Соблюдайте баланс между тренировками и правильным питанием.', 0, 2, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
@@ -435,23 +435,59 @@ values (109, 'The market is the brainchild of several banks that "create supply 
         'Рынок – это детище нескольких банков, которые «создают спрос и предложение».', 4, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (110, '.',
+values (110, 'It is time to bring this inquiry to a conclusion.',
+        'Пришло время довести это расследование до конца.', 4, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (111, 'Don\'t want to jump to conclusions here, but we assume that that bomb was meant for you.',
+        'Не хочу торопиться с выводами, но мы предпологаем, что эта бомба предназначалась вам.', 2, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (112, 'In other words, the election result is already a foregone conclusion.',
+        'Другими словами, результат выборов уже предрешен.', 9, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (113, 'Motorists should always show consideration for pedestrians crossing the street at a zebra crossing.',
+        'Автомобилисты всегда должны проявлять внимание к пешеходам, переходящим улицу по зебре.', 3, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (114, 'I will give some consideration to your proposals and get back to you.',
+        'Я рассмотрю ваши предложения и свяжусь с вами.', 2, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (115, 'We stupidly didn\'t take changes in interest rates into consideration when we got a mortgage.',
+        'Мы по глупости не учли изменения процентных ставок, когда брали ипотеку.', 9, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (116, 'I didn\'t tell Angie out of consideration for Eddie.',
+        'Я не сказал Энджи из уважения к Эдди.', 3, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (117, '.',
         '.', 8, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (111, '.',
+values (118, '.',
         '.', 8, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (112, '.',
+values (119, '.',
         '.', 8, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (113, '.',
+values (120, '.',
         '.', 8, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (114, '.',
+values (121, '.',
+        '.', 8, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (122, '.',
+        '.', 8, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (123, '.',
         '.', 8, 0, 'media/.mp3');
 
 insert into users (id, email, password, user_role)
@@ -555,6 +591,25 @@ insert into progress (id, card_id, probability, user_id) values (95, 95, 1.00, 1
 insert into progress (id, card_id, probability, user_id) values (96, 96, 1.00, 1);
 insert into progress (id, card_id, probability, user_id) values (97, 97, 1.00, 1);
 insert into progress (id, card_id, probability, user_id) values (98, 98, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (99, 99, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (100, 100, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (101, 101, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (102, 102, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (103, 103, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (104, 104, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (105, 105, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (106, 106, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (107, 107, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (108, 108, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (109, 109, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (110, 110, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (111, 111, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (112, 112, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (113, 113, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (114, 114, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (115, 115, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (116, 116, 1.00, 1);
+
 
 
 
