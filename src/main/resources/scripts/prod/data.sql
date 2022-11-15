@@ -1,46 +1,46 @@
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (3, 'On the contrary, it is a deep and heave responsibility.',
-        'Напротив, это глубокая и тяжелая ответственность.', 2, 0, 'media/0001.mp3');
+        'Напротив, это глубокая и тяжелая ответственность.', 2, 0, 'media/0003.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (4, 'I have not the faintest notion.',
-        'Не имею ни малейшего представления.', 5, 0, 'media/0002.mp3');
+        'Не имею ни малейшего представления.', 5, 0, 'media/0004.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (5, 'Just where the steep ascent of the mountain began, he stopped.',
-        'Там, где начинается крутой подъем на гору, он остановился.', 4, 0, 'media/0003.mp3');
+        'Там, где начинается крутой подъем на гору, он остановился.', 4, 0, 'media/0005.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (6, 'The company intends to cut 400 jobs.',
-        'Компания намеревается сократить 400 рабочих мест.', 2, 0, 'media/0004.mp3');
+        'Компания намеревается сократить 400 рабочих мест.', 2, 0, 'media/0006.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (7, 'I wish I had a brother to reciprocate.',
-        'Жаль, что у меня нет брата, чтобы ответить взаимностью.', 7, 0, 'media/0005.mp3');
+        'Жаль, что у меня нет брата, чтобы ответить взаимностью.', 7, 0, 'media/0007.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (8, 'The most elusive fruit here is a ripe watermelon.',
-        'Самый неуловимый фрукт здесь это спелый арбуз.', 2, 0, 'media/0006.mp3');
+        'Самый неуловимый фрукт здесь это спелый арбуз.', 2, 0, 'media/0008.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (9, 'She appeared quite bewildered.',
-        'Она казалась совершенно сбитой столку.', 3, 0, 'media/0007.mp3');
+        'Она казалась совершенно сбитой столку.', 3, 0, 'media/0009.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (10, 'She is able to replicate any action.',
-        'Она способна копирвоать любое дейтсвие.', 4, 0, 'media/0008.mp3');
+        'Она способна копирвоать любое дейтсвие.', 4, 0, 'media/0010.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (11, 'He traversed more than half the length of the settlement.',
-        'Он миновал большую часть поселка.', 1, 0, 'media/0009.mp3');
+        'Он миновал большую часть поселка.', 1, 0, 'media/0011.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (12, 'The location is so crucial to the film.',
-        'Место является ключевым для кино.', 4, 0, 'media/0010.mp3');
+        'Место является ключевым для кино.', 4, 0, 'media/0012.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (13, 'You have craved power your whole life.',
-        'Ты всю жизнь стремился к власти.', 2, 0, 'media/0011.mp3');
+        'Ты всю жизнь стремился к власти.', 2, 0, 'media/0013.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (14, 'England impose a tax on plastic bags.',
@@ -48,39 +48,39 @@ values (14, 'England impose a tax on plastic bags.',
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (15, 'Somehow, over time, it got easier to be apart from you.',
-        'Как-то, со временем, мне стало легче быть вдали от тебя.', 2, 0, 'media/0013.mp3');
+        'Как-то, со временем, мне стало легче быть вдали от тебя.', 2, 3, 'media/0015.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (16, 'Only diehard supporters will not learn something.',
-        'Только самые убежденные сторонники ничему не научатся.', 1, 0, 'media/0014.mp3');
+        'Только самые убежденные сторонники ничему не научатся.', 1, 0, 'media/0016.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (17, 'She spots him and starts waving frantically.',
-        'Она замечает его и начинает отчаянно махать руками.', 6, 0, 'media/0015.mp3');
+        'Она замечает его и начинает отчаянно махать руками.', 6, 0, 'media/0017.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (18, 'It makes my blood run cold.',
-        'От этого моя кровь стынет в жилах.', 5, 0, 'media/0016.mp3');
+        'От этого моя кровь стынет в жилах.', 5, 3, 'media/0018.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (19, 'Now i am scarred for life.',
-        'Теперь у меня травма на всю жизнь.', 3, 0, 'media/0017.mp3');
+values (19, 'Now I am scarred for life.',
+        'Теперь у меня травма на всю жизнь.', 3, 0, 'media/0019.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (20, 'I disliked what you were doing but had to grin and bear it.',
-        'Мне не нравилось то, что ты делал, но мне пришлось улыбаться и терпеть это.', 11, 0, 'media/0018.mp3');
+        'Мне не нравилось то, что ты делал, но мне пришлось улыбаться и терпеть это.', 11, 3, 'media/0020.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (21, 'There has been an outbreak of salmonella.',
-        'Приозошла вспышка сальмонеллы.', 7, 0, 'media/0019.mp3');
+        'Приозошла вспышка сальмонеллы.', 4, 0, 'media/0021.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (22, 'A Chinese saying has it that women hold up half of the sky.',
-        'Китайская пословица гласит, что на женщинах держится полнеба.', 7, 0, 'media/0020.mp3');
+        'Китайская пословица гласит, что на женщинах держится полнеба.', 2, 0, 'media/0022.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (23, 'I am tired of hearing about your moans and groans.',
-        'Мне надоело слушать, как ты охаешь и ахаешь.', 7, 0, 'media/0021.mp3');
+        'Мне надоело слушать, как ты охаешь и ахаешь.', 7, 3, 'media/0023.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (24, 'I have let my heart overpower my head.',
@@ -144,51 +144,51 @@ values (38, 'Humans has managed to create the means to destroy the planet we liv
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (39, 'We tried to assess his suitability for the job.',
-        'Мы попытались оценить его пригодность для этой работы.', 3, 0, 'media/.mp3');
+        'Мы попытались оценить его пригодность для этой работы.', 3, 0, 'media/0039.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (40, 'Detectives remain baffled by these murders.',
-        'Детективы по-прежнему сбиты с толку этими убийствами.', 2, 0, 'media/.mp3');
+        'Детективы по-прежнему сбиты с толку этими убийствами.', 2, 0, 'media/0040.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (41, 'I have a biased view on that subject.',
-        'У меня предвзятая позиция по этому вопросу.', 3, 0, 'media/.mp3');
+        'У меня предвзятая позиция по этому вопросу.', 3, 0, 'media/0041.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (42, 'They consider it inevitable that some people will lost their jobs.',
-        'Они считают неизбежным, что некоторые люди потеряют работу.', 3, 0, 'media/.mp3');
+        'Они считают неизбежным, что некоторые люди потеряют работу.', 3, 0, 'media/0042.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (43, 'I haven\'t got time to sit around contemplating the meaning of life.',
-        'У меня нет времени сидеть сложа руки и размышлять о смысле жизни.', 7, 0, 'media/.mp3');
+        'У меня нет времени сидеть сложа руки и размышлять о смысле жизни.', 7, 0, 'media/0043.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (44, 'I know that some of you are cynical about the proposals.',
-        'Я знаю, что некоторые из вас цинично относятся к этим предложениям.', 7, 0, 'media/.mp3');
+        'Я знаю, что некоторые из вас цинично относятся к этим предложениям.', 7, 0, 'media/0044.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (45, 'Finding fossils, he deduced that the area had once been covered by water.',
-        'Найдя окаменелости, он пришел к выводу, что эта местность когда-то была покрыта водой.', 3, 0, 'media/.mp3');
+        'Найдя окаменелости, он пришел к выводу, что эта местность когда-то была покрыта водой.', 3, 0, 'media/0045.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (46, 'The judges deliberated for an hour before choosing the winner.',
-        'Судьи совещались в течение часа, прежде чем выбрать победителя.', 2, 0, 'media/.mp3');
+        'Судьи совещались в течение часа, прежде чем выбрать победителя.', 2, 0, 'media/0046.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (47, 'Long-range missiles attack simply cannot discriminate military and civilian targets.',
-        'Атака ракетами большой дальности просто не может различать военные и гражданские цели.', 5, 0, 'media/.mp3');
+        'Атака ракетами большой дальности просто не может различать военные и гражданские цели.', 5, 0, 'media/0047.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (48, 'I am dubious about his ability to do the job.',
-        'Я сомневаюсь в его способности выполнять эту работу.', 2, 0, 'media/.mp3');
+        'Я сомневаюсь в его способности выполнять эту работу.', 2, 0, 'media/0048.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (49, 'I am delighted to know you have such faith in me.',
-        'Мне приятно знать, что вы так верите в меня.', 8, 0, 'media/.mp3');
+        'Мне приятно знать, что вы так верите в меня.', 8, 0, 'media/0049.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (50, 'You are the new here, I gather.',
-        'Ты здесь новенький, я так понимаю.', 6, 0, 'media/.mp3');
+        'Ты здесь новенький, я так понимаю.', 6, 0, 'media/0050.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (51, 'He was finding it difficult to grasp the rule of the game.',
@@ -463,32 +463,32 @@ values (116, 'I didn\'t tell Angie out of consideration for Eddie.',
         'Я не сказал Энджи из уважения к Эдди.', 3, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (117, '.',
-        '.', 8, 0, 'media/.mp3');
+values (117, 'This findings cast doubt on previous research done in this field.',
+        'Эти результаты ставят под сомнение предыдущие исследования, проведенные в этой области.', 2, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (118, '.',
-        '.', 8, 0, 'media/.mp3');
+values (118, 'A shadow of a doubt as to my conduct would bring the matter to an end.".',
+        'Тень сомнения относительно моего поведения положила бы этому делу конец.', 4, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (119, '.',
-        '.', 8, 0, 'media/.mp3');
+values (119, 'I have had the same recurring dream for four nights in a row.',
+        'Четыре ночи подряд мне снился один и тот же повторяющийся сон.', 5, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (120, '.',
-        '.', 8, 0, 'media/.mp3');
+values (120, 'His growths recur, build up and threaten his larynx and lungs.',
+        'Его опухоли рецидивируют, растут и угрожают его гортани и легким.', 1, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (121, '.',
-        '.', 8, 0, 'media/.mp3');
+values (121, 'Philip does a comical impression of Tony.',
+        'Филип забавно пародирует Тони.', 4, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (122, '.',
-        '.', 8, 0, 'media/.mp3');
+values (122, 'Why was I under the impression that the exam on Thursday?',
+        'Почему у меня сложилось впечатление, что экзамен в четверг?', 3, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (123, '.',
-        '.', 8, 0, 'media/.mp3');
+values (123, 'Jim seems to be under the misapprehension that tomorrow is a holiday.',
+        'Джим, похоже, находится в заблуждении, что завтра праздник.', 6, 0, 'media/.mp3');
 
 insert into users (id, email, password, user_role)
  values (1, 'admin@admin.com', '$2a$12$nRKrtJpoPXonmfoTxNS9c.Gi56j6XmnmJM38.JlinVb7/rxwLWyVy', 'ADMIN');
