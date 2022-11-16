@@ -383,112 +383,116 @@ values (98, 'Birthdays make me take stock of where I am in life.',
         'Дни рождения заставляют меня проанализировать, где я нахожусь в жизни.', 4, 2, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (98, 'I gave an account of a circumstance which occurred in my presence on the 13th.',
+values (99, 'I gave an account of a circumstance which occurred in my presence on the 13th.',
         'Я дал отчет об обстоятельствах, которые произошли в моем присутствии 13-го числа.', 8, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (98, 'This should take account of policies for information dissemination and entitlement.',
+values (100, 'This should take account of policies for information dissemination and entitlement.',
         'При этом следует учитывать политику распространения информации и предоставления прав.', 10, 0, 'media/.mp3');
 
  insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
- values (99, 'The meeting was adjourned on account of the absence of witnesses.',
+ values (101, 'The meeting was adjourned on account of the absence of witnesses.',
          'Заседание было отложено из-за отсутствия свидетелей.', 3, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (100, 'Not when the future of our country hangs in the balance.',
+values (102, 'Not when the future of our country hangs in the balance.',
         'Только не в то время, когда будущее страны висит на волоске.', 7, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (101, 'Strike a balance between workouts and proper nutrition.',
+values (103, 'Strike a balance between workouts and proper nutrition.',
         'Соблюдайте баланс между тренировками и правильным питанием.', 0, 2, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (102, 'But, on balance, we are on the right track..',
+values (104, 'But, on balance, we are on the right track..',
         'Однако, в целом, мы находимся на верном пути.', 2, 2, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (103, 'Both sides have come together to redress the balance.',
+values (105, 'Both sides have come together to redress the balance.',
         'Обе стороны собрались вместе, чтобы восстановить равновесие.', 8, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (104, 'With frequent use, they can upset the balance of the normal microbial environment on skin.',
+values (106, 'With frequent use, they can upset the balance of the normal microbial environment on skin.',
         'При частом использовании они могут нарушить баланс нормальной микробной среды на коже.', 5, 2, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (105, 'It is a widely held belief that foreigners are jumping the queue for council housing.',
+values (107, 'It is a widely held belief that foreigners are jumping the queue for council housing.',
         'Широко распространено мнение, что иностранцы встают в очередь на муниципальное жилье.', 3, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (106, 'Carter was the brain behind the whole criminal operation.',
+values (108, 'Carter was the brain behind the whole criminal operation.',
         'Картер был мозгом всей преступной операции.', 4, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (107, 'Could I just pick your brain about good places to eat around here?',
+values (109, 'Could I just pick your brain about good places to eat around here?',
         'Могу я узнать, где здесь можно поесть?', 5, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (108, 'We sat there racking our brain trying to think of a place to take Paul in the evening.',
+values (110, 'We sat there racking our brain trying to think of a place to take Paul in the evening.',
         'Мы сидели, ломая голову, пытаясь придумать, куда бы отвезти Пола вечером.', 3, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (109, 'The market is the brainchild of several banks that "create supply and demand".',
+values (111, 'The market is the brainchild of several banks that "create supply and demand".',
         'Рынок – это детище нескольких банков, которые «создают спрос и предложение».', 4, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (110, 'It is time to bring this inquiry to a conclusion.',
+values (112, 'It is time to bring this inquiry to a conclusion.',
         'Пришло время довести это расследование до конца.', 4, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (111, 'Don\'t want to jump to conclusions here, but we assume that that bomb was meant for you.',
+values (113, 'Don\'t want to jump to conclusions here, but we assume that that bomb was meant for you.',
         'Не хочу торопиться с выводами, но мы предпологаем, что эта бомба предназначалась вам.', 2, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (112, 'In other words, the election result is already a foregone conclusion.',
+values (114, 'In other words, the election result is already a foregone conclusion.',
         'Другими словами, результат выборов уже предрешен.', 9, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (113, 'Motorists should always show consideration for pedestrians crossing the street at a zebra crossing.',
+values (115, 'Motorists should always show consideration for pedestrians crossing the street at a zebra crossing.',
         'Автомобилисты всегда должны проявлять внимание к пешеходам, переходящим улицу по зебре.', 3, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (114, 'I will give some consideration to your proposals and get back to you.',
+values (116, 'I will give some consideration to your proposals and get back to you.',
         'Я рассмотрю ваши предложения и свяжусь с вами.', 2, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (115, 'We stupidly didn\'t take changes in interest rates into consideration when we got a mortgage.',
+values (117, 'We stupidly didn\'t take changes in interest rates into consideration when we got a mortgage.',
         'Мы по глупости не учли изменения процентных ставок, когда брали ипотеку.', 9, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (116, 'I didn\'t tell Angie out of consideration for Eddie.',
+values (118, 'I didn\'t tell Angie out of consideration for Eddie.',
         'Я не сказал Энджи из уважения к Эдди.', 3, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (117, 'This findings cast doubt on previous research done in this field.',
+values (119, 'This findings cast doubt on previous research done in this field.',
         'Эти результаты ставят под сомнение предыдущие исследования, проведенные в этой области.', 2, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (118, 'A shadow of a doubt as to my conduct would bring the matter to an end.".',
+values (120, 'A shadow of a doubt as to my conduct would bring the matter to an end.".',
         'Тень сомнения относительно моего поведения положила бы этому делу конец.', 4, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (119, 'I have had the same recurring dream for four nights in a row.',
+values (121, 'I have had the same recurring dream for four nights in a row.',
         'Четыре ночи подряд мне снился один и тот же повторяющийся сон.', 5, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (120, 'His growths recur, build up and threaten his larynx and lungs.',
+values (122, 'His growths recur, build up and threaten his larynx and lungs.',
         'Его опухоли рецидивируют, растут и угрожают его гортани и легким.', 1, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (121, 'Philip does a comical impression of Tony.',
+values (123, 'Philip does a comical impression of Tony.',
         'Филип забавно пародирует Тони.', 4, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (122, 'Why was I under the impression that the exam on Thursday?',
+values (124, 'Why was I under the impression that the exam on Thursday?',
         'Почему у меня сложилось впечатление, что экзамен в четверг?', 3, 3, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (123, 'Jim seems to be under the misapprehension that tomorrow is a holiday.',
+values (125, 'Jim seems to be under the misapprehension that tomorrow is a holiday.',
         'Джим, похоже, находится в заблуждении, что завтра праздник.', 6, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (126, 'This perspective appears to be at the core of a new national security strategy.',
+        'Эта точка зрения, по-видимому, лежит в основе новой стратегии национальной безопасности.', 1, 0, 'media/.mp3');
 
 insert into users (id, email, password, user_role)
  values (1, 'admin@admin.com', '$2a$12$nRKrtJpoPXonmfoTxNS9c.Gi56j6XmnmJM38.JlinVb7/rxwLWyVy', 'ADMIN');
@@ -609,6 +613,16 @@ insert into progress (id, card_id, probability, user_id) values (113, 113, 1.00,
 insert into progress (id, card_id, probability, user_id) values (114, 114, 1.00, 1);
 insert into progress (id, card_id, probability, user_id) values (115, 115, 1.00, 1);
 insert into progress (id, card_id, probability, user_id) values (116, 116, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (117, 117, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (118, 118, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (119, 119, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (120, 120, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (121, 121, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (122, 122, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (123, 123, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (124, 124, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (125, 125, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (126, 126, 1.00, 1);
 
 
 
