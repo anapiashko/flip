@@ -44,7 +44,7 @@ values (13, 'You have craved power your whole life.',
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (14, 'England impose a tax on plastic bags.',
-        'Англия облагает налогом пластиковые пакеты.', 1, 0, 'media/0012.mp3');
+        'Англия облагает налогом пластиковые пакеты.', 1, 0, 'media/0014.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (15, 'Somehow, over time, it got easier to be apart from you.',
@@ -227,8 +227,8 @@ values (59, 'I presume you have already ordered the lunch.',
         'Я полагаю, ты уже заказал обед.', 1, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (60, 'It\'s not for us to query his decision.',
-        'Не нам оспаривать его решение.', 5, 0, 'media/.mp3');
+values (60, 'It is not for us to query his decision.',
+        'Не нам оспаривать его решение.', 6, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (61, 'I reckon there is something wrong with him.',
@@ -359,8 +359,8 @@ values (92, 'If you have no witnesses, you don\'t have a leg to stand on.',
         'Если у вас нет свидетелей, вам не на что опереться.', 11, 2, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (93, 'I can\'t see the wood for the trees, so let\'s get an outsider to take a look at the project.',
-        'Я не вижу леса за деревьями, так что давайте попросим постороннего взглянуть на проект.', 6, 2, 'media/.mp3');
+values (93, 'I can not see the wood for the trees, so let\'s get an outsider to take a look at the project.',
+        'Я не вижу леса за деревьями, так что давайте попросим постороннего взглянуть на проект.', 8, 2, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (94, 'She is not an intellectual, but is quick on the uptake.',
@@ -493,6 +493,102 @@ values (125, 'Jim seems to be under the misapprehension that tomorrow is a holid
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (126, 'This perspective appears to be at the core of a new national security strategy.',
         'Эта точка зрения, по-видимому, лежит в основе новой стратегии национальной безопасности.', 1, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (127, 'I swear, you will go broke in this business trying to stick to your principles.',
+        'Клянусь, ты разоришься в этом бизнесе, пытаясь придерживаться своих принципов.', 10, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (128, 'But recent events beg the question of whether they are becoming a liability.',
+        'Но недавние события вызывают вопрос о том, не становятся ли они обузой.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (129, 'I am here to hold the government to account and to ask the awkward questions.',
+        'Я здесь для того, чтобы призвать правительство к ответу и задать неудобные вопросы.', 13, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (130, 'Dad said that my borrowing the car tonight was out of the question.',
+        'Папа сказал, что о моем одолжении машины сегодня не может быть и речи.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (131, 'Unplugging a toaster before you try to fix it is just common sense.',
+        'Отключать тостер от сети, прежде чем пытаться его починить, - это просто здравый смысл.', 11, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (132, 'To have some rest from noisy streets and to come to your senses it is better to go there.',
+        'Чтобы немного передохнуть от шумных улиц и прийти в себя, лучше идти сюда.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (133, 'Your silence makes me fear you take sides.',
+        'Твое молчание заставляет меня бояться, что ты встанешь на чью-то сторону.', 7, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (134, 'I will come straight to the point - you are hired!',
+        'Я перейду прямо к делу - вы наняты!', 3, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (135, 'It is time to set the record straight about what really happened that night.',
+        'Пришло время внести ясность в то, что на самом деле произошло той ночью.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (136, 'Modern students take a dim view of the traditional education model.',
+        'Современные студенты плохо воспринимают традиционную модель обучения.', 4, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (137, 'You are not only greedy, you are conceited.',
+        'Вы не только скупые, но и тщеславные.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (138, '.',
+        '.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (139, '.',
+        '.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (140, '.',
+        '.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (141, '.',
+        '.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (142, '.',
+        '.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (143, '.',
+        '.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (144, '.',
+        '.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (145, '.',
+        '.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (146, '.',
+        '.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (147, '.',
+        '.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (148, '.',
+        '.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (149, '.',
+        '.', 12, 3, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (150, '.',
+        '.', 12, 3, 'media/.mp3');
 
 insert into users (id, email, password, user_role)
  values (1, 'admin@admin.com', '$2a$12$nRKrtJpoPXonmfoTxNS9c.Gi56j6XmnmJM38.JlinVb7/rxwLWyVy', 'ADMIN');
