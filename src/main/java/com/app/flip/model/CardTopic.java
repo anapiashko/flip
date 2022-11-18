@@ -1,8 +1,12 @@
 package com.app.flip.model;
 
 public enum CardTopic {
-    HEALTH (0),
-    TRAVEL (1);
+    VOCABULARY (0),
+    IDIOMS (1),
+
+    PHRASAL_VERB (2),
+
+    COLLOCATION (3);
 
     private final Integer ordinal;
 

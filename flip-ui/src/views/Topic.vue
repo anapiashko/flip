@@ -2,14 +2,24 @@
   <div id="app">
     <TopicCard
       :topics="[{
-          name: 'Health',
-          img: 'img/icons/yoga-position.png',
-          desc: `Vocabulary set to help learn words related to health. Learn useful health and healthcare vocabulary in English, including common diseases, medical supplies and equipment.`
+          name: 'Vocabulary',
+          img: 'img/icons/dictionary.png',
+          desc: `Learning vocabulary will help you improve your language level and communicate confidently and effectively.`
         },
         {
-          name: 'Travel',
-          img: 'img/icons/plane.png',
-          desc: `The travel-related words are the most important terms to know when talking about travel or taking vacations. You'll find example sentences to help provide context for learning.`
+          name: 'Idioms',
+          img: 'img/icons/discussion.png',
+          desc: `An idiom is an expression or phrase whose meaning does not relate to the literal meaning of its words.`
+        },
+        {
+          name: 'Phrasal Verbs',
+          img: 'img/icons/rinse.png',
+          desc: `Phrasal verbs are two or more words that together act as a completely new word, with a different meaning.`
+        },
+        {
+          name: 'Collocations',
+          img: 'img/icons/puzzle.png',
+          desc: `A collocation is a group of words that are almost always put together to create a specific meaning.`
         }]"
     />
   </div>
