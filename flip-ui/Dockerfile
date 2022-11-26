@@ -11,5 +11,6 @@ RUN npm install
 
 # RUN npm run build
 
+ENV VUE_APP_ENV="prd"
 # start app
-CMD ["npm", "run", "serve"]
+CMD npm run serve:${VUE_APP_ENV}
