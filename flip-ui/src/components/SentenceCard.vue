@@ -124,12 +124,16 @@ export default {
       topic = TopicCard.data().topic
       console.log('topic = ', topic)
       try {
-        const res = await axios.get(process.env.VUE_APP_SERVER_HOST + '/get-sample', {
+        const res = await axios.post(process.env.VUE_APP_SERVER_HOST + '/get-sample', {
+          id: userService.getUserId()
+        },
+        {
           headers: authHeader(),
           params: {
             topic: topic
           }
         })
+
         this.$data.sentences = res.data
         console.log('new sample : ', this.$data.sentences)
 

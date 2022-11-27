@@ -28,7 +28,7 @@ values (9, 'She appeared quite bewildered.',
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (10, 'She is able to replicate any action.',
-        'Она способна копирвоать любое дейтсвие.', 4, 0, 'media/0010.mp3');
+        'Она способна копировать любое дейтсвие.', 4, 0, 'media/0010.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (11, 'He traversed more than half the length of the settlement.',
@@ -88,7 +88,7 @@ values (24, 'I have let my heart overpower my head.',
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (25, 'He moved along the pavement, deep in thought.',
-        'он шел по тротуару, погруженный в свои мысли.', 4, 0, 'media/0025.mp3');
+        'Он шел по тротуару, погруженный в свои мысли.', 4, 0, 'media/0025.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (26, 'Never put off until tomorrow what you can do today.',
@@ -575,20 +575,108 @@ values (146, 'There is no way we can drive in this appalling weather.',
         'Мы не можем ехать в такую ужасную погоду.', 9, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (147, '.',
-        '.', 12, 3, 'media/.mp3');
+values (147, 'Can anyone corroborate your story?',
+        'Кто-нибудь может подтвердить вашу историю?', 2, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (148, '.',
-        '.', 12, 3, 'media/.mp3');
+values (148, 'My mum is nagging me to clean my room.',
+        'Моя мама пилит меня из-за уборки в моей комнате.', 3, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (149, '.',
-        '.', 12, 3, 'media/.mp3');
+values (149, 'I spent the whole day fretting about my exam results.',
+        'Я провел весь день, беспокоясь о результатах своего экзамена.', 5, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (150, '.',
-        '.', 12, 3, 'media/.mp3');
+values (150, 'Itching your skin will only aggravate the rash further.',
+        'Чесание кожи только усугубит сыпь еще больше.', 5, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (151, 'He gets frustrated when things are not perfect.',
+        'Он расстраивается, когда дела идут не идеально.', 2, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (152, 'I hate wearing all this cumbersome equipment for diving.',
+        'Я ненавижу носить все это громоздкое снаряжение для дайвинга.', 5, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (153, 'The children are a little boisterous today.',
+        'Дети сегодня немного шумные.', 5, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (154, 'Sorry, we are moving, so my apartment is a little chaotic at moment.',
+        'Извините, мы переезжаем, поэтому в моей квартире сейчас небольшой хаос.', 10, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (155, 'There is a certain allure to being a movie star.',
+        'Есть некоторое очарование в том, чтобы быть кинозвездой.', 4, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (156, 'Paparazzi are always trying to pry into the lives of celebrities.',
+        'Папарацци всегда пытаются проникнуть в жизнь знаменитостей.', 5, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (157, '.',
+        '.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (158, '.',
+        '.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (159, '.',
+        '.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (160, '.',
+        '.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (161, '.',
+        '.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (162, '.',
+        '.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (163, '.',
+        '.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (164, '.',
+        '.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (165, '.',
+        '.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (166, '.',
+        '.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (167, '.',
+        '.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (168, '.',
+        '.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (169, '.',
+        '.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (170, '.',
+        '.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (171, '.',
+        '.', 12, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (172, '.',
+        '.', 12, 0, 'media/.mp3');
 
 insert into users (id, email, password, user_role)
  values (1, 'admin@admin.com', '$2a$12$nRKrtJpoPXonmfoTxNS9c.Gi56j6XmnmJM38.JlinVb7/rxwLWyVy', 'ADMIN');

@@ -1,10 +1,7 @@
 package com.app.flip.services;
 
 import com.app.flip.dao.CardRepository;
-import com.app.flip.model.Card;
-import com.app.flip.model.Progress;
-import com.app.flip.model.Statistics;
-import com.app.flip.model.CardTopic;
+import com.app.flip.model.*;
 import com.app.flip.utils.Constants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -50,18 +47,13 @@ public class CardServiceImpl implements CardService {
         return savedCards;
     }
 
-    public List<Card> getSample(CardTopic cardTopic) {
+    public List<Card> getSample(CardTopic cardTopic, User user) {
         log.info("Getting sample by topic = {}", cardTopic);
 
         List<Card> resultCollection = new ArrayList<>();
 
-        List<Card> newCards = cardRepository.findNewByCardTopic(cardTopic.getOrdinal(), Constants.NEW_CARDS_SIZE);
-        List<Card> seenCards = cardRepository.findSeenByCardTopic(cardTopic.getOrdinal(), Constants.SEEN_CARDS_SIZE);
-
-        if (seenCards.size() < Constants.SEEN_CARDS_SIZE) {
-            newCards.addAll(cardRepository.findNewByCardTopic(cardTopic.getOrdinal(), Constants.SEEN_CARDS_SIZE));
-            newCards = newCards.stream().distinct().collect(Collectors.toList());
-        }
+        List<Card> newCards = cardRepository.findNewByCardTopic(user.getId(), cardTopic.getOrdinal(), Constants.NEW_CARDS_SIZE);
+        List<Card> seenCards = cardRepository.findSeenByCardTopic(user.getId(), cardTopic.getOrdinal(), Constants.SEEN_CARDS_SIZE);
 
         resultCollection.addAll(newCards);
         resultCollection.addAll(seenCards);
@@ -72,16 +64,16 @@ public class CardServiceImpl implements CardService {
 
     public Statistics getStatistics() {
         log.info("Get full statistics in percentage");
-        Integer allSeenHealth = cardRepository.findAllSeenByCardTopic(CardTopic.HEALTH.getOrdinal());
-        Integer allSeenTravel = cardRepository.findAllSeenByCardTopic(CardTopic.TRAVEL.getOrdinal());
+        Integer allSeenVocabulary = cardRepository.findAllSeenByCardTopic(CardTopic.VOCABULARY.getOrdinal());
+        Integer allSeenIdioms = cardRepository.findAllSeenByCardTopic(CardTopic.IDIOMS.getOrdinal());
 
-        long allHealth = cardRepository.countByCardTopic(CardTopic.HEALTH);
-        long allTravel = cardRepository.countByCardTopic(CardTopic.TRAVEL);
+        long allVocabulary = cardRepository.countByCardTopic(CardTopic.VOCABULARY);
+        long allIdioms = cardRepository.countByCardTopic(CardTopic.IDIOMS);
 
         DecimalFormat df = new DecimalFormat("##.##");
 
-        Double percentageHealth = new Double(df.format((double)allSeenHealth/allHealth));
-        Double percentageTravel = new Double(df.format((double)allSeenTravel/allTravel));
+        Double percentageHealth = new Double(df.format((double)allSeenVocabulary/allVocabulary));
+        Double percentageTravel = new Double(df.format((double)allSeenIdioms/allIdioms));
 
         return Statistics.builder()
                 .healthPercentage(percentageHealth)

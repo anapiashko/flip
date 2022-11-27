@@ -18,14 +18,16 @@ public interface CardRepository extends CrudRepository<Card, Integer> {
   long countByCardTopic(CardTopic cardTopic);
 
   @Query(value = "SELECT c.id, c.en_sentence, c.rus_sentence, c.missed_word, c.topic, c.location FROM card c " +
-          " JOIN progress p on c.id = p.card_id WHERE c.topic = :cardTopic AND p.probability = 1 LIMIT :limitValue",
+          " JOIN progress p on c.id = p.card_id WHERE p.user_id = :userId AND c.topic = :cardTopic " +
+          " AND p.probability = 1 LIMIT :limitValue",
           nativeQuery = true)
-  List<Card> findNewByCardTopic(@Param("cardTopic") Integer cardTopic, Integer limitValue);
+  List<Card> findNewByCardTopic(@Param("userId") Integer userId, @Param("cardTopic") Integer cardTopic, Integer limitValue);
 
   @Query(value = "SELECT c.id, c.en_sentence, c.rus_sentence, c.missed_word, c.topic, c.location FROM card c " +
-          " JOIN progress p on c.id = p.card_id WHERE c.topic = :cardTopic AND p.probability BETWEEN 0.1 AND 0.9 LIMIT :limitValue",
+          " JOIN progress p on c.id = p.card_id WHERE p.user_id = :userId AND c.topic = :cardTopic" +
+          " AND p.probability BETWEEN 0.1 AND 0.9 LIMIT :limitValue",
           nativeQuery = true)
-  List<Card> findSeenByCardTopic(@Param("cardTopic") Integer cardTopic, Integer limitValue);
+  List<Card> findSeenByCardTopic(@Param("userId") Integer userId, @Param("cardTopic") Integer cardTopic, Integer limitValue);
 
   @Query(value = "SELECT count(c.id) FROM card c " +
           " JOIN progress p on c.id = p.card_id WHERE c.topic = :cardTopic AND p.probability < 1",

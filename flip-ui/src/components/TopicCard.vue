@@ -22,6 +22,7 @@ import axios from 'axios'
 // import SidebarMenuAkahon from "@/components/Sidebar-menu-akahon.vue"
 import Test from '@/components/Test.vue'
 import authHeader from '../services/auth-header'
+import userService from '../services/user.service'
 
 let sentences
 let topic
@@ -48,7 +49,10 @@ export default {
       console.log('topicName = ', topicName)
       console.log('topic = ', topic)
       try {
-        const res = await axios.get(process.env.VUE_APP_SERVER_HOST + '/get-sample', {
+        const res = await axios.post(process.env.VUE_APP_SERVER_HOST + '/get-sample', {
+          id: userService.getUserId()
+        },
+        {
           headers: authHeader(),
           params: {
             topic: topicName
@@ -58,9 +62,9 @@ export default {
         sentences = res.data
 
         console.log(sentences)
-        console.log(sentences[0].id)
-        console.log(sentences[0].en_sentence)
-        console.log(sentences[0].rus_sentence)
+        // console.log(sentences[0].id)
+        // console.log(sentences[0].en_sentence)
+        // console.log(sentences[0].rus_sentence)
         await this.$router.push('/sentences')
       } catch (e) {
         console.error(e)
