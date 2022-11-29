@@ -615,16 +615,16 @@ values (156, 'Paparazzi are always trying to pry into the lives of celebrities.'
         'Папарацци всегда пытаются проникнуть в жизнь знаменитостей.', 5, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (157, '.',
-        '.', 12, 0, 'media/.mp3');
+values (157, 'A few years ago I was backpacking across Western Europe.',
+        'Несколько лет назад я занимался пешим туризмом в Западной Европе.', 6, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (158, '.',
-        '.', 12, 0, 'media/.mp3');
+values (158, 'It is said that the guerrillas made an attempt to kidnap General.',
+        'Говорят, что партизаны предприняли попытку похитить генерала.', 10, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (159, '.',
-        '.', 12, 0, 'media/.mp3');
+values (159, 'She said I could frown before I could walk.',
+        'Она говорила, я умел хмуриться прежде, чем я научился ходить.', 4, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (160, '.',
