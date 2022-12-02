@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-<!--    <SidebarMenuAkahon />-->
-<!--    <sidebar-menu-akahon @search-input-emit="search" />-->
-    <Test></Test>
+    <SidebarMenu></SidebarMenu>
     <h1>Your Upcoming Goals</h1>
     <div class="topic-contain">
       <div id="topics" style="cursor: pointer;" @click="goToSentenceCards(topic.name)"
@@ -19,8 +17,7 @@
 
 <script>
 import axios from 'axios'
-// import SidebarMenuAkahon from "@/components/Sidebar-menu-akahon.vue"
-import Test from '@/components/Test.vue'
+import SidebarMenu from '@/components/SidebarMenu.vue'
 import authHeader from '../services/auth-header'
 import userService from '../services/user.service'
 
@@ -30,8 +27,7 @@ let topic
 export default {
   name: 'TopicCard',
   components: {
-    // SidebarMenuAkahon,
-    Test
+    SidebarMenu
   },
   props: {
     topics: Array
