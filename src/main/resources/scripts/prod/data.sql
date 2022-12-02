@@ -192,83 +192,83 @@ values (50, 'You are the new here, I gather.',
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (51, 'He was finding it difficult to grasp the rule of the game.',
-        'Ему было трудно понять правила игры.', 6, 0, 'media/.mp3');
+        'Ему было трудно понять правила игры.', 6, 0, 'media/0051.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (52, 'It was a theory based on pure guesswork.',
-        'Это была теория, основанная на чистых догадках.', 7, 0, 'media/.mp3');
+        'Это была теория, основанная на чистых догадках.', 7, 0, 'media/0052.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (53, 'I have a hunch there will an election soon.',
-        'У меня есть предчувствие, что скоро будут выборы.', 3, 0, 'media/.mp3');
+        'У меня есть предчувствие, что скоро будут выборы.', 3, 0, 'media/0053.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (54, 'This is an ingenious device for opening bottles.',
-        'Это хитроумное приспособление для открывания бутылок.', 3, 0, 'media/.mp3');
+        'Это хитроумное приспособление для открывания бутылок.', 3, 0, 'media/0054.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (55, 'Archaeologists use their intuition to decide where to dig.',
-        'Археологи используют свою интуицию, чтобы решить, где копать.', 3, 0, 'media/.mp3');
+        'Археологи используют свою интуицию, чтобы решить, где копать.', 3, 0, 'media/0055.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (56, 'You will be expected to justify your actions.',
-        'От вас ожидают, что вы будете оправдывать свои действия.', 5, 0, 'media/.mp3');
+        'От вас ожидают, что вы будете оправдывать свои действия.', 5, 0, 'media/0056.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (57, 'A bomb was the only plausible explanation for the crash.',
-        'Бомба была единственным правдоподобным объяснением крушения.', 5, 0, 'media/.mp3');
+        'Бомба была единственным правдоподобным объяснением крушения.', 5, 0, 'media/0057.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (58, 'They played checkers together in the evening, and pondered whether war would come.',
-        'По вечерам они вместе играли в шашки и размышляли о том, придет ли война.', 8, 0, 'media/.mp3');
+        'По вечерам они вместе играли в шашки и размышляли о том, придет ли война.', 8, 0, 'media/0058.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (59, 'I presume you have already ordered the lunch.',
-        'Я полагаю, ты уже заказал обед.', 1, 0, 'media/.mp3');
+        'Я полагаю, ты уже заказал обед.', 1, 0, 'media/0059.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (60, 'It is not for us to query his decision.',
-        'Не нам оспаривать его решение.', 6, 0, 'media/.mp3');
+        'Не нам оспаривать его решение.', 6, 0, 'media/0060.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (61, 'I reckon there is something wrong with him.',
-        'Я считаю, что с ним что-то не так.', 1, 0, 'media/.mp3');
+        'Я считаю, что с ним что-то не так.', 1, 0, 'media/0061.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (62, 'Josie reflected on how easily she could have been killed.',
-        'Джози размышляла о том, как легко ее могли убить.', 1, 0, 'media/.mp3');
+        'Джози размышляла о том, как легко ее могли убить.', 1, 0, 'media/0062.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (63, 'We can only speculate on the reasons for his sudden resignation.',
-        'Мы можем только строить догадки о причинах его внезапной отставки.', 3, 0, 'media/.mp3');
+        'Мы можем только строить догадки о причинах его внезапной отставки.', 3, 0, 'media/0063.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (64, 'Simon is a very conscientious worker.',
-        'Саймон очень добросовестный работник.', 4, 0, 'media/.mp3');
+        'Саймон очень добросовестный работник.', 4, 0, 'media/0064.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (65, 'My exams in two weeks, so I am cramming at the moment.',
-        'Мои экзамены через две недели, так что сейчас я зубрю.', 8, 0, 'media/.mp3');
+        'Мои экзамены через две недели, так что сейчас я зубрю.', 8, 0, 'media/0065.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (66, 'Our mathematics curriculum is much boarder now.',
-        'Наша учебная программа по математике теперь намного шире.', 2, 0, 'media/.mp3');
+        'Наша учебная программа по математике теперь намного шире.', 2, 0, 'media/0066.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (67, 'There are not many careers for history graduates.',
-        'Существует не так много профессий для выпускников исторических факультетов.', 7, 0, 'media/.mp3');
+        'Существует не так много профессий для выпускников исторических факультетов.', 7, 0, 'media/0067.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (68, 'I was ignorant to the terms used in business.',
-        'Я был незнаком с терминами, используемыми в бизнесе.', 2, 0, 'media/.mp3');
+        'Я был незнаком с терминами, используемыми в бизнесе.', 2, 0, 'media/0068.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (69, 'I hate speaking in front of an inattentive audience.',
-        'Я ненавижу выступать перед невнимательной аудиторией.', 7, 0, 'media/.mp3');
+        'Я ненавижу выступать перед невнимательной аудиторией.', 7, 0, 'media/0069.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (70, 'He is extremely knowledgeable about finance.',
-        'Он чрезвычайно хорошо осведомлен в финансах.', 3, 0, 'media/.mp3');
+        'Он чрезвычайно хорошо осведомлен в финансах.', 3, 0, 'media/0070.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (71, 'She lectures on Greek Literature at the Sorbonne.',
