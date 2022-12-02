@@ -13,7 +13,7 @@
 
       <div id="progressCircles" v-if="isOpened">
         <div id="healthProgress">
-          <Progress :radius="50" :strokeWidth="15" strokeColor="#2c3e50" :value="statistics.healthPercentage">
+          <Progress :radius=circleRadius :strokeWidth=lineWidth :strokeColor=lineColor :value="statistics.healthPercentage">
             <template v-slot:footer>
               <b>Health</b>
             </template>
@@ -21,12 +21,28 @@
           <span class="tooltip">Seen from Health Topic</span>
         </div>
         <div id="travelProgress">
-          <Progress :radius="50" :strokeWidth="15" strokeColor="#2c3e50" :value="statistics.travelPercentage">
+          <Progress :radius=circleRadius :strokeWidth=lineWidth :strokeColor=lineColor :value="statistics.travelPercentage">
             <template v-slot:footer>
               <b>Travel</b>
             </template>
           </Progress>
           <span class="tooltip">Seen from Travel Topic</span>
+        </div>
+        <div id="phrasalVerbsProgress">
+          <Progress :radius=circleRadius :strokeWidth=lineWidth :strokeColor=lineColor :value="statistics.phrasalVerbsPercentage">
+            <template v-slot:footer>
+              <b>Phrasal Verbs</b>
+            </template>
+          </Progress>
+          <span class="tooltip">Seen from Phrasal Verbs Topic</span>
+        </div>
+        <div id="collocationsProgress">
+          <Progress :radius=circleRadius :strokeWidth=lineWidth :strokeColor=lineColor :value="statistics.collocationsPercentage">
+            <template v-slot:footer>
+              <b>Collocations</b>
+            </template>
+          </Progress>
+          <span class="tooltip">Seen from Collocations Topic</span>
         </div>
       </div>
 
@@ -88,6 +104,20 @@ export default {
       default: 'bxl-foursquare'
     },
 
+    //! Progress circle
+    circleRadius: {
+      type: Number,
+      default: 40
+    },
+    lineWidth: {
+      type: Number,
+      default: 15
+    },
+    lineColor: {
+      type: String,
+      default: '#2c3e50'
+    },
+
     //! Menu items
     menuItems: {
       type: Array,
@@ -134,12 +164,12 @@ export default {
         //   tooltip: 'Saved',
         //   icon: 'bx-heart'
         // },
-        {
-          link: '#',
-          name: 'Setting',
-          tooltip: 'Setting up',
-          icon: 'bx-cog'
-        }
+        // {
+        //   link: '#',
+        //   name: 'Setting',
+        //   tooltip: 'Setting up',
+        //   icon: 'bx-cog'
+        // }
       ]
     },
 
@@ -205,7 +235,9 @@ export default {
       isOpened: false,
       statistics: {
         healthPercentage: 0,
-        travelPercentage: 0
+        travelPercentage: 0,
+        phrasalVerbsPercentage: 0,
+        collocationsPercentage: 0
       }
     }
   },
@@ -255,8 +287,14 @@ export default {
   margin: 0 10px 0 10px;
 }
 
+.vue-circular-progress .percent__int {
+  font-size: 20px;
+}
+
 #healthProgress:hover .tooltip,
-#travelProgress:hover .tooltip {
+#travelProgress:hover .tooltip,
+#phrasalVerbsProgress:hover .tooltip,
+#collocationsProgress:hover .tooltip {
   opacity: 1;
   pointer-events: auto;
   transition: all 0.4s ease;
@@ -265,7 +303,9 @@ export default {
 }
 
 #healthProgress .tooltip,
-#travelProgress .tooltip {
+#travelProgress .tooltip,
+#phrasalVerbsProgress .tooltip,
+#collocationsProgress .tooltip {
   position: relative;
   bottom: 150px;
   left: calc(80%);
@@ -397,7 +437,7 @@ export default {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  font-size: 22px;
+  font-size: 15px;
   background: var(--secondary-color);
   color: var(--icons-color);
 }
@@ -456,7 +496,7 @@ export default {
   width: 78px;
   left: 0;
   bottom: 0;
-  padding: 10px 14px;
+  padding: 1px 14px;
   background: var(--secondary-color);
   transition: all 0.5s ease;
   overflow: hidden;
