@@ -727,56 +727,56 @@ values (184, 'Show the child to the doctor if hiccup is repeated regularly withi
         'Покажите ребенка врачу, если икота повторяется регулярно в течение двух недель.', 7, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (185, '.',
-        '.', 9, 0, 'media/.mp3');
+values (185, 'Happiness is stopping and savouring the moment.',
+        'Счастье - это возможность остановиться и насладиться моментом.', 4, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (186, '.',
-        '.', 9, 0, 'media/.mp3');
+values (186, 'The solvent of the iodine is perfectly transparent.',
+        'Растворитель йода совершенно прозрачен.', 7, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (187, '.',
-        '.', 9, 0, 'media/.mp3');
+values (187, 'I put my hand up to my head and took off the curly wig.',
+        'Я поднесла руку к голове и сняла кудрявый парик.', 13, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (188, '.',
-        '.', 9, 0, 'media/.mp3');
+values (188, 'You have been wrinkled and disheveled for two days.',
+        'Вы ходите помятым и взъерошенным в течение двух дней.', 5, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (189, '.',
-        '.', 9, 0, 'media/.mp3');
+values (189, 'On the seventeenth day of the three weary travelers have almost reached the island.',
+        'На семнадцатый день трое измученных путешественников почти достигли острова.', 9, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (190, '.',
-        '.', 9, 0, 'media/.mp3');
+values (190, 'Would anybody like to share their thoughts on why policy of appeasement did not work?',
+        'Кто-нибудь хочет поделиться своими мыслями, почему не сработала политика умиротворения?', 11, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (191, '.',
-        '.', 9, 0, 'media/.mp3');
+values (191, 'Only a few miles in another direction was the dreary place she had recently lived in.',
+        'Только несколько миль отделяли её от того мрачного места, где она жила раньше.', 9, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (192, '.',
-        '.', 9, 0, 'media/.mp3');
+values (192, 'She wore her best jewels to the ball.',
+        'Она надела свои лучшие драгоценности на бал.', 4, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (193, '.',
-        '.', 9, 0, 'media/.mp3');
+values (193, 'I just want to crawl into a hole and die!',
+        'Я хочу просто заползти в нору и умереть!', 4, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (194, '.',
-        '.', 9, 0, 'media/.mp3');
+values (194, 'Our people rejoice, and wish to honour your name.',
+        'Наш народ ликует и хочет восславить твое имя.', 2, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (195, '.',
-        '.', 9, 0, 'media/.mp3');
+values (195, 'The issue of rural poverty is back on the international agenda.',
+        'Проблема сельской бедности снова стоит на международной повестке дня.', 3, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (196, '.',
-        '.', 9, 0, 'media/.mp3');
+values (196, 'Stand up straight and do not slouch!',
+        'Стойте прямо и не сутулитесь!', 6, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (197, '.',
-        '.', 9, 0, 'media/.mp3');
+values (197, 'It would be in public, so we would be forced to restrain ourselves.',
+        'Это будет на публике, поэтому мы будем вынуждены сдерживать себя.', 11, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (198, '.',
