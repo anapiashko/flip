@@ -1,46 +1,28 @@
-package com.app.flip.controllers;
+package com.app.flip.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class JwtResponse {
+public class AuthenticationResponseDTO {
   private String token;
-  private String type = "Bearer";
 
   private Long userId;
   private String username;
   private String email;
   private List<String> roles;
 
-  public JwtResponse(String accessToken, Long userId, String username, String email, List<String> roles) {
-    this.token = accessToken;
-    this.userId = userId;
-    this.username = username;
-    this.email = email;
-    this.roles = roles;
-  }
-
-  public String getAccessToken() {
+  public String getToken() {
     return token;
   }
 
-  public void setAccessToken(String accessToken) {
-    this.token = accessToken;
-  }
-
-  public String getTokenType() {
-    return type;
-  }
-
-  public void setTokenType(String tokenType) {
-    this.type = tokenType;
+  public void setToken(String token) {
+    this.token = token;
   }
 
   public Long getUserId() {
