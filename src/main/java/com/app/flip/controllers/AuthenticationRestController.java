@@ -1,6 +1,7 @@
 package com.app.flip.controllers;
 
 import com.app.flip.dao.UserRepository;
+import com.app.flip.model.Role;
 import com.app.flip.model.User;
 import com.app.flip.model.dto.AuthenticationRequestDTO;
 import com.app.flip.model.dto.AuthenticationResponseDTO;
@@ -21,6 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -41,11 +44,19 @@ public class AuthenticationRestController {
 
     @PostMapping("/signup")
     public ResponseEntity<?> signup(@RequestBody AuthenticationRequestDTO request) {
-        userRepository.save(User.builder()
-                .email(request.getEmail())
-                .password(request.getPassword())
-                .build());
-        return new ResponseEntity<>(HttpStatus.OK);
+        Map<Object, Object> response = new HashMap<>();
+        try {
+            userRepository.save(User.builder()
+                    .email(request.getEmail())
+                    .password(request.getPassword())
+                    .role(Role.USER)
+                    .build());
+            response.put("message", "User is successfully created");
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            response.put("message", e.getMessage());
+            return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @PostMapping("/signin")
