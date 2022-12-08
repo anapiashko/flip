@@ -779,32 +779,32 @@ values (197, 'It would be in public, so we would be forced to restrain ourselves
         'Это будет на публике, поэтому мы будем вынуждены сдерживать себя.', 11, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (198, '.',
-        '.', 9, 0, 'media/.mp3');
+values (198, 'He goggled in amazement at the huge statue.',
+        'Он в изумлении вытаращил глаза на огромную статую.', 1, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (199, '.',
-        '.', 9, 0, 'media/.mp3');
+values (199, 'He had the effrontery to demand more money.',
+        'У него хватило наглости потребовать еще денег.', 3, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (200, '.',
-        '.', 9, 0, 'media/.mp3');
+values (200, 'Do you think I want to fold laundry for the rest of my life?',
+        'Думаешь, я хочу складывать бельё всю свою жизнь?', 6, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (201, '.',
-        '.', 9, 0, 'media/.mp3');
+values (201, 'And I like the face you make when you are trying not to yawn.',
+        'И мне нравится твое лицо, когда ты пытаешься не зевать.', 13, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (202, '.',
-        '.', 9, 0, 'media/.mp3');
+values (202, 'He glanced from time to time at her sad and pensive face.',
+        'Он глядел время от времени на ее печальное и задумчивое лицо.', 10, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (203, '.',
-        '.', 9, 0, 'media/.mp3');
+values (203, 'Most coffee-growing countries have only one major harvest a year.',
+        'В большинстве стран экспортеров кофе, в год собирается только один крупный урожай.', 7, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (204, '.',
-        '.', 9, 0, 'media/.mp3');
+values (204, 'My previous company was too stingy to raise salaries.',
+        'Моя предыдущая компания была слишком скупа, чтобы повышать зарплату.', 5, 0, 'media/.mp3');
 
 insert into users (id, email, password, user_role)
  values (1, 'admin@admin.com', '$2a$12$nRKrtJpoPXonmfoTxNS9c.Gi56j6XmnmJM38.JlinVb7/rxwLWyVy', 'ADMIN');
