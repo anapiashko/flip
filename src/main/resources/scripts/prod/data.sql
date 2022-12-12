@@ -28,7 +28,7 @@ values (9, 'She appeared quite bewildered.',
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (10, 'She is able to replicate any action.',
-        'Она способна копировать любое дейтсвие.', 4, 0, 'media/0010.mp3');
+        'Она способна копировать любое действие.', 4, 0, 'media/0010.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (11, 'He traversed more than half the length of the settlement.',
@@ -219,8 +219,8 @@ values (57, 'A bomb was the only plausible explanation for the crash.',
         'Бомба была единственным правдоподобным объяснением крушения.', 5, 0, 'media/0057.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (58, 'They played checkers together in the evening, and pondered whether war would come.',
-        'По вечерам они вместе играли в шашки и размышляли о том, придет ли война.', 8, 0, 'media/0058.mp3');
+values (58, 'They played checkers together and pondered whether war would come.',
+        'Они вместе играли в шашки и размышляли о том, придет ли война.', 8, 0, 'media/0058.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (59, 'I presume you have already ordered the lunch.',
@@ -272,19 +272,19 @@ values (70, 'He is extremely knowledgeable about finance.',
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (71, 'She lectures on Greek Literature at the Sorbonne.',
-        'Она читает лекции по греческой литературе в Сорбонне.', 1, 0, 'media/.mp3');
+        'Она читает лекции по греческой литературе в Сорбонне.', 1, 0, 'media/0071.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (72, 'We have got our mock exams next month.',
-        'В следующем месяце у нас пробные экзамены.', 4, 0, 'media/.mp3');
+        'В следующем месяце у нас пробные экзамены.', 4, 0, 'media/0072.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (73, 'They accused her of plagiarising speech.',
-        'Они обвинили ее в плагиате речи.', 4, 0, 'media/.mp3');
+values (73, 'They accused her of plagiarizing speech.',
+        'Они обвинили ее в плагиате речи.', 4, 0, 'media/0073.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (74, 'He has been getting private tuition in French.',
-        'Он получал частное обучение французскому языку.', 5, 0, 'media/.mp3');
+        'Он получал частное обучение французскому языку.', 5, 0, 'media/0074.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (75, 'If you wanna keep up, you better brush up on your skills.',
@@ -299,7 +299,7 @@ values (77, 'You know, it\'s easier to come up with a new plan in silence.',
         'Знаешь, новый план легче придумывать в тишине.', 6, 1, 'media/0077.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (78, 'I was being too young and foolish to face up to them.',
+values (78, 'I was being too young and foolish to face up to it.',
         'Я был слишком молод и глуп, чтобы признать это.', 8, 1, 'media/0078.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
@@ -344,11 +344,11 @@ values (88, 'The best advertising was impossible to think up.',
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (89, 'Fame and fortune had gone to his head.',
-        'Слава и богатство вскружили ему в голову.', 4, 2, 'media/.mp3');
+        'Слава и богатство вскружили ему в голову.', 4, 2, 'media/0089.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (90, 'She managed to keep her wits about her and escaped unharmed.',
-        'Ей удалось сохранить самообладание и сбежать целой и невредимой.', 5, 2, 'media/.mp3');
+        'Ей удалось сохранить самообладание и сбежать целой и невредимой.', 5, 2, 'media/0090.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (91, 'He also keeps her in the dark about their grandchild.',

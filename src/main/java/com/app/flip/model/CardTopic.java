@@ -6,7 +6,7 @@ public enum CardTopic {
 
     PHRASAL_VERB (2),
 
-    COLLOCATION (3);
+    COLLOCATIONS (3);
 
     private final Integer ordinal;
 
