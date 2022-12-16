@@ -6,7 +6,7 @@
           <h4 class="card-category">{{ category }}</h4>
           <div id="english_sentence" :missed="getMissedWord(sentences[counter])">
             <h3 class="en-sentence">{{ getFirstSentencePart(sentences[counter]) }}
-            <input id="input-word" v-model.lazy.trim="typedWord"
+            <input id="input-word" spellcheck="false" v-model.lazy.trim="typedWord"
                    :style="{width: missedWord.length * 1.5 + 'ch'}"
                    v-on:keyup.enter="onEnter()">
             {{ getLastSentencePart(sentences[counter]) }}</h3>
@@ -22,6 +22,7 @@ import TopicCard from '@/components/TopicCard.vue'
 import axios from 'axios'
 import authHeader from '../services/auth-header'
 import userService from '../services/user.service'
+import cardService from '../services/card-service'
 
 let sentences
 let topic
@@ -124,15 +125,7 @@ export default {
       topic = TopicCard.data().topic
       console.log('topic = ', topic)
       try {
-        const res = await axios.post(process.env.VUE_APP_SERVER_HOST + '/get-sample', {
-          id: userService.getUserId()
-        },
-        {
-          headers: authHeader(),
-          params: {
-            topic: topic
-          }
-        })
+        const res = await cardService.getNewSample(topic)
 
         this.$data.sentences = res.data
         console.log('new sample : ', this.$data.sentences)

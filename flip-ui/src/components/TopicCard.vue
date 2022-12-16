@@ -16,10 +16,8 @@
 </template>
 
 <script>
-import axios from 'axios'
 import SidebarMenu from '@/components/SidebarMenu.vue'
-import authHeader from '../services/auth-header'
-import userService from '../services/user.service'
+import cardService from '../services/card-service'
 
 let sentences
 let topic
@@ -45,15 +43,7 @@ export default {
       console.log('topicName = ', topicName)
       console.log('topic = ', topic)
       try {
-        const res = await axios.post(process.env.VUE_APP_SERVER_HOST + '/get-sample', {
-          id: userService.getUserId()
-        },
-        {
-          headers: authHeader(),
-          params: {
-            topic: topicName
-          }
-        })
+        const res = await cardService.getNewSample(topicName)
 
         sentences = res.data
 

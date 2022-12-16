@@ -895,16 +895,16 @@ values (226, 'Young gymnasts wand and the ribbon itself is a bit smaller.',
         'У юных гимнасток палочка и сама лента немного меньше.', 2, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (227, '.',
-        '.', 5, 0, 'media/.mp3');
+values (227, 'History is vague for the first few centuries.',
+        'История является расплывчатой в течение первых нескольких столетий нашей эры.', 2, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (228, '.',
-        '.', 5, 0, 'media/.mp3');
+values (228, 'The photographs are an eloquent reminder of the horrors of war.',
+        'Фотографии являются красноречивым напоминанием об ужасах войны.', 4, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (229, '.',
-        '.', 5, 0, 'media/.mp3');
+values (229, 'We sell a full range of sports apparel.',
+        'Мы продаем полный ассортимент спортивной одежды.', 7, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (230, '.',
@@ -1127,6 +1127,27 @@ insert into progress (id, card_id, probability, user_id) values (167, 167, 1.00,
 insert into progress (id, card_id, probability, user_id) values (168, 168, 1.00, 1);
 insert into progress (id, card_id, probability, user_id) values (169, 169, 1.00, 1);
 insert into progress (id, card_id, probability, user_id) values (170, 170, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (171, 171, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (172, 172, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (173, 173, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (174, 174, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (175, 175, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (176, 176, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (177, 177, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (178, 178, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (179, 179, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (180, 180, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (181, 181, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (182, 182, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (183, 183, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (184, 184, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (185, 185, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (186, 186, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (187, 187, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (188, 188, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (189, 189, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (190, 190, 1.00, 1);
+insert into progress (id, card_id, probability, user_id) values (191, 191, 1.00, 1);
 
 
 
