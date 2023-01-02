@@ -907,52 +907,60 @@ values (229, 'We sell a full range of sports apparel.',
         'Мы продаем полный ассортимент спортивной одежды.', 7, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (230, '.',
-        '.', 5, 0, 'media/.mp3');
+values (230, 'You go first this game, and then we will alternate.',
+        'Сначала ты играешь в эту игру, а потом мы будем чередоваться.', 9, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (231, '.',
-        '.', 5, 0, 'media/.mp3');
+values (231, 'When leaves decay, chemicals returned to the soil.',
+        'При распаде листьев химические вещества возвращаются в почву.', 2, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (232, '.',
-        '.', 5, 0, 'media/.mp3');
+values (232, 'The situation in the country has deteriorated and tourists are advised not to go there.',
+        'Ситуация в стране ухудшилась, и туристам советуют туда не ездить.', 6, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (233, '.',
-        '.', 5, 0, 'media/.mp3');
+values (233, 'Journalists often distort the statistics in order to tell a good story.',
+        'Журналисты часто искажают статистику, чтобы рассказать хорошую историю.', 5, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (234, '.',
-        '.', 5, 0, 'media/.mp3');
+values (234, 'I do not know how people endure the conditions in prison.',
+        'Я не знаю, как люди переносят условия в тюрьме.', 6, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (235, '.',
-        '.', 5, 0, 'media/.mp3');
+values (235, 'You need to refine your argument to make it clearer.',
+        'Вам нужно улучшить свой аргумент, чтобы сделать его более ясным.', 3, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (236, '.',
-        '.', 5, 0, 'media/.mp3');
+values (236, 'Prices should remain steady over the next few months.',
+        'Цены должны оставаться стабильными в течение следующих нескольких месяцев.', 3, 0, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (237, '.',
-        '.', 5, 0, 'media/.mp3');
+values (237, 'My friends had changed all the furniture around as a joke.',
+        'Мои друзья в шутку поменяли всю мебель вокруг.', 7, 1, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (238, '.',
-        '.', 5, 0, 'media/.mp3');
+values (238, 'The film was about the man who changes into a werewolf during the full moon.',
+        'Фильм был о человеке, который превращается в оборотня во время полнолуния.', 7, 1, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (239, '.',
-        '.', 5, 0, 'media/.mp3');
+values (239, 'To my amazement, the letters on the page slowly faded away.',
+        'К моему удивлению, буквы на странице медленно исчезали.', 9, 1, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (240, '.',
-        '.', 5, 0, 'media/.mp3');
+values (240, 'It is as if my parents are trying to make me into the ideal student.',
+        'Как будто мои родители пытаются сделать из меня идеального студента.', 9, 1, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
-values (241, '.',
-        '.', 5, 0, 'media/.mp3');
+values (241, 'The sofa turns into the bed, so you can stay with us.',
+        'Диван превращается в кровать, так что вы можете остаться с нами.', 2, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (242, 'I have used up all the hot water for a week.',
+        'Я истратила горячую воду за целую неделю.', 2, 1, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (243, 'On my walking holiday, I wore out three pairs of boots.',
+        'Во время пеших прогулок я сносил три пары сапог.', 6, 1, 'media/.mp3');
 
 insert into users (id, email, password, user_role)
  values (1, 'admin@admin.com', '$2a$12$nRKrtJpoPXonmfoTxNS9c.Gi56j6XmnmJM38.JlinVb7/rxwLWyVy', 'ADMIN');
