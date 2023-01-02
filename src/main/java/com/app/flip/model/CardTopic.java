@@ -4,7 +4,7 @@ public enum CardTopic {
     VOCABULARY (0),
     IDIOMS (1),
 
-    PHRASAL_VERB (2),
+    PHRASAL_VERBS (2),
 
     COLLOCATIONS (3);
 

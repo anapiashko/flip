@@ -936,31 +936,31 @@ values (236, 'Prices should remain steady over the next few months.',
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (237, 'My friends had changed all the furniture around as a joke.',
-        'Мои друзья в шутку поменяли всю мебель вокруг.', 7, 1, 'media/.mp3');
+        'Мои друзья в шутку поменяли всю мебель вокруг.', 7, 2, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (238, 'The film was about the man who changes into a werewolf during the full moon.',
-        'Фильм был о человеке, который превращается в оборотня во время полнолуния.', 7, 1, 'media/.mp3');
+        'Фильм был о человеке, который превращается в оборотня во время полнолуния.', 7, 2, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (239, 'To my amazement, the letters on the page slowly faded away.',
-        'К моему удивлению, буквы на странице медленно исчезали.', 9, 1, 'media/.mp3');
+        'К моему удивлению, буквы на странице медленно исчезали.', 9, 2, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (240, 'It is as if my parents are trying to make me into the ideal student.',
-        'Как будто мои родители пытаются сделать из меня идеального студента.', 9, 1, 'media/.mp3');
+        'Как будто мои родители пытаются сделать из меня идеального студента.', 9, 2, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (241, 'The sofa turns into the bed, so you can stay with us.',
-        'Диван превращается в кровать, так что вы можете остаться с нами.', 2, 1, 'media/.mp3');
+        'Диван превращается в кровать, так что вы можете остаться с нами.', 2, 2, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (242, 'I have used up all the hot water for a week.',
-        'Я истратила горячую воду за целую неделю.', 2, 1, 'media/.mp3');
+        'Я истратила горячую воду за целую неделю.', 2, 2, 'media/.mp3');
 
 insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (243, 'On my walking holiday, I wore out three pairs of boots.',
-        'Во время пеших прогулок я сносил три пары сапог.', 6, 1, 'media/.mp3');
+        'Во время пеших прогулок я сносил три пары сапог.', 6, 2, 'media/.mp3');
 
 insert into users (id, email, password, user_role)
  values (1, 'admin@admin.com', '$2a$12$nRKrtJpoPXonmfoTxNS9c.Gi56j6XmnmJM38.JlinVb7/rxwLWyVy', 'ADMIN');

@@ -6,7 +6,7 @@
       <div class="logo_name">
         {{ menuTitle }}
       </div>
-      <i class="bx" :class="isOpened ? 'bx-menu-alt-right' : 'bx-menu'" id="btn" @click="isOpened = !isOpened" />
+      <i class="bx" :class="isOpened ? 'bx-menu-alt-right' : 'bx-menu'" id="btn" @click="statisticsRequest()" />
     </div>
 
     <perfect-scrollbar style="height: 87vh;" :options="{ suppressScrollX: true }">
@@ -243,9 +243,6 @@ export default {
   },
   mounted () {
     this.isOpened = this.isMenuOpen
-    axios
-      .get(process.env.VUE_APP_SERVER_HOST + '/get-statistics', { headers: authHeader() })
-      .then(response => (this.statistics = response.data))
   },
   computed: {
     cssVars () {
@@ -263,6 +260,18 @@ export default {
     }
   },
   methods: {
+    statisticsRequest () {
+      this.isOpened = !this.isOpened
+      axios
+        .get(process.env.VUE_APP_SERVER_HOST + '/get-statistics', { headers: authHeader() })
+        .then(response => (this.statistics = response.data))
+        .catch(function (error) {
+          if (error.response && error.response.status === 401) {
+            localStorage.removeItem('user')
+            this.$router.push('/login')
+          }
+        })
+    },
     logOut () {
       this.$store.dispatch('auth/logout')
       this.$router.push('/login')

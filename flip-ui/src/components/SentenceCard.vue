@@ -41,7 +41,7 @@ export default {
     missedWord: missedWord,
     firstSentencePart: firstSentencePart,
     lastSentencePart: lastSentencePart,
-    category: topic,
+    category: topic.name,
     author: 'Anastasiya Piashko'
   }),
   beforeCreate () {
@@ -125,7 +125,7 @@ export default {
       topic = TopicCard.data().topic
       console.log('topic = ', topic)
       try {
-        const res = await cardService.getNewSample(topic)
+        const res = await cardService.getNewSample(topic.internal_name)
 
         this.$data.sentences = res.data
         console.log('new sample : ', this.$data.sentences)

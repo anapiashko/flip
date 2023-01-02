@@ -3,7 +3,7 @@
     <SidebarMenu></SidebarMenu>
     <h1>Your Upcoming Goals</h1>
     <div class="topic-contain">
-      <div id="topics" style="cursor: pointer;" @click="goToSentenceCards(topic.name)"
+      <div id="topics" style="cursor: pointer;" @click="goToSentenceCards(topic)"
            v-for="topic in topics" :key="topic.name">
 
         <h2 :id="topic.name" ref="header">{{ topic.name }}</h2>
@@ -37,13 +37,13 @@ export default {
     }
   },
   methods: {
-    async goToSentenceCards (topicName) {
+    async goToSentenceCards (topicData) {
       console.log('goToSentenceCards')
-      topic = topicName
-      console.log('topicName = ', topicName)
+      topic = topicData
+      console.log('topicName = ', topic.name)
       console.log('topic = ', topic)
       try {
-        const res = await cardService.getNewSample(topicName)
+        const res = await cardService.getNewSample(topic.internal_name)
 
         sentences = res.data
 
