@@ -962,6 +962,126 @@ insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
 values (243, 'On my walking holiday, I wore out three pairs of boots.',
         'Во время пеших прогулок я сносил три пары сапог.', 6, 2, 'media/.mp3');
 
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (244, 'Our friendship came to an abrupt end.',
+        'Нашей дружбе пришел внезапный конец.', 5, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (245, 'She regards the marriage ceremony as a quaint anachronism.',
+        'Она считает церемонию бракосочетания причудливым пережитком.', 8, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (246, 'Contemporary sources offer a very different interpretation.',
+        'Современные источники предлагают совершенно иную интерпретацию.', 0, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (247, 'Another hour elapsed and still the wind continued to howl.',
+        'Прошел еще час, а ветер все еще продолжал завывать.', 2, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (248, 'She has earned our eternal gratitude.',
+        'Она заслужила нашу вечную благодарность.', 4, 0, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (249, 'Recently developed medical tests can give instantaneous results.',
+        'Недавно разработанные медицинские тесты могут давать мгновенные результаты.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (250, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (251, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (252, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (253, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (254, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (255, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (256, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (257, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (258, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (259, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (260, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (261, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (262, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (263, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (264, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (265, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (266, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (267, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (268, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (269, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (270, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (271, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (272, '.',
+        '.', 6, 2, 'media/.mp3');
+
+insert into card (id, en_sentence, rus_sentence, missed_word, topic, location)
+values (273, '.',
+        '.', 6, 2, 'media/.mp3');
+
 insert into users (id, email, password, user_role)
  values (1, 'admin@admin.com', '$2a$12$nRKrtJpoPXonmfoTxNS9c.Gi56j6XmnmJM38.JlinVb7/rxwLWyVy', 'ADMIN');
 insert into users (id, email, password, user_role)
