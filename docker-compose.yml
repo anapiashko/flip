@@ -2,10 +2,10 @@ version: '3.3'
 
 services:
   mysql-app:
-    image: mysql:8.0.26
+    image: mysql:8.0.32
     environment:
-      #      MYSQL_USER: flip_user
-      #      MYSQL_PASSWORD: password
+      MYSQL_USER: flip_user
+      MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: root
     ports:
       - 3308:3306

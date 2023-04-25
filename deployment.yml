@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-bank-api-deployment
+  labels:
+    app: simple-bank-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-bank-api
+  template:
+    metadata:
+      labels:
+        app: simple-bank-api
+    spec:
+      containers:
+#        - name: simple-bank-api
+#          image: public.ecr.aws/nginx/nginx:1.21
+#          imagePullPolicy: Always
+#          ports:
+#            - containerPort: 80
+#        - name: flip-ui
+#          image: public.ecr.aws/g3w5u5l3/flip-ui:0.0.2
+#          imagePullPolicy: Always
+#          ports:
+#            - containerPort: 8080
+        - name: flip
+          image: public.ecr.aws/g3w5u5l3/flip:0.0.3
+          imagePullPolicy: Always
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: "jdbc:mysql://mysql:3306/flip"
+            - name: SPRING_DATASOURCE_USERNAME
+              value: "root"
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: "root"
+          ports:
+            - containerPort: 8000
+#        - name: mysql-app
+#          image: mysql:8.0.32
+#          imagePullPolicy: Always
+#          env:
+#            - name: SPRING_DATASOURCE_URL
+#              value: "jdbc:mysql://mysql-app:3306/flip"
+#            - name: SPRING_DATASOURCE_USERNAME
+#              value: "flip_user"
+#            - name: SPRING_DATASOURCE_PASSWORD
+#              value: "password"
+#          ports:
+#            - containerPort: 3306
