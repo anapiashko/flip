@@ -6,6 +6,8 @@ import lombok.Data;
 @Data
 @Builder
 public class Statistics {
-    private Double healthPercentage;
-    private Double travelPercentage;
+    private Double vocabularyPercentage;
+    private Double idiomsPercentage;
+    private Double phrasalVerbsPercentage;
+    private Double collocationsPercentage;
 }

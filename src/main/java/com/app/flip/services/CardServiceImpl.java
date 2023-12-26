@@ -66,18 +66,26 @@ public class CardServiceImpl implements CardService {
         log.info("Get full statistics in percentage");
         Integer allSeenVocabulary = cardRepository.findAllSeenByCardTopic(CardTopic.VOCABULARY.getOrdinal());
         Integer allSeenIdioms = cardRepository.findAllSeenByCardTopic(CardTopic.IDIOMS.getOrdinal());
+        Integer allSeenPhrasalVerbs = cardRepository.findAllSeenByCardTopic(CardTopic.PHRASAL_VERBS.getOrdinal());
+        Integer allSeenCollocations = cardRepository.findAllSeenByCardTopic(CardTopic.COLLOCATIONS.getOrdinal());
 
         long allVocabulary = cardRepository.countByCardTopic(CardTopic.VOCABULARY);
         long allIdioms = cardRepository.countByCardTopic(CardTopic.IDIOMS);
+        long allPhrasalVerbs = cardRepository.countByCardTopic(CardTopic.PHRASAL_VERBS);
+        long allCollocations = cardRepository.countByCardTopic(CardTopic.COLLOCATIONS);
 
         DecimalFormat df = new DecimalFormat("##.##");
 
-        Double percentageHealth = new Double(df.format((double)allSeenVocabulary/allVocabulary));
-        Double percentageTravel = new Double(df.format((double)allSeenIdioms/allIdioms));
+        Double percentageVocabulary = new Double(df.format((double)allSeenVocabulary/allVocabulary));
+        Double percentageIdioms = new Double(df.format((double)allSeenIdioms/allIdioms));
+        Double percentagePhrasalVerbs = new Double(df.format((double)allSeenPhrasalVerbs/allPhrasalVerbs));
+        Double percentageCollocations = new Double(df.format((double)allSeenCollocations/allCollocations));
 
         return Statistics.builder()
-                .healthPercentage(percentageHealth)
-                .travelPercentage(percentageTravel)
+                .vocabularyPercentage(percentageVocabulary)
+                .idiomsPercentage(percentageIdioms)
+                .phrasalVerbsPercentage(percentagePhrasalVerbs)
+                .collocationsPercentage(percentageCollocations)
                 .build();
     }
 }
